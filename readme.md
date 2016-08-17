@@ -1,12 +1,10 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта**
-
+# Informupuck
 
 ## Старт проекта
 
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:CSSSR/csssr-project-template.git new-project && cd new-project
+git clone git@github.com:aversan/informupuck.git new-project && cd new-project
 ```
 
 ### Установи модули
@@ -220,5 +218,3 @@ npm run deploy
     height: 24px;
 }
 ```
-
-## [Внеси свой вклад в развитие проекта!](https://github.com/CSSSR/csssr-project-template/blob/master/contributing.md)
