@@ -1,0 +1,65 @@
+.form-control
+	display block
+	width 100%
+	background-image none
+	border 1px solid grey
+	transition border-color ease-in-out .15s, box-shadow ease-in-out .15s
+	box-sizing border-box
+
+	&:focus
+		outline 0
+
+	&::-moz-placeholder
+		opacity 1
+
+	&::-ms-expand
+		background-color transparent
+		border 0
+
+	&[disabled]
+	&[readonly]
+	fieldset[disabled] &
+		opacity 1
+
+	&[disabled]
+	fieldset[disabled] &
+		cursor not-allowed
+
+
+// Theme
+
+.form-control
+	height $input-height-md
+	padding $input-padding-y-md $input-padding-x-md
+	font-size $font-size-md
+	line-height $line-height-md
+	color $input-color
+	background-color $input-bg
+	border-width $input-btn-border-width
+	border-color $input-border-color
+	border-radius $input-border-radius
+	box-shadow $input-box-shadow
+
+	&:focus
+		border-color $input-border-focus
+		box-shadow $input-box-shadow-focus
+
+	&::-moz-placeholder
+		color $input-color-placeholder
+
+	&:-ms-input-placeholder
+		color $input-color-placeholder
+
+	&::-webkit-input-placeholder
+		color $input-color-placeholder
+
+	&.placeholdersjs
+		color $input-color-placeholder
+
+	&[disabled]
+	&[readonly]
+	fieldset[disabled] &
+		background-color $input-bg-disabled
+
+	textarea&
+		height auto

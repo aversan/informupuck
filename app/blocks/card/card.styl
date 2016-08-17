@@ -1,0 +1,139 @@
+.card
+	box-shadow 0 2px 2px -2px alpha(#000000, .3)
+
+	&__header
+		font-size 12px
+		line-height 14px
+		display flex
+		min-height 140px
+		box-sizing border-box
+		flex-direction row
+		flex-wrap nowrap
+		padding 9px
+		color #333
+		overflow hidden
+		position relative
+
+		&-primary-content
+			order 0
+			flex-grow 2
+			text-decoration none
+			box-sizing border-box
+			display flex
+			align-items center
+			display block
+
+		&-secondary-content
+			display flex
+			align-items flex-start
+			justify-content flex-end
+			margin-left 15px
+			position relative
+			margin-top -9px
+
+		&-secondary-action
+			position relative
+			z-index 2
+
+			&.mdl-icon-toggle
+				margin-top 5px
+
+		&-avatar
+			width 50px
+			height 50px
+			background-size cover
+			background-repeat no-repeat
+			background-position 50% 50%
+			overflow hidden
+			float left
+			margin-right 15px
+
+			img
+				visibility hidden
+
+			.card__header-avatar-wrap &
+				float none
+				margin-right 0
+
+		&-avatar-wrap
+			width 50px
+			float left
+			display flex
+			flex-flow column
+			align-items center
+			margin-right 15px
+
+		&-rating
+			font-size 10px
+			color #333
+			font-weight bold
+			display block
+			text-align center
+			margin-top 12px
+
+		&-rating-title
+			font-size 9px
+			color #999
+			font-weight normal
+			display block
+			margin-bottom 1px
+
+		&-title
+			font-size 15px
+			font-weight bold
+			color #4d4d4d
+			text-truncate()
+
+			a
+				color inherit
+
+			.card--hoverable:hover &
+			.card--hoverable:hover & a
+				color $link-color
+
+		&-cover-link
+			position absolute
+			left 0
+			top 0
+			right 0
+			bottom 0
+
+		&-site-link
+		&-address
+		&-text-body
+			display block
+			font-size 11px
+			line-height 1.27
+			margin-top 5px
+			margin-bottom 0
+
+		&-site-link
+			font-size 11px
+
+		&-address
+			color #333
+			margin-top 10px
+
+		&-text-body
+			color #858585
+
+	&__actions
+		display flex
+		align-items center
+		border-top 1px solid #efefef
+		font-size 11px
+		padding-right 15px
+
+		&-btn
+			padding-top 10px
+			padding-bottom 10px
+			font-size 11px
+			line-height 1.8
+
+	&__spacer
+		-ms-flex-positive 1
+		flex-grow 1
+
+	& + &
+		margin-top 8px
+

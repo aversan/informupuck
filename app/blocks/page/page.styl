@@ -1,0 +1,24 @@
+.page__nano-left
+	.page--layout-main &
+		width 768px
+		max-height 1290px
+		height 1290px
+		background-color #fff
+
+		& > .nano-pane
+			display none !important
+
+@media screen and (max-width 767px)
+	.page__nano-left
+		.page--layout-main &
+			width 510px
+
+.page-right
+	.page--layout-main &
+	.page--layout-main & > #scroll_block_jquery
+		max-height 1290px
+
+	.page--layout-main & > #scroll_block_jquery
+		overflow hidden
+
+//.page--layout-main--company

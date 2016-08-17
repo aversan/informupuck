@@ -1,0 +1,43 @@
+.form-control-feedback
+	position absolute
+	top 0
+	right 0
+	z-index 3
+	display block
+	text-align center
+	pointer-events none
+
+.has-feedback-first
+.has-feedback-last
+	position relative
+
+.has-feedback-first
+	.form-control-feedback
+		left 0
+		right auto
+
+.has-feedback-last
+	.form-control-feedback
+		left auto
+		right 0
+
+
+// Theme
+
+.form-control-feedback
+	width $input-height-md
+	height $input-height-md
+	line-height $input-height-md
+
+	&.mdi
+		line-height $input-height-md
+
+.has-feedback-first .form-control
+	padding-left $input-height-md
+
+.has-feedback-last .form-control
+	padding-right $input-height-md
+
+formControlFeedback('sm', $input-height-sm)
+formControlFeedback('md', $input-height-md)
+formControlFeedback('lg', $input-height-lg)

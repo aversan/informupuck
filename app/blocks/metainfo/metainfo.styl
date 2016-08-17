@@ -1,0 +1,70 @@
+	$metainfo-transition = all 0.2s ease-in-out 0s
+
+	.metainfo
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		flex-shrink 0
+		box-sizing border-box
+		align-self stretch
+		list-style-type none
+		font-family $font-family-base
+		font-size 11px
+		line-height 1.16
+
+		& > *
+			-ms-flex-negative 0
+			flex-shrink 0
+			margin-left 24px
+
+			&:first-child
+				margin-left 0
+
+		&__spacer
+			-ms-flex-positive 1
+			flex-grow 1
+
+		a
+			transition $metainfo-transition
+			text-decoration none
+
+		&
+		a
+		a:focus
+		a:hover
+			color #999
+
+		&__title
+			color #999
+
+		&__content
+			color #999
+
+			&--alt
+				color #4d739f
+
+			&--alt-2
+				font-weight bold
+				color #333
+
+		.icon
+			margin-left 3px
+			margin-right 3px
+
+			&:first-child
+				margin-left 0
+
+			&:last-child
+				margin-right 0
+
+		&--hoverable:hover
+			& a
+				transition $metainfo-transition
+
+			&
+			& a
+				color #aebfd3
+
+			& a:focus
+			& a:hover
+				color #fff

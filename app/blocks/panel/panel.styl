@@ -1,0 +1,90 @@
+.panel
+	background-color #fff
+	color #333
+
+	&
+	&__heading
+	&__body
+	&__collapse
+		box-sizing border-box
+
+	.typography--headline
+		color #666
+
+.panel__hr
+	border-top 1px solid #f1f1f1
+
+	hr
+		display none
+
+.panel__body
+	& > *:first-child:not(.panel__secondary-action)
+		margin-top 0 !important
+
+	& > *:last-child:not(.panel__secondary-action)
+		margin-bottom 0 !important
+
+.panel__body + .panel__body
+	padding-top 0 !important
+
+.panel__body + .panel__collapse > .panel__body
+	padding-top 0 !important
+
+.panel__map
+	img
+		display block
+
+.panel--section
+	.panel__body
+		padding 14px 24px
+
+		.panel__hr
+			margin-top 14px
+			margin-bottom 14px
+
+
+.panel__secondary-action
+	float right
+	margin -10px -20px -10px 0
+
+.panel--filter
+	background-color #fff
+
+	.panel__nano
+	.panel__body
+		background-color #fff
+
+	.panel__heading
+	.panel__body
+		border 1px solid #e7e7e7
+		padding 13px
+
+	.panel__body
+		margin-top -1px
+
+	.panel__title
+		font-size 13px
+		text-transform uppercase
+		letter-spacing .1ex
+		color #333
+
+		a
+			color inherit
+			text-decoration none
+
+		a:hover
+		a:focus
+			color inherit
+
+	.treeview label
+	.checkbox label
+		font-size 12px
+
+	& + &
+		margin-top -1px
+
+	.checkbox + .checkbox
+		margin-top 8px
+
+	.btn-block + .btn-block
+		margin-top 6px

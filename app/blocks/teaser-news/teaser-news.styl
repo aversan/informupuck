@@ -1,0 +1,384 @@
+$teaset-news-transition = all 0.2s ease-in-out 0s
+
+.teaser-news
+	position relative
+
+	&__row
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		flex-shrink 0
+		box-sizing border-box
+		align-self stretch
+
+		& > *
+			border 1px solid #c2c2c2
+			-ms-flex-negative 0
+			flex-shrink 0
+			width 50%
+			box-sizing border-box
+			transition $teaset-news-transition
+
+			.teaser-news--hoverable:hover &.teaser-news__panel
+				border-color $background-color-base-hover
+
+		& > .teaser-news__image
+			width 50%
+
+		&--reverse
+			flex-direction row-reverse
+
+	&__title
+		typo-title()
+		display block
+		display -webkit-box
+		-webkit-box-orient vertical
+		overflow hidden
+		text-overflow ellipsis
+		word-wrap break-word
+
+		&--line-2
+			max-height 34px
+			-webkit-line-clamp 2
+
+		&--line-3
+			max-height 51px
+			-webkit-line-clamp 3
+
+		a
+			transition $teaset-news-transition
+
+		&
+		a
+		a:focus
+		a:hover
+			color #4d4d4d
+
+			.teaser-news__panel--inverse &
+				color #fff
+
+		a
+			text-decoration none
+
+			.teaser-news--hoverable:hover &
+				text-decoration underline
+
+		.teaser-news--hoverable:hover &
+			&
+			& a
+			& a:focus
+			& a:hover
+				color #fff
+
+	&__text
+		typo-body-small()
+
+		a
+			text-decoration none
+
+		p
+			display -webkit-box
+			-webkit-box-orient vertical
+			overflow hidden
+			text-overflow ellipsis
+			word-wrap break-word
+			margin 0
+
+		&--line-3
+			height 51px
+
+			p
+				max-height 51px
+				-webkit-line-clamp 3
+
+		&--line-4
+			height 68px
+
+			p
+				max-height 68px
+				-webkit-line-clamp 4
+
+		&--line-5
+			height 85px
+
+			p
+				max-height 85px
+				-webkit-line-clamp 5
+
+		&--line-6
+			height 102px
+
+			p
+				max-height 102px
+				-webkit-line-clamp 6
+
+	&__panel
+		position relative
+		padding 15px 24px 28px
+		background-color #fff
+		color #4d4d4d
+		transition $teaset-news-transition
+		box-sizing border-box
+
+		&--inverse
+			background-color $background-color-inverse
+			color #fff
+
+		.teaser-section--p-alt &
+			padding-left 20px
+			padding-right 28px
+			padding-top 20px
+			padding-bottom 33px
+
+		a
+			color inherit
+
+		.teaser-news--hoverable:hover &
+			background-color $background-color-base-hover
+			color #fff
+
+		&-footer
+			position absolute
+			padding 0 24px 15px
+			left 0
+			right 0
+			bottom 0
+
+			.teaser-section--p-alt &
+				padding-left 20px
+				padding-right 28px
+				padding-bottom 20px
+
+		&-arrow-top
+		&-arrow-left
+		&-arrow-right
+			transition $teaset-news-transition
+			content ''
+			display block
+			width 0
+			height 0
+			border-style solid
+			position absolute
+			z-index 1
+
+		&-arrow-top
+			bottom 100%
+			left 50%
+			margin-left -15px
+			border-width 0 15px 15px 15px
+			border-color transparent transparent #fff transparent
+
+			.teaser-news__panel--inverse &
+				border-color transparent transparent $background-color-inverse transparent
+
+			.teaser-news--hoverable:hover &
+				border-color transparent transparent $background-color-base-hover transparent
+
+		&-arrow-left
+			border-width 15px 15px 15px 0
+			border-color transparent #fff transparent transparent
+			right 100%
+			top 50%
+			margin-top -15px
+			transition $teaset-news-transition
+
+			.teaser-news__panel--inverse &
+				border-color transparent $background-color-inverse transparent transparent
+
+			.teaser-news--hoverable:hover &
+				border-color transparent $background-color-base-hover transparent transparent
+
+		&-arrow-right
+			border-width 15px 0 15px 15px
+			border-color transparent transparent transparent #fff
+			left 100%
+			top 50%
+			margin-top -15px
+			transition $teaset-news-transition
+
+			.teaser-news__panel--inverse &
+				border-color transparent transparent transparent $background-color-inverse
+
+			.teaser-news--hoverable:hover &
+				border-color transparent transparent transparent $background-color-base-hover
+
+	&__toolbar
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		flex-shrink 0
+		box-sizing border-box
+		align-self stretch
+		typo-caption()
+
+
+		& > *
+			-ms-flex-negative 0
+			flex-shrink 0
+			margin-left 10px
+
+			&:first-child
+				margin-left 0
+
+		&-spacer
+			-ms-flex-positive 1
+			flex-grow 1
+
+		a
+			transition $teaset-news-transition
+			text-decoration none
+
+		&
+		a
+		a:focus
+		a:hover
+			color #999
+
+			.teaser-news__panel--inverse &
+				color #fff
+
+		&-text-alt
+			color #4d739f
+
+			.teaser-news__panel--inverse &
+				color #fff
+
+		.teaser-news--hoverable:hover &
+			& a
+				transition $teaset-news-transition
+
+			&
+			& a
+				color #aebfd3
+
+			& a:focus
+			& a:hover
+				color #fff
+
+		.icon
+			margin-left 3px
+			margin-right 3px
+
+			&:first-child
+				margin-left 0
+
+			&:last-child
+				margin-right 0
+
+		&-date
+			margin-right 15px
+
+	.teaser-news__toolbar
+	.teaser-news__title
+	.teaser-news__text
+		margin-bottom 9px
+
+		&:last-child
+			margin-bottom 0
+
+	&__image
+		background-position 50% 50%
+		background-size cover
+		background-repeat no-repeat
+		overflow hidden
+
+		&--h-215
+			height 215px
+
+		&--h-240
+			height 240px
+
+		&--small
+			width 55px
+			height 55px
+
+		&--small-2
+			width 60px
+			height 60px
+
+		img
+			width auto
+			height auto
+			min-width 100%
+			min-height 100%
+			max-width none
+			position relative
+			left 50%
+			top 50%
+			-webkit-transform translate(-50%, -50%)
+			transform translate(-50%, -50%)
+
+		&--left
+			float left
+			margin-right 10px
+
+		&--right
+			float right
+			margin-left 10px
+
+		&-overlay-panel
+			padding 25px
+
+	&__content
+		display block
+		overflow hidden
+
+	.teaser-section__list &--hoverable:hover
+		z-index 2
+
+	.teaser-section__list & + &
+		margin-top -1px
+
+	.teaser-section__list &--sep + &--sep
+		&:before
+			content ''
+			display block
+			border-top 1px solid #e6e6e6
+			position absolute
+			top 0
+			left 24px
+			right 24px
+			z-index 1
+
+		&.teaser-news--hoverable:hover:before
+			display none
+
+	.teaser-section--p-alt .teaser-section__list &--sep + &--sep
+		&:before
+			left 20px
+			right 28px
+
+.teaser-section
+	.nano
+		background-color #fff
+
+	& > .typography--space
+		.teaser-section--p-alt&
+			padding-top 20px
+			padding-left 20px
+			padding-right 28px
+
+		.teaser-section--p-alt2&
+			padding-top 25px
+
+@media screen and (max-width 767px)
+	.teaser-section
+		.nano
+			background-color #fff
+
+		& > .typography--space
+			.teaser-section--p-alt2&
+				padding-top 20px
+
+.teaser-section
+	background-color #fff
+
+	&__more
+		margin-top 0
+
+.teaser-news__cover-link
+	position absolute
+	left 0
+	top 0
+	right 0
+	bottom 0

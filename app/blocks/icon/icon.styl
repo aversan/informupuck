@@ -1,0 +1,81 @@
+.icon
+	display inline-block
+	text-align center
+	vertical-align middle
+
+	&:before
+		content ''
+		display inline-block
+		vertical-align top
+		background-position 50% 50%
+		background-repeat no-repeat
+
+	&--video-blue-xs
+		&:before
+			sprite($icon_video_blue_xs)
+
+		.teaser-news--hoverable:hover &:before
+			sprite($icon_video_white_xs)
+
+	&--foto-blue-xs
+		&:before
+			sprite($icon_foto_blue_xs)
+
+		.teaser-news--hoverable:hover &:before
+			sprite($icon_foto_white_xs)
+
+	&--comment-blue-xs
+		&:before
+			sprite($icon_comment_blue_xs)
+
+		.teaser-news--hoverable:hover &:before
+			sprite($icon_comment_white_xs)
+
+	&--smotr-blue-xs
+		&:before
+			sprite($icon_smotr_blue_xs)
+
+		.teaser-news--hoverable:hover &:before
+			sprite($icon_smotr_white_xs)
+
+	&--video-white-xs:before
+		sprite($icon_video_white_xs)
+
+	&--foto-white-xs:before
+		sprite($icon_foto_white_xs)
+
+	&--comment-white-xs:before
+		sprite($icon_comment_white_xs)
+
+	&--smotr-white-xs:before
+		sprite($icon_smotr_white_xs)
+
+	&--star-yellow-xs:before
+		sprite($icon_star_yellow_xs)
+
+	&--star-muted-xs:before
+		sprite($icon_star_muted_xs)
+
+	&--email-white-sm:before
+		sprite($icon_email_white_sm)
+
+	&--mobile-link-xs:before
+		sprite($icon_mobile_link_xs)
+
+	&--search-white-xs:before
+		sprite($icon_search_white_xs)
+
+	&--search-dark-blue-sm:before
+		sprite($icon_search_dark_blue_sm)
+
+	&--label-top-10-vertical:before
+		sprite($icon_label_top_10_vertical)
+
+	&--pin-dark-blue-sm:before
+		sprite($icon_pin_dark_blue_sm)
+
+	&--email-dark-blue-sm:before
+		sprite($icon_email_dark_blue_sm)
+
+	&--pin-dark-blue-xs:before
+		sprite($icon_pin_dark_blue_xs)

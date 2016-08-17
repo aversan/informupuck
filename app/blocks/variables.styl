@@ -1,0 +1,222 @@
+// Breakpoints
+
+$breakpoint-xs = 0
+$breakpoint-sm = 400px // 544px
+$breakpoint-md = 600px // 768px
+$breakpoint-lg = 800px // 992px
+$breakpoint-xl = 1050px // 1200px
+
+rupture.scale = $breakpoint-xs $breakpoint-sm $breakpoint-md $breakpoint-lg $breakpoint-xl
+
+
+$brand-primary = #4d739f
+
+// Reboot
+
+$body-bg = #55c9e0
+$body-color = #fff
+$link-color = #4d739f
+$link-hover-color = #fff
+
+
+// Typography
+
+$font-size-root = 16px
+
+$font-family-sans-serif = 'Roboto', Arial, sans-serif
+$font-family-base = $font-family-sans-serif
+
+$font-size-base = 14px
+$line-height-base = 1.21
+$line-height = 1.21
+
+$headings-font-family = 'GothamPro', arial, sans-serif
+
+$small-font-size = 80%
+
+$background-color-inverse = #3b4555
+$background-color-base-hover = #5c7fa7
+
+
+// List
+
+$list-main-text-text-color = inherit
+$list-supporting-text-text-color = #858585
+$list-icon-color = #333
+$list-avatar-color = inherit
+
+$list-border = 0
+$list-min-height = 56px
+$list-min-padding = 5px
+$list-bottom-padding = 0
+$list-avatar-text-left-distance = 55px
+$list-icon-text-left-distance = 55px
+
+$list-avatar-size = 40px
+$list-icon-size = 24px
+
+$list-two-line-height = 54px
+$list-three-line-height = 54px
+
+
+// Components
+
+//$line-height-md =         1.4285
+//$line-height-lg =         (4 / 3)
+//$line-height-sm =         1.5
+
+//$border-radius =          100px
+//$border-radius-lg =       100px
+//$border-radius-sm =       100px
+
+//$border-radius =          .125rem
+//$border-radius-lg =       .125rem
+//$border-radius-sm =       .2rem
+
+//$component-active-color = #fff
+//$component-active-bg =    $brand-primary
+
+//$caret-width =            .3em
+//$caret-width-lg =         $caret-width
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+//$table-cell-padding = .75rem
+//$table-sm-cell-padding = .3rem
+
+//$table-bg = transparent
+//$table-bg-accent = #f9f9f9
+//$table-bg-hover = #f5f5f5
+//$table-bg-active = $table-bg-hover
+
+//$table-border-width = $border-width
+//$table-border-color = grey-light
+
+
+// Buttons
+
+$btn-padding-x = 20px
+$btn-padding-y = 10px
+$btn-box-shadow = none
+$btn-active-box-shadow = inset 0 3px 5px alpha(#000, .125)
+
+$btn-primary-color = #fff
+$btn-primary-bg = $brand-primary
+$btn-primary-bg-hover = lighten($btn-primary-bg, 10%)
+$btn-primary-bg-active = darken($btn-primary-bg, 10%)
+$btn-primary-border = $btn-primary-bg
+$btn-primary-border-hover = lighten($btn-primary-border, 10%)
+$btn-primary-border-active = darken($btn-primary-border, 10%)
+
+$btn-secondary-color = #333
+$btn-secondary-bg = #f2f2f2
+$btn-secondary-bg-hover = lighten($btn-secondary-bg, 10%)
+$btn-secondary-bg-active = darken($btn-secondary-bg, 10%)
+$btn-secondary-border = #d5d5d5
+$btn-secondary-border-hover = lighten($btn-secondary-border, 10%)
+$btn-secondary-border-active = darken($btn-secondary-border, 10%)
+
+$btn-disabled-color = #adadad
+$btn-disabled-bg = #f9fafb
+$btn-disabled-border = #f9fafb
+
+$btn-link-color = #4d739f
+$btn-link-disabled-color = #adadad
+
+$btn-padding-x-sm = .75rem
+$btn-padding-y-sm = .25rem
+
+$btn-padding-x-lg = 1.25rem
+$btn-padding-y-lg = .75rem
+
+$btn-border-radius = 0
+$btn-border-radius-lg = 0
+$btn-border-radius-sm = 0
+
+
+$background-image-pattern = url('data:image/png;base64,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')
+
+$font-size-md = 13px
+$line-height-md = 1.2
+
+$font-size-sm = 12px
+$line-height-sm = 1.2
+
+$font-size-lg = 13px
+$line-height-lg = 1.2
+
+// Forms
+
+$input-padding-x = 10px
+$input-padding-y = 10px
+
+$input-bg = #fff
+$input-bg-disabled = #f9fafb
+
+$input-color = #333
+$input-border-color = #a4b7cd
+$input-btn-border-width = 1px
+$input-box-shadow = none
+
+$input-border-radius = 0
+$input-border-radius-md = 0
+$input-border-radius-lg = 0
+$input-border-radius-sm = 0
+
+$input-border-focus = #a4b7cd
+$input-box-shadow-focus = inset 0 1px 1px alpha($input-border-color, 0.75), 0 0 8px alpha($input-border-focus, 0.6)
+
+$input-color-placeholder = #414a5a
+
+$input-padding-x-md = 10px
+$input-padding-y-md = 10px
+
+$input-padding-x-sm = 10px
+$input-padding-y-sm = 3px
+
+$input-padding-x-lg = 20px
+$input-padding-y-lg = 10px
+
+$input-height = $font-size-md * $line-height-md + $input-padding-y * 2
+$input-height-md = $font-size-md * $line-height-md + $input-padding-y * 2
+$input-height-lg = $font-size-lg * $line-height-lg + $input-padding-y-lg * 2
+$input-height-sm = $font-size-sm * $line-height-sm + $input-padding-y-sm * 2
+
+$form-group-margin-bottom = 20px
+
+$input-group-addon-bg = #fff
+$input-group-addon-border-color = $input-border-color
+
+$cursor-disabled = not-allowed
+
+
+// Icon toggles
+
+$icon-toggle-size = 32px
+$icon-toggle-font-size = 20px
+$icon-toggle-ripple-size = 36px
+
+$icon-toggle-color = grey
+$icon-toggle-focus-color = grey
+$icon-toggle-checked-color = $brand-primary
+$icon-toggle-checked-focus-color = alpha($brand-primary, .26)
+$icon-toggle-disabled-color = alpha(#000, .26)
+
+
+// Chip
+$chip-bg-color = #fffff3
+$chip-bg-active-color = #fffff3
+$chip-height = 25px
+$chip-font-size = 11px
+$chip-border-color = #d9d9d5
+$chip-border-radius = 7px
+
+// Animations
+
+$animation-curve-fast-out-slow-in = cubic-bezier(0.4, 0, 0.2, 1)
+$animation-curve-linear-out-slow-in = cubic-bezier(0, 0, 0.2, 1)
+$animation-curve-fast-out-linear-in = cubic-bezier(0.4, 0, 1, 1)
+$animation-curve-default = $animation-curve-fast-out-slow-in

@@ -1,0 +1,64 @@
+.mdl-chip
+	height $chip-height
+	line-height $chip-height
+	padding 0 12px
+	border 0
+	//border-radius $chip-height / 2
+	border-radius $chip-border-radius
+	background-color $chip-bg-color
+	display inline-block
+	margin 2px 0
+	font-size 0
+	white-space nowrap
+	border 1px solid $chip-border-color
+	box-sizing border-box
+
+	&__text
+		font-size $chip-font-size
+		vertical-align middle
+		display inline-block
+
+	&__action
+		height 19px
+		width 19px
+		line-height normal
+		background transparent
+		opacity 1
+		display inline-block
+		cursor pointer
+		text-align center
+		vertical-align middle
+		padding 0
+		margin -2px 0 0 4px
+		font-size $chip-font-size
+		text-decoration none
+		border none
+		outline none
+		overflow hidden
+		box-sizing border-box
+
+		border 1px solid #d8d8d2
+		background-color #fff
+		border-radius 100px
+
+	&__contact
+		height $chip-height
+		width $chip-height
+		border-radius $chip-height / 2
+		display inline-block
+		vertical-align middle
+		margin-right 8px
+		overflow hidden
+		text-align center
+		font-size 18px
+		line-height 32px
+
+	&:focus
+		outline 0
+		//shadow-2dp()
+
+	&:active
+		background-color $chip-bg-active-color
+
+	&--deletable
+		padding-right 4px

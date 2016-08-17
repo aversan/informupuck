@@ -1,0 +1,48 @@
+.collapse
+	display none
+
+	&.in
+		display block
+
+.collapsing
+	position relative
+	height 0
+	overflow hidden
+	transition-timing-function ease
+	transition-duration .35s
+	transition-property height
+
+.panel__collapse--line-4
+	display block
+	min-height 86px
+	height 86px
+	overflow hidden
+
+	&.in
+		height auto
+
+	&:not(.collapsing):not(.in)
+		.panel__collapse-inner
+			display block
+			display -webkit-box
+			-webkit-box-orient vertical
+			overflow hidden
+			text-overflow ellipsis
+			word-wrap break-word
+			-webkit-line-clamp 4
+			line-height 18px
+			max-height 72px
+
+.collapse-toggle
+	.btn__text
+		display none
+
+	.btn__text:first-child
+		display inline
+
+.collapse.in + .collapse-toggle
+	.btn__text
+		display inline
+
+	.btn__text:first-child
+		display none

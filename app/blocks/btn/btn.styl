@@ -1,0 +1,224 @@
+$btn-transition = all 0.2s ease-in-out 0s
+
+.btn
+	typo-button()
+	display inline-block
+	padding $btn-padding-y $btn-padding-x
+	margin-bottom 0
+	text-align center
+	white-space nowrap
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	background-image $background-image-pattern
+	background-repeat none
+	border 1px solid transparent
+	border-radius $btn-border-radius
+	box-sizing border-box
+	transition $btn-transition
+	box-shadow $btn-box-shadow
+
+	a&
+		text-decoration none
+
+	&:focus
+	&:active:focus
+	&.active:focus
+	&.focus
+	&:active.focus
+	&.active.focus
+		outline thin dotted
+		outline 5px auto -webkit-focus-ring-color
+		outline-offset -2px
+
+	&:hover
+	&:focus
+	&.focus
+		color #333
+		text-decoration none
+
+	&:active
+	&.active
+		background-image none
+		outline 0
+		box-shadow $btn-active-box-shadow
+
+	&.disabled
+	&[disabled]
+	fieldset[disabled] &
+		cursor not-allowed
+		box-shadow none
+		opacity .65
+
+	a&.disabled
+	fieldset[disabled] a&
+		pointer-events none
+
+	&--more
+		border-radius 0
+		padding-top 13px
+		padding-bottom 13px
+		padding-left 24px
+		padding-right 24px
+		color #333
+		background-color #eff2f6
+		border-color #eff2f6
+
+		&:focus
+		&.focus
+			color #fff
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&:hover
+			color #fff
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&:active
+		&.active
+		.open > .dropdown-toggle&
+			color #333
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&--inverse
+			color #fff
+			background-color #515a68
+			border-color #515a68
+			background-image none
+
+			&:focus
+			&.focus
+				color #fff
+				background-color $background-color-base-hover
+				border-color $background-color-base-hover
+				background-image none
+
+			&:hover
+				color #fff
+				background-color $background-color-base-hover
+				border-color $background-color-base-hover
+				background-image none
+
+			&:active
+			&.active
+			.open > .dropdown-toggle&
+				color #333
+				background-color $background-color-base-hover
+				border-color $background-color-base-hover
+				background-image none
+
+.btn-block
+	display block
+	width 100%
+
+	& + .btn-block
+		margin-top 5px
+
+	input[type="submit"]&
+	input[type="reset"]&
+	input[type="button"]&
+		width 100%
+
+btnDisabled('', $btn-disabled-color, $btn-disabled-bg, $btn-disabled-border)
+
+btn('primary', $btn-primary-color, $btn-primary-bg, $btn-primary-bg-hover, $btn-primary-bg-active, $btn-primary-border, $btn-primary-border-hover, $btn-primary-border-active)
+btnDisabled('primary', $btn-disabled-color, $btn-disabled-bg, $btn-disabled-border)
+
+btn('secondary', $btn-secondary-color, $btn-secondary-bg, $btn-secondary-bg-hover, $btn-secondary-bg-active, $btn-secondary-border, $btn-secondary-border-hover, $btn-secondary-border-active)
+btnDisabled('secondary', $btn-disabled-color, $btn-disabled-bg, $btn-disabled-border)
+
+
+// btn-link
+
+.btn-link
+	font-weight normal
+	color $btn-link-color
+	border-radius 0
+	background transparent
+	text-decoration none
+
+.btn-link
+.btn-link:active
+.btn-link.active
+.btn-link[disabled]
+fieldset[disabled] .btn-link
+	background transparent
+	box-shadow none
+
+.btn-link
+.btn-link:hover
+.btn-link:focus
+.btn-link:active
+	border-color transparent
+
+.btn-link:hover
+.btn-link:focus
+	background-color transparent
+
+.btn-link[disabled]:hover
+fieldset[disabled] .btn-link:hover
+.btn-link[disabled]:focus
+fieldset[disabled] .btn-link:focus
+	color $btn-link-disabled-color
+	text-decoration none
+
+.btn .icon
+	margin-right 5px
+	display inline-block
+	vertical-align middle
+
+.page-header__secondary-btn
+	padding-top 13px
+	padding-bottom 13px
+
+.btn--alt
+	text-transform none
+	letter-spacing normal
+	font-size 11px
+
+
+// btn-colored
+
+.btn-colored
+	color $brand-primary
+	background-color transparent
+	background-image none
+	border-color transparent
+	opacity .6
+
+	&:focus
+	&.focus
+		color $brand-primary
+		background-color #eff2f6
+		border-color #eff2f6
+		opacity 1
+		background-image $background-image-pattern
+
+	&:hover
+		color $brand-primary
+		background-color #eff2f6
+		border-color #eff2f6
+		opacity 1
+		background-image $background-image-pattern
+
+	&:active
+	&.active
+		color $brand-primary
+		background-color #eff2f6
+		border-color #eff2f6
+		opacity 1
+		background-image $background-image-pattern
+
+
+btnSize('sm', $input-padding-y-sm, $input-padding-y-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm)
+btnSize('md', $input-padding-y-md, $input-padding-y-md, $font-size-md, $line-height-md, $input-border-radius-md)
+btnSize('lg', $input-padding-y-lg, $input-padding-y-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg)

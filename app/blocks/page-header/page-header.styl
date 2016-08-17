@@ -1,0 +1,65 @@
+.page-header
+	padding 14px 24px
+	border-bottom 1px solid #eee
+	background-image $background-image-pattern
+	background-repeat repeat
+
+	&__row
+		display flex
+		box-sizing border-box
+		flex-direction row
+		flex-wrap nowrap
+		align-items center
+		overflow hidden
+	&__primary-content
+		order 0
+		flex-grow 2
+		box-sizing border-box
+		display flex
+		align-items center
+
+	&__secondary-content
+		display flex
+		flex-flow column
+		align-items flex-end
+		margin-left 12px
+
+	&__title
+		font-size 18px
+		line-height 1.21
+		font-weight bold
+		color #4d4d4d
+		margin-top 7px
+		margin-bottom 10px
+		overflow hidden
+		text-overflow ellipsis
+		white-space nowrap
+
+	&__avatar
+		display inline-block
+		background-position 50% 50%
+		background-size cover
+		background-repeat no-repeat
+		width 60px
+		height 60px
+		margin-right 18px
+		float left
+
+		img
+			visibility hidden
+
+	.breadcrumb
+		margin-bottom 10px
+		position relative
+		z-index 1
+
+	&__row--three-line
+		.page-header__primary-content
+			display block
+			line-height 30px
+
+			.page-header__avatar
+				float left
+
+	&__metainfo
+		margin-top 10px
