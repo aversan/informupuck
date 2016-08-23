@@ -1,6 +1,7 @@
 require('../blocks/mdlComponentHandler/mdlComponentHandler.js');
 require('../blocks/mdl-icon-toggle/mdl-icon-toggle');
 require('../blocks/uk-core/uk-core.js');
+require('../blocks/uk-modal/uk-modal.js');
 require('../blocks/uk-sticky/uk-sticky.js');
 require('../blocks/util/util.js');
 require('../blocks/collapse/collapse.js');
@@ -16,6 +17,7 @@ $(() => {
             $(target).collapse('hide');
         } else {
             $(target).collapse('show');
+            ininGoogleMapInDetailCompany();
         }
     });
 });

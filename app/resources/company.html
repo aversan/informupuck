@@ -503,7 +503,7 @@
 				</ul>
 			</div>
 			<div class="page-header__secondary-content">
-				<button class="page-header__secondary-btn btn btn-primary btn--alt">
+				<button class="page-header__secondary-btn btn btn-primary btn--alt" data-uk-modal="{target:'#modal1'}">
 					<i class="icon icon--email-white-sm"></i>
 					<span>Отправить сообщение</span>
 				</button>
@@ -589,18 +589,20 @@
 				<div class="panel__body">
 					<div class="panel__hr"><hr></div>
 					<ul class="list list--title-left list--title-left-width-2 panel__list">
-						<li class="list__item">
+						<li class="list__item list__item--phone" id="phone-item">
 							<div class="list__item-primary-content">
 								<strong class="list__item-title-left">Телефон:</strong>
 								<span class="list__item-text-body">
-									<a class="underline" href="">
-										<i class="icon icon--mobile-link-xs"></i>
-										<span>+7 (495) XX-XX-67</span>
-									</a>
+									<i class="icon icon--mobile-link-xs"></i>
+									<span class="phone1">+7  495 XX-XX-67</span>
+									<span class="phone2">+7 495 77-15-33</span>
+									<small class="typography--subhead typography--color-muted">
+										&nbsp;c 09:00 до 21:00
+									</small>
 								</span>
 							</div>
 							<span class="list__item-secondary-content">
-								<a class="list__item-section-action" href="">
+								<a class="list__item-section-action" href="#" data-uk-modal="{ target: '#modal-phone', center: true }" data-uk-toggle="{ target: '#phone-item', cls: 'is-show' }">
 									<i class="mdi mdi-menu-left"></i>
 									<span>Показать телефон</span>
 								</a>
@@ -1380,6 +1382,52 @@
 				</div>
 			</div>
 		</div>
+
+
+<div class="uk-modal" id="modal1">
+    <div class="uk-modal-dialog">
+    	<button type="button" class="uk-modal-close uk-close"></button>
+        <div class="uk-modal-header">
+        	<h5 class="typography--headline">Новое сообщение</h5>
+        </div>
+        <p class="typography--body">
+        	Для отправки сообщений необходимо авторизоваться.
+        	<br>Eсли нет учётной записи - пройдите простую регистрацию.
+        </p>
+        <div class="uk-modal-footer">
+        	<div class="row">
+        		<div class="col-xs-6">
+        			<a class="btn btn-secondary btn-block" href="">Авторизация</a>
+        		</div>
+        		<div class="col-xs-6">
+        			<a class="btn btn-primary btn-block" href="">Регистрация</a>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</div>
+
+<div class="uk-modal" id="modal-phone">
+    <div class="uk-modal-dialog">
+    	<button type="button" class="uk-modal-close uk-close"></button>
+        <div class="uk-modal-header">
+        	<h5 class="typography--headline">Архангельский целюлозный комбинат (АЦБК)</h5>
+        </div>
+        <p class="typography--suphead">менеджер</p>
+        <p class="typography--display-2">
+        	+7 495 227-64-36
+        </p>
+        <p class="typography--subhead">
+        	c 09:00 до 21:00
+        </p>
+        <div class="uk-modal-footer">
+			<p class="typography--body typography--color-muted">
+				Пожалуйста, сообщите компании что Вы нашли информацию на портале ИнформУпак.ру
+			</p>
+        </div>
+    </div>
+</div>
+
 <!-- Yandex.Metrika counter -->  <noscript><div><img src="https://mc.yandex.ru/watch/35812245" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <!----><meta name='yandex-verification' content='624019008dd92022' />
 <!---->
