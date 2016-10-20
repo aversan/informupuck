@@ -3,6 +3,9 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 .teaser-news
 	position relative
 
+	+below(767px)
+		width 100%
+
 	&__row
 		display flex
 		flex-direction row
@@ -11,13 +14,20 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		box-sizing border-box
 		align-self stretch
 
+		.teaser-news--rubric &
+			+below(767px)
+				flex-direction column-reverse
+
 		& > *
-			border 1px solid #c2c2c2
 			-ms-flex-negative 0
 			flex-shrink 0
 			width 50%
 			box-sizing border-box
 			transition $teaset-news-transition
+
+			+below(767px)
+				width 100%
+				border none
 
 			.teaser-news--hoverable:hover &.teaser-news__panel
 				border-color $background-color-base-hover
@@ -25,11 +35,29 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		& > .teaser-news__image
 			width 50%
 
+			+below(767px)
+				display none
+
+			.teaser-news--rubric &
+				+below(767px)
+					width 100%
+					display block
+
+		& > .teaser-news__panel
+			// border 1px solid #e6e6e6
+			border none
+
 		&--reverse
 			flex-direction row-reverse
 
+			.teaser-news--rubric &
+				+below(767px)
+					flex-direction column-reverse
+
 	&__title
 		typo-title()
+		font-family $font-family-sans-serif
+		font-weight bold
 		display block
 		display -webkit-box
 		-webkit-box-orient vertical
@@ -37,13 +65,53 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		text-overflow ellipsis
 		word-wrap break-word
 
+		&-link
+			color inherit
+
+		+below(767px)
+			font-size 15px
+			line-height 1.2
+
+		.teaser-news--slide-main &
+			font-family $headings-font-family-bold
+			font-size 23px
+			font-weight normal
+			line-height 1.21
+			text-transform uppercase
+
+			+below(767px)
+				font-size 23px
+				line-height 1.21
+
+		.teaser-news--rubric &
+			typo-display-1()
+			font-family $font-family-sans-serif
+			font-size 20px
+			font-weight bold
+			text-transform uppercase
+			letter-spacing .1ex
+
+			+below(767px)
+				typo-display-1()
+				font-family $font-family-sans-serif
+				font-size 20px
+				font-weight bold
+				text-transform uppercase
+				letter-spacing .1ex
+
 		&--line-2
 			max-height 34px
 			-webkit-line-clamp 2
 
+			+below(767px)
+				max-height 36px
+
 		&--line-3
 			max-height 51px
 			-webkit-line-clamp 3
+
+			+below(767px)
+				max-height 54px
 
 		a
 			transition $teaset-news-transition
@@ -55,6 +123,7 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			color #4d4d4d
 
 			.teaser-news__panel--inverse &
+			.teaser-news__panel--transparent &
 				color #fff
 
 		a
@@ -70,8 +139,18 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			& a:hover
 				color #fff
 
+	&__subhead
+		typo-subhead()
+		font-weight normal
+		line-height 17px
+		color inherit
+
 	&__text
 		typo-body-small()
+
+		+below(767px)
+			font-size 13px
+			line-height 1.3846
 
 		a
 			text-decoration none
@@ -87,30 +166,55 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		&--line-3
 			height 51px
 
+			+below(767px)
+				height 54px
+
 			p
 				max-height 51px
 				-webkit-line-clamp 3
 
+				+below(767px)
+					max-height 54px
+
 		&--line-4
 			height 68px
+
+			+below(767px)
+				height 72px
 
 			p
 				max-height 68px
 				-webkit-line-clamp 4
 
+				+below(767px)
+					max-height 72px
+
 		&--line-5
 			height 85px
+
+			+below(767px)
+				height 90px
 
 			p
 				max-height 85px
 				-webkit-line-clamp 5
 
+				+below(767px)
+					max-height 90px
+
 		&--line-6
 			height 102px
+
+
+			+below(767px)
+				height 108px
 
 			p
 				max-height 102px
 				-webkit-line-clamp 6
+
+				+below(767px)
+					max-height 108px
 
 	&__panel
 		position relative
@@ -120,9 +224,27 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		transition $teaset-news-transition
 		box-sizing border-box
 
+		&--overlay
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			left 0
+
 		&--inverse
 			background-color $background-color-inverse
 			color #fff
+
+		&--transparent
+			background-color transparent
+			color #fff
+
+		.teaser-news--slide-main &
+			display flex
+			align-items center
+			padding-top 45px
+			padding-right 63px
+			padding-bottom 35px
 
 		.teaser-section--p-alt &
 			padding-left 20px
@@ -130,11 +252,17 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			padding-top 20px
 			padding-bottom 33px
 
+		.teaser-news--rubric &
+			padding-top 25px
+			padding-bottom 35px
+			min-height 215px
+
 		a
 			color inherit
 
 		.teaser-news--hoverable:hover &
 			background-color $background-color-base-hover
+			border-color $background-color-base-hover
 			color #fff
 
 		&-footer
@@ -149,6 +277,12 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 				padding-right 28px
 				padding-bottom 20px
 
+			.teaser-news--slide-main &
+				padding-bottom 25px
+
+			.teaser-news--rubric &
+				padding-bottom 35px
+
 		&-arrow-top
 		&-arrow-left
 		&-arrow-right
@@ -161,6 +295,9 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			position absolute
 			z-index 1
 
+			+below(767px)
+				display none
+
 		&-arrow-top
 			bottom 100%
 			left 50%
@@ -172,6 +309,7 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 				border-color transparent transparent $background-color-inverse transparent
 
 			.teaser-news--hoverable:hover &
+				// border-image $background-image-pattern
 				border-color transparent transparent $background-color-base-hover transparent
 
 		&-arrow-left
@@ -211,6 +349,8 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		align-self stretch
 		typo-caption()
 
+		+below(767px)
+			font-size 11px
 
 		& > *
 			-ms-flex-negative 0
@@ -235,10 +375,14 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			color #999
 
 			.teaser-news__panel--inverse &
+			.teaser-news__panel--transparent &
 				color #fff
 
 		&-text-alt
 			color #4d739f
+
+			.teaser-news--hoverable:hover &
+				color #aebfd3
 
 			.teaser-news__panel--inverse &
 				color #fff
@@ -268,25 +412,39 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		&-date
 			margin-right 15px
 
-	.teaser-news__toolbar
-	.teaser-news__title
-	.teaser-news__text
+	&__toolbar
+	&__title
+	&__text
 		margin-bottom 9px
 
 		&:last-child
 			margin-bottom 0
+
+		.teaser-news--slide-main &
+			margin-bottom 15px
+
+			&:last-child
+				margin-bottom 0
 
 	&__image
 		background-position 50% 50%
 		background-size cover
 		background-repeat no-repeat
 		overflow hidden
+		display block
+
+		& > a
+			display block
+			height 100%
 
 		&--h-215
 			height 215px
 
 		&--h-240
 			height 240px
+
+		&--h-270
+			height 270px
 
 		&--small
 			width 55px
@@ -299,13 +457,12 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		img
 			width auto
 			height auto
-			min-width 100%
-			min-height 100%
+			min-width 101%
+			min-height 101%
 			max-width none
 			position relative
 			left 50%
 			top 50%
-			-webkit-transform translate(-50%, -50%)
 			transform translate(-50%, -50%)
 
 		&--left
@@ -318,6 +475,9 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 
 		&-overlay-panel
 			padding 25px
+
+			.teaser-news--slide-main &
+				padding-right 33%
 
 	&__content
 		display block
@@ -349,6 +509,8 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 			right 28px
 
 .teaser-section
+	background-color #fff
+
 	.nano
 		background-color #fff
 
@@ -361,17 +523,8 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 		.teaser-section--p-alt2&
 			padding-top 25px
 
-@media screen and (max-width 767px)
-	.teaser-section
-		.nano
-			background-color #fff
-
-		& > .typography--space
-			.teaser-section--p-alt2&
+			+below(767px)
 				padding-top 20px
-
-.teaser-section
-	background-color #fff
 
 	&__more
 		margin-top 0
@@ -382,3 +535,20 @@ $teaset-news-transition = all 0.2s ease-in-out 0s
 	top 0
 	right 0
 	bottom 0
+
+.teaser-hr
+	border-top 1px solid #e6e6e6
+
+.teaser-news--rubric
+	&
+		+below(767px)
+			border-top 5px solid #414a5a
+			border-bottom 5px solid #414a5a
+
+	&:first-child
+		+below(767px)
+			border-top 10px solid #414a5a
+
+	&:last-child
+		+below(767px)
+			border-bottom 10px solid #414a5a

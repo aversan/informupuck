@@ -6,6 +6,7 @@ inputGroupSize(sizeName, paddingTopBottom, paddingLeftRight, paddingLeftRightInp
 
 	.input-group{mod}
 		& > .form-control
+		& > .twitter-typeahead > .form-control
 		& > .input-group-addon
 		& > .input-group-btn > .btn
 			font-size fontSize
@@ -54,6 +55,7 @@ inputGroupPrefix(sizeName, fontSize, height, borderRadius)
 			font-size fontSize
 
 			& + .form-control
+			& + .twitter-typeahead > .form-control
 				padding-left height
 
 				&:last-child

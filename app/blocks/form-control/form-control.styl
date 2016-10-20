@@ -29,6 +29,7 @@
 // Theme
 
 .form-control
+	font-family 'Roboto', arial, sans-serif
 	height $input-height-md
 	padding $input-padding-y-md $input-padding-x-md
 	font-size $font-size-md
@@ -36,7 +37,7 @@
 	color $input-color
 	background-color $input-bg
 	border-width $input-btn-border-width
-	border-color $input-border-color
+	border-color alpha($input-border-color, .6)
 	border-radius $input-border-radius
 	box-shadow $input-box-shadow
 
@@ -45,15 +46,27 @@
 		box-shadow $input-box-shadow-focus
 
 	&::-moz-placeholder
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
 		color $input-color-placeholder
 
 	&:-ms-input-placeholder
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
 		color $input-color-placeholder
 
 	&::-webkit-input-placeholder
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
 		color $input-color-placeholder
 
 	&.placeholdersjs
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
 		color $input-color-placeholder
 
 	&[disabled]
@@ -63,3 +76,50 @@
 
 	textarea&
 		height auto
+
+	.has-error &
+		border-color alpha(#c73c41, .6)
+		background-color #feecec
+		color #c73c41
+
+.form-control__container
+	position relative
+
+	.input-group
+		width 100%
+
+	.form-control
+		with 100%
+
+	.form-control__error
+		position absolute
+		left 1px
+		top 1px
+		right 1px
+		bottom 1px
+		font-family 'Roboto', arial, sans-serif
+		padding $input-padding-y-md $input-padding-x-md
+		font-size $font-size-md
+		line-height $line-height-md
+		background-color #feecec
+		color #c73c41
+		border-radius $input-border-radius
+		white-space nowrap
+		display none
+		text-truncate()
+
+	.form-control.input-lg + .form-control__error
+		padding $input-padding-y-lg $input-padding-x-lg
+		font-size $font-size-lg
+		line-height $line-height-lg
+
+	.form-control.input-xl + .form-control__error
+		padding $input-padding-y-xl $input-padding-x-xl
+		font-size $font-size-xl
+		line-height $line-height-xl
+
+.has-error .form-control__container .form-control__error
+	display block
+
+.has-error .form-control__container .form-control:focus + .form-control__error
+	display none

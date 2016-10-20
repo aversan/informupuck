@@ -7,6 +7,20 @@ include ../icon/icon
 doctype html
 html(lang='ru')
 	include ../head/head
-	+page(class=pageClass || '')
-		block content
+	block page
+	+page(class=pageClasses || '')
+		include ../jade/page-top
+		.page-left
+			include ../layout/layout-header-main
+			include ../layout/layout-header-mobile
+			include ../uk-offcanvas/uk-offcanvas-menu
+			block content
+		include ../page/page-right
+		include ../jade/footer
+		.opacity-block
+		.popup-block
+		+scripts(['_jquery.js'])
+		+scripts(['_func.js'])
+		+scripts(['_flickity.js'])
+		block scripts
 		+scripts(['app.min.js'])

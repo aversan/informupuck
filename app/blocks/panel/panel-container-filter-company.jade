@@ -1,0 +1,106 @@
+#accordion.panel__container(role='tablist', aria-multiselectable='true')
+  .panel.panel--filter
+    #headingOne.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+          | Раздел
+    #collapseOne.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+      .panel__body
+        a.panel__chip(href='')
+          i.mdi.mdi-chevron-down
+          |                   Упаковка и тара 
+          small.panel__chip-count (1580)
+        a.panel__chip(href='')
+          i.mdi.mdi-chevron-down
+          |                   Упаковка и тара 
+          small.panel__chip-count (1580)
+  .panel.panel--filter
+    #headingTwo.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+          | Категории
+    #collapseTwo.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='headingTwo')
+      .panel__body
+        .nano.panel__nano(style='height: 575px')
+          .nano-content
+            .treeview.treeview--view2
+              ul
+                li
+                  div
+                    p
+                      a.sc(href='#', onclick='return UnHide(this)')
+                        i.mdi.mdi-minus-box
+                      input#tall(type='checkbox', name='tall')
+                      label.custom-unchecked(for='tall') Ампуты
+                  ul
+                    li
+                      div
+                        p
+                          input#tall-1(type='checkbox', name='tall-1')
+                          label.custom-unchecked(for='tall-1') Подкатегория 1
+                    li
+                      div
+                        p
+                          a.sc(href='#', onclick='return UnHide(this)')
+                            i.mdi.mdi-minus-box
+                          input#tall-2(type='checkbox', name='tall-2')
+                          label.custom-unchecked(for='tall-2') Подкатегория 2
+                      ul
+                        li
+                          div
+                            p
+                              input#tall-2-1(type='checkbox', name='tall-2-1')
+                              label.custom-unchecked(for='tall-2-1') Медицинские
+                        li.last
+                          div
+                            p
+                              input#tall-2-2(type='checkbox', name='tall-2-2')
+                              label.custom-unchecked(for='tall-2-2') Пищевые
+                    li.last
+                      div
+                        p
+                          input#tall-3(type='checkbox', name='tall-3')
+                          label.custom-unchecked(for='tall-3') Подкатегория 3
+                li
+                  div
+                    p
+                      input#short(type='checkbox', name='short')
+                      label.custom-unchecked(for='short') Асептическая упаковка
+                li
+                  div
+                    p
+                      input#short1(type='checkbox', name='short1')
+                      label.custom-unchecked(for='short1') Асептическая упаковка
+                li
+                  div
+                    p
+                      input#short2(type='checkbox', name='short2')
+                      label.custom-unchecked(for='short2') Асептическая упаковка
+                li.last
+                  div
+                    p
+                      input#short3(type='checkbox', name='short3')
+                      label.custom-unchecked(for='short3') Аэразольная упаковка
+  .panel.panel--filter
+    #headingThree.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+          | Фильтры
+    #collapseThree.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='headingThree')
+      .panel__body
+        .checkbox
+          input#filter1.checkbox__input(type='checkbox', name='filter1')
+          label(for='filter1') Физическое лицо
+        .checkbox
+          input#filter2.checkbox__input(type='checkbox', name='filter2')
+          label(for='filter2') Юридическое лицо
+        .checkbox
+          input#filter3.checkbox__input(type='checkbox', name='filter3')
+          label(for='filter3') Работа с НДС
+        .checkbox
+          input#filter4.checkbox__input(type='checkbox', name='filter4')
+          label(for='filter4') Возможность доставки
+  .panel.panel--filter
+    .panel__body
+      button.btn.btn-primary.btn-block.btn--alt Подобрать
+      button.btn.btn-secondary.btn-block.btn--alt Сбросить фильтр

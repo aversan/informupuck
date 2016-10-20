@@ -58,6 +58,7 @@ $btn-transition = all 0.2s ease-in-out 0s
 	fieldset[disabled] a&
 		pointer-events none
 
+	&--secondary
 	&--more
 		border-radius 0
 		padding-top 13px
@@ -115,6 +116,50 @@ $btn-transition = all 0.2s ease-in-out 0s
 				background-color $background-color-base-hover
 				border-color $background-color-base-hover
 				background-image none
+
+	&--tab
+		color #333
+		background-color #eff2f6
+		border-color #eff2f6
+
+		&:focus
+		&.focus
+			color #fff
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&:hover
+			color #fff
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&:active
+		&.active
+		&.uk-active
+			color #fff
+			background-color $background-color-base-hover
+			border-color $background-color-base-hover
+			background-image none
+
+		&.btn--arrow.active
+		&.btn--arrow.uk-active
+			position relative
+
+			&:after
+				top 100%
+				left 50%
+				border solid transparent
+				content " "
+				height 0
+				width 0
+				position absolute
+				pointer-events none
+				border-color transparent
+				border-top-color $background-color-base-hover
+				border-width 4px
+				margin-left -4px
 
 .btn-block
 	display block
@@ -181,6 +226,8 @@ fieldset[disabled] .btn-link:focus
 	padding-bottom 13px
 
 .btn--alt
+	font-family $font-family-sans-serif
+	font-weight normal
 	text-transform none
 	letter-spacing normal
 	font-size 11px
@@ -219,6 +266,7 @@ fieldset[disabled] .btn-link:focus
 		background-image $background-image-pattern
 
 
-btnSize('sm', $input-padding-y-sm, $input-padding-y-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm)
-btnSize('md', $input-padding-y-md, $input-padding-y-md, $font-size-md, $line-height-md, $input-border-radius-md)
-btnSize('lg', $input-padding-y-lg, $input-padding-y-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg)
+btnSize('sm', $input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm)
+btnSize('md', $input-padding-y-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-border-radius-md)
+btnSize('lg', $input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg)
+btnSize('xl', $input-padding-y-xl, $input-padding-x-xl, $font-size-xl, $line-height-xl, $input-border-radius-xl)

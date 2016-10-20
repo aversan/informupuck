@@ -145,8 +145,8 @@
 	font-size 11px
 
 	.list--title-left-width-1 &
-		width 70px
-		min-width 140px
+		width 90px
+		min-width 90px
 
 	.list--title-left-width-2 &
 		width 140px
@@ -171,6 +171,9 @@
 		margin-top 5px
 		margin-bottom 5px
 
+	.list__item-primary-content
+		align-items flex-start
+
 	.list__item-text-body
 		font-size 13px
 		line-height 17px
@@ -192,6 +195,10 @@
 
 	.list__item-section-action
 		font-size 11px
+
+.list--chip
+	.list__item-title-left
+		line-height 29px
 
 .list--employees
 	.list__item
@@ -256,8 +263,9 @@
 			border-color $background-color-base-hover
 			color #fff
 
-	.list-item__title
+	.list__item-title
 		line-height 17px
+		max-width 160px
 
 		&--line-2
 			line-height 17px
@@ -310,6 +318,10 @@
 	padding-top 0
 	padding-bottom 0
 
+	.list__item
+		margin-top 2px
+		margin-bottom 2px
+
 .list__item--phone
 	.phone1
 		display inline
@@ -332,3 +344,16 @@
 
 		.list__item-section-action
 			display none
+
+.list--square
+	.list__item
+		&:before
+			content ''
+			display block
+			width 4px
+			height 4px
+			background-color #858585
+			margin-left 10px
+			margin-right 10px
+			margin-top .45em
+			border-radius 1px

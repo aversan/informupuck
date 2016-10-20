@@ -1,0 +1,13 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Регистрация';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content.layout-nano-content--alt
+			.nano-content
+				include ../blocks/form/form-register

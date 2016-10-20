@@ -1,0 +1,16 @@
+#layout-header-mobile-main.layout__header.is-mobile
+  .layout__header-row
+    button.layout__header-button-icon.layout__header-button-menu(data-target='#menu')
+      i.mdi.mdi-menu
+    .layout-spacer
+    img(src='assets/images/informupack-logo.png', alt='', width='161', height='37')
+    .layout-spacer
+    button.layout__header-button-icon(data-uk-toggle="{ target: '#layout-header-mobile-main', cls: 'is-visible-search' }")
+      i.mdi.mdi-magnify
+.layout__header-placeholder
+#layout-header-mobile-search.layout__header.is-search.is-mobile
+  .layout__header-row
+    #mobile-search.input-group.input-group-search.layout__header-search
+      span.input-group-prefix.mdi.mdi-magnify
+      input.form-control.typeahead(type='text', value='')
+      span.input-group-postfix.mdi.mdi-close.input-group-postfix--close(data-uk-toggle="{ target: '#layout-header-mobile-main', cls: 'is-visible-search' }")

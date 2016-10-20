@@ -9,10 +9,10 @@
 		box-sizing border-box
 
 	.typography--headline
-		color #666
+		color #858585
 
 .panel__hr
-	border-top 1px solid #f1f1f1
+	border-top 1px solid #f2f2f2
 
 	hr
 		display none
@@ -27,20 +27,44 @@
 .panel__body + .panel__body
 	padding-top 0 !important
 
+.panel__body + .panel__footer
+	padding-top 15px !important
+
 .panel__body + .panel__collapse > .panel__body
 	padding-top 0 !important
 
 .panel__map
 	img
 		display block
+		max-width 100%
+		height auto
 
 .panel--section
+	.panel__header
 	.panel__body
+	.panel__footer
 		padding 14px 24px
 
 		.panel__hr
+		.panel__list--m-1
 			margin-top 14px
 			margin-bottom 14px
+
+			&:first-child
+				margin-top 0
+
+			&:last-child
+				margin-bottom 0
+
+	.panel__footer
+		padding-top 25px
+		padding-bottom 25px
+
+	.panel__footer-line
+		margin-top 25px
+
+		&:first-child
+			margin-top 0
 
 
 .panel__secondary-action
@@ -49,6 +73,50 @@
 
 .panel--filter
 	background-color #fff
+
+	.panel__price
+		&-container
+			display block
+
+		&-input-wrapper
+			display flex
+			justify-content space-between
+			flex-wrap nowrap
+			align-items center
+
+			.form-control
+				width 70px
+
+	.panel__chip
+		padding 6px 22px 6px 12px
+		background-color #edf1f5
+		color $brand-primary
+		text-decoration none
+		min-height 25px
+		font-size 12px
+		line-height 13px
+		box-sizing border-box
+		position relative
+		white-space normal
+		display block
+
+		& + .panel__chip
+			margin-top 6px
+
+		&-count
+			color $brand-primary
+			opacity .5
+			margin-left 6px
+
+		.mdi
+			width 22px
+			height 25px
+			line-height 25px
+			position absolute
+			text-align center
+			right 0
+			top 50%
+			margin-top -13px
 
 	.panel__nano
 	.panel__body
@@ -64,13 +132,29 @@
 
 	.panel__title
 		font-size 13px
+		font-weight bold
 		text-transform uppercase
 		letter-spacing .1ex
 		color #333
 
 		a
+			padding 13px
+			margin -13px
+			display block
 			color inherit
 			text-decoration none
+
+		a[data-toggle="collapse"]
+			&:before
+				font-family 'Material Design Icons'
+				content '\F143'
+				float right
+				color $brand-primary
+
+		a[data-toggle="collapse"].collapsed
+			&:before
+				content '\F140'
+
 
 		a:hover
 		a:focus

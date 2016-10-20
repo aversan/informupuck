@@ -1,213 +1,31 @@
-.top-line
-	&:before
-	&:after
-		content ''
-		display block
-		position absolute
-		height 32px
-		background-repeat no-repeat
-		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwEAAAAgCAYAAABKB3QbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAkFJREFUeNrs3GtPwyAABVDYiN/9/3/ViItWM1uglD3s5jnJUla656d7R7sYQng53V5Ptxi+xMY4FMatfQAAQF1e2ZfPtq3xlttbmh78Pgv8eRpnJQAAAHZRAkIl/PeWgR+p8GTzVYDcUQJi5QMAAADbikBujEfLwK+5NA3eZ6G/tAqQG4HfKgAAAFynBNSKQK0AhJUisCgLtZWA0rYW+K0CAADAdYtA7f5IEVjMpdkBpeAfG4FfAQAAgNsXgbWVgZ7ThH628wuDS6cCzccKAAAA3KcI9BSA3kKwKAFrKwGl04FaBcA1AgAA0B/0145pFYFW+C9uUyj8ZVAo//pfC/9x8IMBAADt/LylDPRum38RmmcBP1dCv8APAAC3LwW91wisFYE8vyagVARCpQyESikAAAAuD/21ubxhXJyvnQ5UeuE48IYBAIDrloPcURCa5SA1Jmun/fjlHwAA7h/+t5aC6jitvEjthRUBAAC4bwHoKQFr9z/HxynQH2YHxgveGAAAcP0CcEkR+LXvOG0PGwoAAADwdyWgdVxXQfheCYid4V9BAACA/RSCPLI/dRwYB5oJAACwj0KwmDtfCSiFfgAA4MlKQRp4QiUBAAD+PuQPP+4YrAIAAMB/KAqLfwfqDf9KAgAA7DPkdz/H1hIAAAA8dnnIx7M7igAAADxX4C8aWQlQFgAAYIfh/pYlAAAAeGAHXwEAACgBAACAEgAAADyL5CsAAIDnl0+UAAAA+AeBvySez8cTXxkAADx+0G/5EGAAa8sZyy63jNMAAAAASUVORK5CYII=')
-		overflow hidden
-		top 100%
-		z-index 1
-
-	&:before
+.page-top
+	+below(767px)
+		position fixed
+		top 0
 		left 0
-		right 384px
-		background-position 0 0
-
-	&:after
 		right 0
-		width 384px
-		background-position 100% 0
+		z-index 1111
 
-.big-slider
-	padding-bottom 100px
-	height 457px
-	position relative
-	box-sizing border-box
+		& + .page-top-placeholder
+			display block
+			height 28px
 
-
-	&__banner
-		position absolute
-		left 0
-		bottom 0
-		width 100%
-		height 100px
-
-	.slide
-		height 357px
-
-	.slide-cont
-		left 30px !important
-		bottom 30px !important
-
-		p
-			padding-top 8px
-			padding-bottom 8px
-
-	.slide-pagi
-		top 34px !important
-		bottom auto
-
-		li
-			vertical-align top
-			margin-left 4px
-			margin-right 4px
-
-			&:first-child
-				margin-left 0
-
-	.slick-prev
-	.slick-next
-		left auto
-		right 15px
-		top 50%
-		z-index 3
-
-		&:before
-		&:before
-			display none
-
-	.slick-prev
-		sprite($icon_slider_prev)
-		margin-top -($icon_slider_prev_height + 6px)
-
-	.slick-next
-		sprite($icon_slider_next)
-		margin-top 0
-
-.big-slider-opac
-	background alpha(#303948, .4)
-
-#main_slider_slide_n
-	top 33px
-	right 20px
-	font-size 10px
-
-.nl-all
-	background #d9dce0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABxJREFUeNpiuHnnwX8gYABhBhgDJAhngGiAAAMAN34cq9tjNrAAAAAASUVORK5CYII=') repeat
-	border-bottom 1px solid #e0e5ea
-
-	span
-		letter-spacing .1ex
-		font-weight bold
-
-.nl-all--dark
-	background-color #515a68
-	color #fff
-
-.nl-zag
-	font-size 11px
-	line-height 16px
-	height auto
-	font-weight bold
-	color #666
-	padding 19px 24px
-	margin 0
-	letter-spacing .1ex
-
-.po-dannim
-	font-size 11px
-	line-height 16px
-	color #666
-	margin 0 24px 20px
-	display block
-
-.indeks-line
-	padding 3px 12px
-	border-left 12px solid #fff
-	border-right 12px solid #fff
-	background-color #f5f5f5
-	color #333
-	height 38px
-	box-sizing border-box
-	font-size 11px
-	line-height 17px
-	margin-top 3px
-	margin-bottom 3px
-
-	&:nth-child(2n)
-		background-color #fff
-
-	&:hover
-		background-color #5c7fa7
-		border-left-color #5c7fa7
-		border-right-color #5c7fa7
-		margin-top 3px
-		margin-bottom 3px
-
-.indeks-name
-.indeks-num
-	font-size 11px
-	line-height 17px !important
-
-.indeks-name
-	width 100%
-
-	a.index-line:hover &
-		text-decoration underline
-
-.indeks-num
-	background-image none
-	position relative
-	top auto
-	right auto
-	width 1px
-	padding-left 27px
-
-	&:before
-		content ''
-		width 0
-		height 0
-		position absolute
-		left 13px
-		top 3px
-		margin-top .3em
-
-	&.up:before
-		border-style solid
-		border-width 0 3.5px 5px 3.5px
-		border-color transparent transparent #8cc63f transparent
-
-	&.down:before
-		width 0
-		height 0
-		border-style solid
-		border-width 5px 3.5px 0 3.5px
-		border-color #ed1c24 transparent transparent transparent
-
-	.percent
-		display block
-		line-height 1.25
-
-	&.up .percent
-		color #8cc63f
-
-	&.down .percent
-		color #ed1c24
-
-.indeksi-lenta
-	.nano
-		height 343px
-		background-color #fff
-
-.page-top__row
-	display flex
-	flex-direction row
-	flex-wrap nowrap
-	flex-shrink 0
-	box-sizing border-box
-	align-self stretch
-	align-items center
-
-	& > *
-		-ms-flex-negative 0
+	&__row
+		display flex
+		flex-direction row
+		flex-wrap nowrap
 		flex-shrink 0
+		box-sizing border-box
+		align-self stretch
+		align-items center
 
-.page-top__spacer
-	-ms-flex-positive 1
-	flex-grow 1
+		& > *
+			-ms-flex-negative 0
+			flex-shrink 0
+
+	&__spacer
+		-ms-flex-positive 1
+		flex-grow 1
 
 .top-money
 	span:nth-child(1)
@@ -222,38 +40,17 @@
 .text-down
 	color #ed1c24
 
-.menu-item
-	& > a
-		letter-spacing .1ex
-
-		&.butter
-			background-color #f2f2f2
-
-			&:focus
-			&:hover
-				background-color #4d739f
-
-@media screen and (max-width 767px)
-	.menu-item
-		.butter
-			background-color #4d739f !important
-
-.find-field
-	&
-	.input-text
-		background-color #f8f8f8
-
 .col50:nth-child(1)
 	background-color #fff
 
 .col-100
 	width 100%
 
-@media screen and (max-width 767px)
-	.col-100
-		width 510px
+	+below(767px)
+		width 100%
+		max-width 510px
 
-/* nl-info */
+
 .nl-info
 	font-family $font-family-base
 
@@ -302,137 +99,50 @@
 		.icon + .icon
 			margin-left 3px
 
-	.nl-element-actual:hover &
-	.nl-element:hover &
-		.info-date
-			color #aebfd3
-
-		.info-comment
-		.info-smotr
-			color #aebfd3
-
-		&__tags
-			color #aebfd3
-
-			a
-				color #aebfd3
-
-				&:focus
-				&:hover
-					color #fff
-
-/* nl-element-actual */
-.nl-element-actual
-	box-sizing border-box
-	padding-left 20px
-	padding-right 30px
-	height auto
-	padding-top 17px
-	padding-bottom 16px
+.cat-head
 	position relative
+	background-color $brand-primary
+	background-image none
 
-	& + &:before
-		position absolute
+	&:before
 		content ''
 		display block
-		border-top 1px solid #e6e6e6
-		top 0
-		left 20px
-		right 30px
+		width 33px
+		position absolute
+		left 0
+		bottom 0
+		height 100%
+		background-image url('../images/shadow-cat-head.png')
+		background-repeat no-repeat
+		background-position 0 100%
 
-	.nl-text-actual
-	.nl-info
-		margin 5px 0 0 0
-
-		&:first-child
-			margin-top 0
-
-	.nl-text-actual
-		padding 0
-		height 68px
-
-		img
-			margin 3px 10px 0 0
-
-		p
-			max-height 68px
-			display -webkit-box
-			-webkit-box-orient vertical
-			overflow hidden
-			text-overflow ellipsis
-			word-wrap break-word
-			-webkit-line-clamp 4
-			float none
-			width auto
-			font-family $font-family-base
-
-	&:hover
-		color #fff
-
-		&:before
+		+below(767px)
 			display none
 
-/* nl-element */
-.nl-element
-	@extend .nl-element-actual
+	span
+		letter-spacing .1ex
 
-	& + &:before
-		@extend .nl-element-actual + .nl-element-actual:before
+.group-cat
+	position relative
 
-	.nl-text
-		@extend .nl-element-actual .nl-text-actual
+	&:before
+		content ''
+		left 0
+		top 0
+		width 33px
+		height 100%
+		background-image url('../images/shadow-group-cat.png')
+		background-repeat repeat-y
+		background-position 0 0
+		position absolute
+		z-index 1
 
-		p
-			@extend .nl-element-actual .nl-text-actual p
-			margin 0
-			-webkit-line-clamp 3
-			max-height 51px
+		+below(767px)
+			display none
 
-	.nl-info
-		@extend .nl-element-actual .nl-info
-
-	.nl-text
-		height 97px
-
-	.nl-text-a
-		display block
-		max-width none
-		font-size 14px
-		font-weight bold
-		max-height 36px
-		display -webkit-box
-		-webkit-box-orient vertical
-		overflow hidden
-		text-overflow ellipsis
-		word-wrap break-word
-		-webkit-line-clamp 2
-		margin-bottom 10px
-
-
-.news-lenta
-	font-family $font-family-base
-
-	.nl-zag
-		height auto
-		line-height 16px
-		padding-bottom 2px
-
-	.nl-zag
-	.nl-element
-		padding-left 24px
-		padding-right 24px
-
-.news-actual
-	.nl-zag
-		padding-bottom 2px
-
-	.nl-zag
-	.nl-element
-		padding-left 20px
-		padding-right 30px
-
-.cat-head span
-	letter-spacing .1ex
++below(943px)
+	.cat-head
+		background-image none
 
 .catorgname
 	font-weight bold
@@ -498,9 +208,18 @@
 .comp-name-top
 	font-family 'GothamPro', arial, sans-serif
 
-.top-activnih-text span
-	font-family 'GothamPro', arial, sans-serif
-	font-weight bold
+.top-activnih-text
+	clearfix()
+	white-space nowrap
+	text-truncate()
+
+	span
+		font-family 'GothamPro', arial, sans-serif
+		font-weight bold
+		margin 0 20px 0 0
+
+	a
+		margin-left 0
 
 .comp-name-rating
 	position relative
@@ -529,10 +248,10 @@
 			margin-bottom 0
 
 	.flickity-viewport
-		max-height 495px
+		max-height 498px
 
 	.teaser-news__panel
-		height 255px
+		height 258px
 
 .layout-widget-4
 	.nano
@@ -546,19 +265,93 @@
 	& .indeks-list
 		min-height 350px
 
-@media screen and (max-width 767px)
+.layout-nano-content
+	width 510px
+	float left
+
+	+below(767px)
+		width 100%
+		max-width 510px
+
+	&--alt
+		width 768px
+
+		+below(767px)
+			width 100%
+			max-width 510px
+
+.layout-nano-content
+.layout-nano-catalog-col-box
+.layout-nano-cell-one-col
+	height 1210px
+	background-color #fff
+
+	& > .nano-pane
+		display none !important
+
+.has-page-header .layout-nano-content
+.has-page-header .layout-nano-cell-one-col
+	height (1210px - 112px)
+
+.layout-nano-cell-one-col
+	position relative
+	z-index 1
+
+	&:before
+		content ''
+		position absolute
+		left 0
+		top 0
+		bottom 0
+		border-left 1px solid #e6e6e6
+		z-index 1
+
+		+below(767px)
+			display none
+
+	.list__item--hoverable:hover
+		position relative
+		z-index 2
+
+	.teaser-news--hoverable .teaser-news__panel
+	.teaser-section__more
+		position relative
+		border-left 1px solid #e6e6e6
+		z-index 2
+
+		+mobile()
+			border-left-width 0
+
+	.list__item--hoverable:hover
+	.teaser-news--hoverable:hover .teaser-news__panel
+	.teaser-section__more:hover
+		border-left-color $background-color-base-hover
+
+.layout-nano-cell-one-col .typography--space
+	padding-bottom 7px
+
+.layout-nano-card-list
+	max-height 900px
+	background-color transparent
+
++below(767px)
+	.page--layout-main .cell-two-col
+	.page--layout-main .col50
+	.page--layout-main .cell-one-col.onmain
+		width 100%
+		max-width 510px
+
++below(767px)
 	.layout-widget-5
 		& .indeks-list
 			min-height 390px
 
 .layout-widget-index
 	& .list
-		min-height 350px
+		min-height 356px
 
-@media screen and (max-width 767px)
-	.layout-widget-index
-		& .list
-			min-height 390px
+		+below(767px)
+			min-height 396px
 
 .page-left
 	background-color #fff
@@ -570,10 +363,13 @@
 .group-cat .pattern
 .group-cat:hover .pattern
 .uk-overlay.uk-cover-background .uk-overlay-panel
-.teaser-news--hoverable:hover .teaser-news__panel
-	background-image url('data:image/png;base64,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')
+// .teaser-news--hoverable:hover .teaser-news__panel
+	background-image $background-image-pattern
 	background-position 0 0
 	background-repeat repeat
+
+.group-cat .pattern
+	background-color alpha(#303948, .3)
 
 .group-cat:hover .pattern
 	background-color alpha(#4d739f, .9)
@@ -581,7 +377,7 @@
 .infindpage .input-find
 	width 550px
 
-@media screen and (max-width 767px)
++mobile()
 	.infindpage
 		width auto
 		height auto
@@ -592,4 +388,386 @@
 .bg-pattern
 	background-position 0 0
 	background-repeat repeat
-	background-image url('data:image/png;base64,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')
+	background-image $background-image-pattern
+
+.page-top
+	background-color $brand-primary
+	background-position 0 0
+	background-repeat repeat
+	background-image $background-image-pattern
+	height 28px !important
+	overflow hidden
+
+.logo
+	background-color $brand-primary
+	background-repeat repeat
+	background-image $background-image-pattern
+	position relative
+
+	&__img
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+
+.wrapper
+	width 100%
+	height 100%
+	display table
+	background-color #414a5a
+	background-repeat repeat
+	background-image $background-image-pattern !important
+
+.top-informer
+	font-family 'GothamPro', arial, sans-serif
+	display flex
+	flex-direction row
+	white-space nowrap
+	overflow hidden
+	text-overflow ellipsis
+	width 513px !important
+	height 28px
+	background-color #414a5a
+	background-repeat repeat
+	background-image $background-image-pattern !important
+
+	+below(767px)
+		width 100% !important
+
+.top-time
+.top-money
+.top-weather
+	display inline-block
+	font-size 10px
+	line-height 28px
+	height 28px
+	margin 0
+	padding 0 10px
+	border-right 1px solid #59606c
+	color #ffffff
+
+	&:last-child
+		border-right 0
+		padding-right 0
+
+.top-weather
+	border-right none
+	padding 0 0 0 30px
+	position relative
+
+.top-money
+	span:nth-child(1)
+		margin 0 11px 0 0
+
+.cat-head
+	span
+		font-family 'GothamPro Bold', arial, sans-serif
+
+	a
+		font-family 'GothamPro', arial, sans-serif
+
+.catorgname
+	font-family 'GothamPro Bold', arial, sans-serif
+
+.catorgnum
+	font-family 'GothamPro', arial, sans-serif
+
+.content
+	background-color #fff
+
+	+below(767px)
+		width 100%
+		max-width 510px
+
+.big-slider .slide
+	+below(767px)
+		width 100%
+		max-width 510px
+
+.top-activnih-line
+	display flex
+	flex-direction row
+	justify-content space-between
+	flex-wrap wrap
+	box-sizing border-box
+	padding-top 0 !important
+	margin-left 0
+	margin-right 0
+
+	+mobile()
+		height 308px
+
+	+tablet()
+		height 154px
+
+	+desktop()
+		height 154px
+
+	+below(767px)
+		height 302px
+
+.top-activnih-obj
+	box-sizing border-box
+	width 82px
+	height 154px
+	margin-left 0
+	margin-right 0
+	float none
+	padding 0
+
+.niz-footer
+	+mobile()
+		box-sizing border-box
+		margin-left 0
+		margin-right 0
+		height auto
+
+.niz-footer-col
+	+mobile()
+		width 50%
+		padding-left 0
+		padding-right 0
+		box-sizing border-box
+
+		&:nth-last-child(1)
+			display block
+			width auto
+
+	&--width-1-1
+		width 100%
+
+		+mobile()
+			width 100%
+
+.footer-ul
+	li:nth-child(1)
+		white-space nowrap
+
+.slide-cont
+	top 30px
+	left 30px
+	right 63px
+	bottom 30px
+
+	+mobile()
+		top 20px
+		right 53px
+		bottom 20px
+		left 20px
+
+	.typography--subhead
+		font-size 10px
+
+		+mobile()
+			font-size 7px
+
+	.typography--display-2
+		line-height 1.2
+
+		+mobile()
+			font-size 23px
+
+	.typography--body
+		font-size 14px
+		line-height 20px
+
+		+mobile()
+			font-size 11px
+			line-height 14px
+
+	.typography--subhead
+	.typography--display-2
+	.typography--body
+		margin-bottom 5px
+
+		&:last-child
+			margin-bottom 0
+
+.bx-composite-btn
+	background url(/bitrix/images/main/composite/sprite-1x.png) no-repeat right 0 #e94524
+	border-radius 15px
+	color #ffffff !important
+	display inline-block
+	line-height 30px
+	font-family "Helvetica Neue", Helvetica, Arial, sans-serif !important
+	font-size 12px !important
+	font-weight bold !important
+	height 31px !important
+	padding 0 42px 0 17px !important
+	vertical-align middle !important
+	text-decoration none !important
+	text-truncate()
+
+@media screen   and (min-device-width: 1200px)   and (max-device-width: 1600px)   and (-webkit-min-device-pixel-ratio: 2)  and (min-resolution: 192dpi)
+	.bx-composite-btn
+		background-image url(/bitrix/images/main/composite/sprite-2x.png)
+		background-size 42px 124px
+
+.bx-composite-btn-fixed
+	position absolute
+	top -45px
+	right 15px
+	z-index 10
+
+.bx-btn-white
+	background-position right 0
+	color #fff !important
+
+.bx-btn-black
+	background-position right -31px
+	color #000 !important
+
+.bx-btn-red
+	background-position right -62px
+	color #555 !important
+
+.bx-btn-grey
+	background-position right -93px
+	color #657b89 !important
+
+.bx-btn-border
+	border 1px solid #d4d4d4
+	height 29px !important
+	line-height 29px !important
+
+.bx-composite-loading
+	display block
+	width 40px
+	height 40px
+	background url(/bitrix/images/main/composite/loading.gif)
+
+.footer .bx-composite-btn
+	margin-top 18px
+	margin-left (25px - 17px)
+
+.nano-news
+	height 1156px
+	background-color #fff
+
+.nano-news .nano-pane
+	display none !important
+
+.z-index-11
+	z-index 11
+
+.cell-one-col.onmain
+	position relative
+
+.ya-share2__badge
+	opacity .7
+
+	&:hover
+		opacity 1
+
+
+// Big slider
+
+.big-slider
+	padding-bottom 100px
+	height 457px
+	position relative
+	box-sizing border-box
+
+	.slide
+		overflow hidden
+		height 357px
+
+		p
+			padding-top 8px
+			padding-bottom 8px
+
+		.podrobnee
+			margin-top 13px
+
+	.slide-pagi
+		top 34px !important
+		bottom auto
+
+		li
+			vertical-align top
+			margin-left 4px
+			margin-right 4px
+
+			&:first-child
+				margin-left 0
+
+	.slick-prev
+		background-image url("../images/sprites/icon.png")
+		background-position 0px 0px
+		width 33px
+		height 33px
+		margin-top -39px
+
+	.slick-next
+		background-image url("../images/sprites/icon.png")
+		background-position -41px 0px
+		width 33px
+		height 33px
+		margin-top 0
+
+@media only screen and (max-width: 400px)
+	.big-slider
+		height 225px
+		width 100%
+		max-width 510px
+		padding-bottom 0
+
+.big-slider__banner
+	position absolute
+	left 0
+	bottom 0
+	width 100%
+	height 100px
+
+@media only screen and (max-width: 400px)
+	.big-slider__banner
+		display none
+
+@media only screen and (max-width: 400px)
+	.big-slider
+		.slide
+			height 225px
+
+@media only screen and (max-width: 400px)
+	.big-slider
+		.slide
+			p
+				padding-top 0
+				padding-bottom 0
+
+@media only screen and (max-width: 400px)
+	.big-slider
+		.slide
+			.podrobnee
+				margin-top 5px
+
+.big-slider .slick-prev,
+.big-slider .slick-next
+	left auto
+	right 15px
+	top 50%
+	z-index 3
+
+.big-slider .slick-prev:before,
+.big-slider .slick-next:before
+	display none
+
+.big-slider-opac
+	background rgba(48,57,72,0.4)
+
+#main_slider_slide_n
+	top 33px
+	right 20px
+	font-size 10px
+
+.nl-all
+	background #d9dce0 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABxJREFUeNpiuHnnwX8gYABhBhgDJAhngGiAAAMAN34cq9tjNrAAAAAASUVORK5CYII=") repeat
+	border-bottom 1px solid #e0e5ea
+
+	span
+		letter-spacing 0.1ex
+		font-weight bold
+
+.nl-all--dark
+	background-color #515a68
+	color #fff

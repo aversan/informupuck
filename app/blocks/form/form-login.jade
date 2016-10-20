@@ -1,0 +1,30 @@
+.form__container
+  .container-fluid.form__container-inner
+    form.form
+      fieldset
+        header.form__header
+          h2.form__header-title Войти на сайт
+        .form__form-group
+          span.control-label.text-xs-center Ваш через аккаунт социальной сети:
+          .form__social-btn-container
+            a.form__social-btn.form__social-btn--vkontakte(href='')
+              i.mdi.mdi-vk
+            a.form__social-btn.form__social-btn--facebook(href='')
+              i.mdi.mdi-facebook
+            a.form__social-btn.form__social-btn--google(href='')
+              i.mdi.mdi-plus
+        .form__hint-block.form__hint-block--alt
+          span или
+        .form__form-group
+          label.control-label(for='ctrl_login') Ваш логин:
+          input#ctrl_login.form-control.input-xl(type='text')
+        .form__form-group
+          label.control-label(for='ctrl_password') Пароль:
+          .input-group.input-group-xl.input-group--block
+            input#ctrl_password.form-control(type='text', value='', placeholder='Введите пароль')
+            span.input-group-postfix.input-group-postfix--action
+              a(href='') Забыли пароль?
+        .form__form-group.form__form-group--footer
+          button.btn.btn-xl.btn-block.btn-primary.form__btn-width-1(type='submit') Войти
+          .form__sep.form__sep--small
+          a.form__footer-link(href='register.html') Регистрация нового пользователя

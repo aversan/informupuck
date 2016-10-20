@@ -1,0 +1,22 @@
+.page-header
+  include ../breadcrumb/breadcrumb-company
+  .page-header__row.page-header__row--three-line
+    .page-header__primary-content
+      .page-header__avatar(style='background-image:url(http://placehold.it/60x60)')
+        img(src='http://placehold.it/60x60', alt='', width='60', height='60')
+      h1.page-header__title Архангельский целюлозный комбинат (АЦБК)
+      ul.metainfo.page-header__metainfo
+        li.metainfo__item
+          span.metainfo__title Рейтинг:
+          span.metainfo__content.metainfo__content--alt-2
+            i.icon.icon--star-yellow-xs
+            span 1674
+        li.metainfo__item
+          span.metainfo__title Всего просмотров:
+          span.metainfo__content.metainfo__content--alt
+            i.icon.icon--smotr-blue-xs
+            span 513
+    .page-header__secondary-content
+      button.page-header__secondary-btn.btn.btn-primary.btn--alt(data-uk-modal="{target:'#modal1'}")
+        i.icon.icon--email-white-sm
+        span Отправить сообщение

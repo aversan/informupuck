@@ -124,16 +124,20 @@
 
 .input-group-prefix
 .input-group-postfix
-	color #414a5a
+	color #a0a4ac
 
 inputGroupSize('sm', $input-padding-y-sm, $input-padding-x-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-height-sm, $input-border-radius-sm)
 inputGroupSize('md', $input-padding-y-md, $input-padding-x-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-height-md, $input-border-radius-md)
 inputGroupSize('lg', $input-padding-y-lg, $input-padding-x-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-height-lg, $input-border-radius-lg)
+inputGroupSize('xl', $input-padding-y-xl, $input-padding-x-xl, $input-padding-x-xl, $font-size-xl, $line-height-xl, $input-height-xl, $input-border-radius-xl)
+inputGroupSize('search', $input-padding-y-search, $input-padding-x-search, $input-padding-x-search, $font-size-search, $line-height-search, $input-height-search, 0)
 
 inputGroupPrefix('', $font-size-md, $input-height-md, $input-border-radius-md)
 inputGroupPrefix('sm', $font-size-sm, $input-height-sm, $input-border-radius-sm)
 inputGroupPrefix('md', $font-size-md, $input-height-md, $input-border-radius-md)
 inputGroupPrefix('lg', $font-size-lg, $input-height-lg, $input-border-radius-lg)
+inputGroupPrefix('xl', $font-size-xl, $input-height-xl, $input-border-radius-xl)
+inputGroupPrefix('search', $font-size-search, $input-height-search, 0)
 
 @media screen and (-webkit-min-device-pixel-ratio 0)
 	.input-group-sm
@@ -157,6 +161,44 @@ inputGroupPrefix('lg', $font-size-lg, $input-height-lg, $input-border-radius-lg)
 		input[type="month"]
 			line-height $line-height-lg
 
+	.input-group-xl
+		input[type="date"]
+		input[type="time"]
+		input[type="datetime-local"]
+		input[type="month"]
+			line-height $line-height-xl
+
 .input-group-postfix--hint
 	font-size 11px !important
 	width auto !important
+
+.input-group-postfix--action
+	width auto !important
+	right 20px
+
+.input-group-postfix
+	a
+		color $link-color
+
+		&:focus
+		&:hover
+			color $link-hover-color
+
+.input-group-search
+	.input-group-prefix
+	.input-group-postfix
+		font-size 24px
+		color $brand-primary
+
+	.input-group-postfix--close
+		cursor pointer
+		color #999
+
+
+.input-group-md .btn
+	font-family 'GothamPro Medium', arial, sans-serif
+	font-weight normal
+	font-size 11px
+
+.input-group--block
+	width 100%

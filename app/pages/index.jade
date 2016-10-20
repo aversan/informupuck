@@ -1,0 +1,43 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Главная';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content
+			.nano-content
+				include ../blocks/jade/big-slider-index
+
+				.cell-two-col
+					.col50
+						include ../blocks/teaser-news/teaser-section-press
+
+					.col50
+						include ../blocks/teaser-news/teaser-section-interview
+
+					.clearfix
+
+					.col50
+						include ../blocks/uk-overlay/uk-overlay-510-200-index
+
+					.col-100
+						include ../blocks/teaser-news/teaser-section-popular
+
+		.cell-one-col.onmain
+			.nano.layout-nano-cell-one-col
+				.nano-content
+					include ../blocks/teaser-news/teaser-section-lenta
+					include ../blocks/panel/panel-side-index
+
+block scripts
+	script.
+		$('#med-slider').flickity({
+			contain: true,
+			prevNextButtons: false,
+			wrapAround: true,
+			autoPlay: 3000
+		});

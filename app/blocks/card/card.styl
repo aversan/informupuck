@@ -1,5 +1,23 @@
+$card-transition = all 0.2s ease-in-out 0s
+
 .card
+	background-color #fff
 	box-shadow 0 2px 2px -2px alpha(#000000, .3)
+
+	&--hoverable-2:hover
+		background-color $background-color-base-hover
+		color #fff
+
+		& a
+			transition $card-transition
+
+		&
+		& a
+			color #aebfd3
+
+		& a:focus
+		& a:hover
+			color #fff
 
 	&__header
 		font-size 12px
@@ -14,6 +32,27 @@
 		overflow hidden
 		position relative
 
+		.card--more-line.card--avatar &
+			+below(767px)
+				flex-direction column
+
+		&--h-210
+			min-height 210px
+
+		.card--panel-section &
+			padding 14px 24px
+
+		.section__header--space + .card--panel-section &
+			padding-top 0
+
+		.card--study &
+			padding-left 20px
+			padding-top 13px
+			min-height 130px
+
+		.card--doc &
+			min-height 148px
+
 		&-primary-content
 			order 0
 			flex-grow 2
@@ -21,7 +60,16 @@
 			box-sizing border-box
 			display flex
 			align-items center
-			display block
+			display inline-block
+
+			.card--more-line.card--avatar &
+				padding-left 65px
+
+				+mobile()
+					padding-left 0
+
+			.card--doc &
+				padding-left 90px
 
 		&-secondary-content
 			display flex
@@ -30,6 +78,22 @@
 			margin-left 15px
 			position relative
 			margin-top -9px
+
+			.card--panel-section &
+				margin-top 0
+
+			.card--more-line.card--avatar &
+				+below(767px)
+					margin-left 65px
+					margin-top 11px
+					justify-content flex-start
+
+				+mobile()
+					margin-left 0
+
+			.btn.m-t-24px
+				+below(767px)
+					margin-top 0 !important
 
 		&-secondary-action
 			position relative
@@ -55,6 +119,12 @@
 				float none
 				margin-right 0
 
+			.card--doc &
+				width 90px
+				height 130px
+				margin-right 9px
+				margin-left -90px
+
 		&-avatar-wrap
 			width 50px
 			float left
@@ -62,6 +132,24 @@
 			flex-flow column
 			align-items center
 			margin-right 15px
+			min-height 130px
+
+			&--h-110
+				min-height 110px
+
+			.card--more-line.card--avatar &
+				margin-left -65px
+
+				+mobile()
+					display none
+
+		&-avatar-caption
+			font-family $headings-font-family
+			font-size 9px
+			line-height normal
+			text-align center
+			color #858585
+			margin-top 8px
 
 		&-rating
 			font-size 10px
@@ -80,16 +168,56 @@
 
 		&-title
 			font-size 15px
+			line-height 18px
 			font-weight bold
 			color #4d4d4d
-			text-truncate()
+			margin-bottom 10px
+			display block
+			display -webkit-box
+			-webkit-box-orient vertical
+			overflow hidden
+			text-overflow ellipsis
+			word-wrap break-word
+			max-height 18px
+			-webkit-line-clamp 1
+
+			+mobile()
+				max-height 36px
+				-webkit-line-clamp 2
+
+			&--h1
+				font-size 20px
+				line-height 24px
+				max-height 24px
+				-webkit-line-clamp 1
+
+			&--line-4
+				max-height 72px
+				-webkit-line-clamp 4
 
 			a
 				color inherit
 
+			.card--hoverable-2:hover &
+				&
+				& a
+				& a:focus
+				& a:hover
+					color #fff
+
 			.card--hoverable:hover &
 			.card--hoverable:hover & a
 				color $link-color
+
+		&-sup-title
+			font-size 11px
+			font-weight bold
+			margin-bottom 5px
+
+			.small
+				font-size inherit
+				font-weight normal
+				color #858585
 
 		&-cover-link
 			position absolute
@@ -101,18 +229,77 @@
 		&-site-link
 		&-address
 		&-text-body
+		&-list-item
 			display block
 			font-size 11px
 			line-height 1.27
 			margin-top 5px
 			margin-bottom 0
 
+		&-list
+			margin-top 5px
+			margin-bottom 5px
+			padding-top 0
+			padding-bottom 0
+			list-style-type none
+
+			.list__item-title
+			.list__item-text-body
+				font-size 11px
+
+			.list__item
+				margin-top 2px
+				margin-bottom 2px
+
+				&--salary .list__item-text-body
+					font-size 13px
+					font-weight bold
+
+				&--salary-2 .list__item-text-body
+					font-size 15px
+					font-weight bold
+
+				&--phone .list__item-text-body
+					font-family $headings-font-family
+					font-size 13px
+					font-weight normal
+
+		&-list + &-list
+			margin-top 10px
+
+		&-list:last-child
+			margin-bottom 0
+
+			.list__item:last-child
+				margin-bottom 0
+
+		&-address
+			margin-top 8px
+			margin-bottom 8px
+
+		&-text-body
+			display block
+			display -webkit-box
+			-webkit-box-orient vertical
+			overflow hidden
+			text-overflow ellipsis
+			word-wrap break-word
+
+			&--line-3
+				max-height 51px
+				-webkit-line-clamp 3
+
+			+below(767px)
+				max-height 54px
+
 		&-site-link
 			font-size 11px
 
+			.card__header-title + &
+				margin-top -5px
+
 		&-address
 			color #333
-			margin-top 10px
 
 		&-text-body
 			color #858585
@@ -130,6 +317,32 @@
 			font-size 11px
 			line-height 1.8
 
+			.btn__text
+				+mobile()
+					font-size 0
+					opacity 0
+
+		.card--hoverable-2:hover &
+			transition $card-transition
+			color #aebfd3
+
+			.typography--color-muted
+			.text-colored
+				color #aebfd3
+
+			& a
+				color #aebfd3
+
+			& a:focus
+			& a:hover
+				color #fff
+
+		.card--doc &
+			border-top none
+			margin-top 10px
+			padding-right 0
+			align-items flex-end
+
 	&__spacer
 		-ms-flex-positive 1
 		flex-grow 1
@@ -137,3 +350,24 @@
 	& + &
 		margin-top 8px
 
+	&__column
+		display flex
+		flex-direction column
+
+		.card--doc &
+			min-height 130px
+
+	&__column-2
+		column-count 2
+		column-gap 7px
+		margin-top -5px
+
+		+below(768px)
+			column-count 1
+			column-gap 0
+
+		.card
+			margin-top 5px
+			margin-bottom 5px
+			display inline-block
+			vertical-align top

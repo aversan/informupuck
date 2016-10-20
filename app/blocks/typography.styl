@@ -1,8 +1,8 @@
 body
 	font-family $font-family-base
-	//font-size $font-size-base
-	//font-weight 300
-	//line-height $line-height-base
+	font-size $font-size-base
+	font-weight 300
+	line-height $line-height-base
 
 //h1, h2, h3, h4, h5, h6
 	//margin-top 0
@@ -79,6 +79,12 @@ body
 .typography--body
 	typo-body()
 
+.typography--body-small
+	typo-body-small()
+
+.typography--body-small-2
+	typo-body-small-2()
+
 .typography--text-left
 	text-align left
 
@@ -128,6 +134,14 @@ body
 
 .typography--color-muted
 	color #a6a6a6
+
+	a
+		text-decoration none
+		opacity .6
+
+		&:focus
+		&:hover
+			opacity 1
 
 .hr
 	border-top 1px solid #f1f1f1

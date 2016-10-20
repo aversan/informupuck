@@ -1,0 +1,319 @@
+.uk-nav
+	&
+	& ul
+		margin 0
+		padding 0
+		list-style none
+
+	& li > a
+		font-family $headings-font-family
+		font-weight normal
+		font-size 12px
+		line-height 1.2
+		display block
+		text-decoration none
+		padding 5px 15px
+
+	&--main > li > a
+		display block
+		text-decoration none
+		padding 0 20px
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
+		line-height 40px
+		height 40px
+		text-transform uppercase
+		letter-spacing normal
+		text-truncate()
+
+	&--mega > li > a
+		position relative
+		padding-left 22px
+
+	&--mega > li:not(.uk-nav__item--icon) > a
+		&:before
+			content ''
+			display block
+			width 4px
+			height 4px
+			background-color #fff
+			opacity .6
+			position absolute
+			top 5px
+			left 9px
+			margin-top .35em
+
+	&--mega > li.uk-nav__item--icon > a
+		.mdi
+			position absolute
+			left 0
+			right 0
+			width 22px
+			text-align center
+
+	& ul
+		padding-left 15px
+
+	& > .uk-parent
+		& > a
+			font-family $headings-font-family-bold
+			font-weight normal
+			font-size 11px
+			line-height 1.2
+			text-transform uppercase
+			letter-spacing .3ex
+			padding-top 10px
+			padding-bottom 10px
+			background alpha(#000, .15)
+
+		& + .uk-parent
+			border-top 1px solid alpha(#fff, .15)
+
+.uk-nav-header
+	font-family $headings-font-family-bold
+	font-weight normal
+	font-size 11px
+	line-height 1.2
+	text-transform uppercase
+	letter-spacing .3ex
+	padding 15px
+
+	&--mega
+		padding 0
+
+.uk-nav-divider
+	margin 0
+
+	&--mega
+		margin-top 10px
+		margin-bottom 10px
+		border-top 1px solid alpha(#fff, .15)
+
+ul.uk-nav-sub
+	padding 5px 0 5px 15px
+
+	& > li > a
+		font-family $headings-font-family
+		font-weight normal
+		font-size 11px
+		line-height 1.2
+		position relative
+
+		&:before
+			content ''
+			display block
+			width 4px
+			height 4px
+			background-color #fff
+			opacity .6
+			position absolute
+			top 5px
+			left 0
+			margin-top .35em
+
+.uk-nav-parent-icon > .uk-parent
+	& > a
+		&:after
+			content "\f141"
+			width 20px
+			margin-right -10px
+			float right
+			font-family 'Material Design Icons'
+			text-align center
+
+	&.uk-open > a
+		&:after
+			content "\f140"
+
+.uk-nav-side
+	& > li > a
+		color #444444
+
+	& > li > a:hover
+	& > li > a:focus
+		background rgba(0, 0, 0, 0.05)
+		color #444444
+		outline none
+
+	& > li.uk-active > a
+		background #00a8e6
+		color #ffffff
+
+	& .uk-nav-header
+		color #444444
+
+	& .uk-nav-divider
+		border-top 1px solid #dddddd
+
+	& ul a
+		color #0077dd
+
+	& ul a:hover
+		color #005599
+
+.uk-nav-dropdown
+	& > li > a
+		color #444444
+
+	& > li > a:hover
+	& > li > a:focus
+		background #00a8e6
+		color #ffffff
+		outline none
+
+	&.uk-nav--main > li > a
+		position relative
+		background $brand-primary
+		color #fff
+
+		.mdi
+			opacity .6
+
+		&:after
+			content "\f142"
+			text-align center
+			width 20px
+			margin-right -15px
+			float right
+			height 40px
+			line-height 40px
+			font-family 'Material Design Icons'
+			color transparent
+
+	&.uk-nav--main > li > a:hover
+	&.uk-nav--main > li > a:focus
+		background-color #fff
+		color $brand-primary
+
+		&:after
+			color $brand-primary
+
+	&.uk-nav--mega > li > a
+		position relative
+		color #fff
+
+		.mdi
+			opacity .6
+
+		&:after
+			content "\f142"
+			text-align center
+			width 20px
+			margin-right -15px
+			float right
+			height 14px
+			line-height 14px
+			font-family 'Material Design Icons'
+			color transparent
+
+	&.uk-nav--mega > li > a:hover
+	&.uk-nav--mega > li > a:focus
+		background-color #fff
+		color $brand-primary
+
+		&:after
+			color $brand-primary
+
+	& .uk-nav-header
+		color #999999
+
+	& .uk-nav-divider
+		border-top 1px solid #dddddd
+
+	& ul a
+		color #0077dd
+
+	& ul a:hover
+		color #005599
+
+.uk-nav-navbar
+	& > li > a
+		color #444444
+
+	& > li > a:hover
+	& > li > a:focus
+		background #00a8e6
+		color #ffffff
+		outline none
+
+	& .uk-nav-header
+		color #999999
+
+	& .uk-nav-divider
+		border-top 1px solid #dddddd
+
+	& ul a
+		color #0077dd
+
+	& ul a:hover
+		color #005599
+
+.uk-nav-offcanvas
+	& > li
+		& > a
+			color #fff
+			padding 5px 15px
+
+			.mdi
+				opacity .6
+
+		&.uk-nav-button
+			margin-top 10px
+			margin-bottom 10px
+
+			& + li.uk-nav-button
+				margin-top -10px
+
+			& > a
+				font-family $headings-font-family-bold
+				font-weight normal
+				font-size 11px
+				line-height 1.2
+				text-transform uppercase
+				letter-spacing .3ex
+				padding-top 7px
+				padding-bottom 7px
+
+		&.uk-nav-city > a
+			font-family $headings-font-family
+			font-weight normal
+			font-size 11px
+			line-height 1.2
+			padding-top 10px
+			padding-bottom 10px
+			background alpha(#000, .15)
+
+			.title
+				opacity .6
+
+			.name
+				font-size 12px
+				text-decoration underline
+
+		&.uk-nav-city > a:hover
+			.name
+				text-decoration none
+
+	& > .uk-open > a
+	html:not(.uk-touch) & > li > a:hover
+	html:not(.uk-touch) & > li > a:focus
+		background alpha(#000, .15)
+		color #fff
+		outline none
+
+	html .uk-nav& > li.uk-active > a
+		background #fff
+		color $brand-primary
+
+	& .uk-nav-header
+		color #fff
+
+	& .uk-nav-divider
+		border-top 1px solid alpha(#fff, .15)
+
+	& ul a
+		color #fff
+
+	html:not(.uk-touch) & ul a:hover
+		color #fff

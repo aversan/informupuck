@@ -1,0 +1,57 @@
+section.card.card--more-line.card--avatar.card--panel-section
+  header.card__header
+    .card__header-primary-content
+      .card__header-avatar-wrap.card__header-avatar-wrap--h-110
+        .card__header-avatar(style='background-image:url(http://placehold.it/50x50)')
+          img(src='http://placehold.it/50x50', alt='', width='50', height='50')
+        .card__header-avatar-caption
+          | Вакансия
+        .card__spacer
+        .card__header-avatar-caption
+          | Сегодня в 14:00
+      p.card__header-sup-title
+        | Мир упаковки, ЗАО
+        small.small организация (больше 500 человек)
+      h1.card__header-title.card__header-title--h1 Директор филиала
+      ul.list.list--title-left.list--title-left-width-1.card__header-list
+        li.list__item.list__item--salary-2
+          .list__item-primary-content
+            strong.list__item-title-left з/п:
+            span.list__item-text-body
+              | 142 000 руб.
+      ul.list.list--title-left.list--title-left-width-1.card__header-list
+        li#phone-item.list__item.list__item--phone
+          .list__item-primary-content
+            strong.list__item-title-left Телефон:
+            span.list__item-text-body
+              i.icon.icon--mobile-link-xs
+              span.phone1 +7  495 XX-XX-67
+              span.phone2 +7 495 77-15-33
+          span.list__item-secondary-content
+            a.list__item-section-action(href='#', data-uk-modal="{ target: '#modal-phone', center: true }", data-uk-toggle="{ target: '#phone-item', cls: 'is-show' }")
+              i.mdi.mdi-menu-left
+              span Показать телефон
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Город:
+            span.list__item-text-body
+              a(href='') Россия, Алтайский край, г. Барнаул
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Опыт работы:
+            span.list__item-text-body
+              | 1 год
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Образование:
+            span.list__item-text-body
+              | Среднее специальное
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left График:
+            span.list__item-text-body
+              | Полный рабочий день
+    .card__header-secondary-content
+      button.btn.btn-primary.btn--alt.m-t-24px
+        i.icon.icon--email-white-sm
+        span.btn__text Отправить резюме

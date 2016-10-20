@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="apple-touch-icon" href="https://informupack.ru/local/templates/projeckt/favicon_white.png">
+		<link rel="icon" type="image/png" href="https://informupack.ru/local/templates/projeckt/favicon.png">
+		<title>Вакансия</title>
+		<meta name="robots" content="index, follow">
+		<meta name="description" content="Информационный отраслевой деловой портал InformUpack.ru — Взгляни по-новому на привычные вещи. Мы с теми, для кого упаковка больше, чем просто упаковка. Будь в центре упаковочной промышленности.">
+		<meta name="keywords" content="Упаковка,новости,информупак">
+		<link rel="stylesheet" type="text/css" href="https://informupack.ru/local/js/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" type="text/css" href="https://informupack.ru/local/js/fancy/jquery.fancybox.css?v=2.1.5" media="screen">
+		<link rel="stylesheet" type="text/css" href="https://informupack.ru/local/js/ui/css/style.css">
+		<link href="https://informupack.ru/bitrix/js/main/core/css/core.css?14423619943963" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/bitrix/js/socialservices/css/ss.css?14595118655037" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/bitrix/js/main/core/css/core_popup.css?145951181438446" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/bitrix/js/altasib.errorsend/css/window.css?14621039544771" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/templates/projeckt/components/twofingers/location/head/style.css?145962863911053"
+			type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/templates/projeckt/components/bitrix/news.list/main_slider/style.css?14545235865065"
+			type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/templates/projeckt/components/bitrix/system.auth.authorize/flat1/style.css?1456316330699"
+			type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/bitrix/components/bitrix/socserv.auth.form/templates/flat/style.css?14595118732659"
+			type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/templates/projeckt/components/marvil/main.register/custom/style.css?14563414711078"
+			type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/js/suggestions/css/suggestions.css?14658555989803" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/bitrix/panel/main/popup.css?145951181423084" type="text/css" rel="stylesheet">
+		<link href="https://informupack.ru/local/templates/projeckt/components/bitrix/system.auth.authorize/.default/style.css?1454523586475"
+			type="text/css" data-template-style="true" rel="stylesheet">
+		<link href="assets/styles/app.min.css?t=1476951601453" rel="stylesheet">
+	</head>
+
+	<body class="page--layout-main">
+		<div class="wrapper">
+			<div class="page page--layout-main">
+				<div class="page-top">
+					<div class="page-top__row">
+						<div class="top-informer">
+							<span class="top-time">Сегодня 02.08.2016 09:27</span>
+							<span class="top-money">
+								<span>USD ЦБ 67,05
+									<i class="ar-up"></i>
+								</span>
+								<span>EUR ЦБ 74,37
+									<i class="ar-down"></i>
+								</span>
+							</span>
+							<span class="top-money">
+								<span>
+									<span class="text-up">NASD</span> 4842,75</span>
+								<span>
+									<span class="text-down">RTS</span> 927,30</span>
+							</span>
+							<!--<span class="top-weather">
+<i class="wicon w99"></i>
+-15°С
+</span>-->
+						</div>
+						<div class="page-top__spacer"></div>
+					</div>
+				</div>
+				<div class="page-top-placeholder"></div>
+				<div class="page-left">
+					<div class="layout__header layout__header--main">
+						<a href="" class="layout__header-logo-wrapper">
+							<img src="assets/images/informupack-logo2.png" alt="" width="81" height="71" class="layout__header-logo">
+						</a>
+						<div class="layout__header-row layout__header-row--sep layout__header-row--secondary">
+							<div class="layout__header-city">
+								<i class="icon icon--pin-dark-blue-xs"></i>
+								<span class="title">Ваш город:</span>
+								<a href="#tfLocationPopup" onclick="tfLocationPopupOpen('/bitrix/components/twofingers/location', ''); return false;"
+									class="tf_location_link">
+									<span class="name">Оренбург</span>
+									<i class="mdi mdi-menu-down"></i>
+								</a>
+								<div style="display:none;" class="custom-popup-2014-overlay"></div>
+								<div style="display:none;" class="city-top custom-popup-2014-content custom-popup-2014 global">
+									<div class="close-region custom-popup-2014-close"></div>
+									<span class="okno-vibora-zag">Выбрать город</span>
+									<span class="okno-vibora-podzag">Введите название Города</span>
+									<input type="text" name="search" placeholder="" autocomplete="off" class="field-text input-okno-vibora city-search">
+									<a href="#" class="clear_field"></a>
+									<div class="clr"></div>
+									<br>
+									<div class="clr"></div>
+									<span class="okno-vibora-pop">Популярные города (регионы)</span>
+									<div class="popup-city nice-scroll inner">
+										<ul class="pop-goroda mega-city current-list">
+											<li>
+												<a data-id="36" href="#">Москва (Московская область)</a>
+											</li>
+											<li>
+												<a data-id="2234" href="#">Муром (Владимирская область)</a>
+											</li>
+											<li>
+												<a data-id="2120" href="#">Мышкин (Ярославская область)</a>
+											</li>
+											<li>
+												<a data-id="3136" href="#">Нижний Новгород (Нижегородская область)</a>
+											</li>
+											<li>
+												<a data-id="4052" href="#">Новосибирск (Новосибирская область)</a>
+											</li>
+											<li>
+												<a data-id="4097" href="#">Омск (Омская область)</a>
+											</li>
+											<li>
+												<a data-id="1867" href="#">Орёл (Орловская область)</a>
+											</li>
+											<li>
+												<a data-id="3366" href="#">Пенза (Пензенская область)</a>
+											</li>
+											<li>
+												<a data-id="3307" href="#">Пермь (Пермский край)</a>
+											</li>
+											<li>
+												<a data-id="2336" href="#">Петрозаводск (Республика Карелия)</a>
+											</li>
+											<li>
+												<a data-id="2498" href="#">Псков (Псковская область)</a>
+											</li>
+											<li>
+												<a data-id="2126" href="#">Ростов Великий (Ярославская область)</a>
+											</li>
+											<li>
+												<a data-id="2686" href="#">Ростов-на-Дону (Ростовская область)</a>
+											</li>
+											<li>
+												<a data-id="2130" href="#">Рыбинск (Ярославская область)</a>
+											</li>
+											<li>
+												<a data-id="1899" href="#">Рязань (Рязанская область)</a>
+											</li>
+											<li>
+												<a data-id="3269" href="#">Самара (Самарская область)</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="title-search2" class="input__container layout__header-search-container bx-searchtitle">
+								<form action="/search/">
+									<div id="desktop-search" class="input-group input-group-search layout__header-search bx-input-group">
+										<span class="input-group-prefix mdi mdi-magnify"></span>
+										<input id="title-search-input2" type="text" value="" placeholder="Поиск по сайту" autocomplete="off" class="form-control">
+										<button type="submit" class="input-group-postfix icon icon--enter-light-grey"></button>
+									</div>
+									<div id="title-search2_res" class="find-rezult">
+										<div class="title-search-result"></div>
+									</div>
+								</form>
+							</div>
+							<a href="" class="navigation__link navigation__link--alt">Войти</a>
+							<a href="" class="navigation__link navigation__link--alt">Регистрация</a>
+						</div>
+						<div class="layout__header-row layout__header-row--primary">
+							<div data-uk-dropdown="{ mode:'click' }" class="layout__header-button-menu-wrapper">
+								<button class="layout__header-button-icon layout__header-button-menu"></button>
+								<div class="uk-dropdown uk-dropdown-bottom uk-dropdown--mega">
+									<div class="uk-grid uk-dropdown-grid">
+										<div class="uk-width-1-1">
+											<h5 class="uk-nav-header uk-nav-header--mega">Каталог организаций</h5>
+											<div class="uk-nav-divider uk-nav-divider--mega"></div>
+											<ul class="uk-nav uk-nav-dropdown uk-panel uk-nav--mega uk-column-1-2">
+												<li>
+													<a href="">Упаковка и тара</a>
+												</li>
+												<li>
+													<a href="">Полиграфическое оборудование</a>
+												</li>
+												<li>
+													<a href="">Упаковочное оборудование</a>
+												</li>
+												<li>
+													<a href="">Пищевое оборудование</a>
+												</li>
+												<li>
+													<a href="">Упаковочные материалы и сырье</a>
+												</li>
+												<li>
+													<a href="">Оборудование для производства упаковки</a>
+												</li>
+												<li>
+													<a href="">Полимерное оборудование и материалы</a>
+												</li>
+												<li>
+													<a href="">Непищевое оборудование</a>
+												</li>
+												<li>
+													<a href="">Торговля. Склад. Транспорт. Логистика</a>
+												</li>
+												<li>
+													<a href="">Бренды. Торговые марки</a>
+												</li>
+												<li>
+													<a href="">Услуги</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="uk-grid uk-dropdown-grid">
+										<div class="uk-width-1-2">
+											<h5 class="uk-nav-header uk-nav-header--mega">Торговая площадка</h5>
+											<div class="uk-nav-divider uk-nav-divider--mega"></div>
+											<ul class="uk-nav uk-nav-dropdown uk-panel uk-nav--mega">
+												<li>
+													<a href="">Покупка</a>
+												</li>
+												<li>
+													<a href="">Продажа</a>
+												</li>
+												<li>
+													<a href="">Добавить объявление</a>
+												</li>
+											</ul>
+										</div>
+										<div class="uk-width-1-2">
+											<h5 class="uk-nav-header uk-nav-header--mega">Новости и статьи</h5>
+											<div class="uk-nav-divider uk-nav-divider--mega"></div>
+											<ul class="uk-nav uk-nav-dropdown uk-panel uk-nav--mega">
+												<li>
+													<a href="">Новости отрасли</a>
+												</li>
+												<li>
+													<a href="">Статьи</a>
+												</li>
+												<li>
+													<a href="">Интервью</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="uk-grid uk-dropdown-grid">
+										<div class="uk-width-1-2">
+											<h5 class="uk-nav-header uk-nav-header--mega">Информация</h5>
+											<div class="uk-nav-divider uk-nav-divider--mega"></div>
+											<ul class="uk-nav uk-nav-dropdown uk-panel uk-nav--mega">
+												<li>
+													<a href="">О проекте</a>
+												</li>
+												<li>
+													<a href="">Реклама</a>
+												</li>
+												<li>
+													<a href="">Помощь</a>
+												</li>
+												<li>
+													<a href="">Контакты</a>
+												</li>
+											</ul>
+										</div>
+										<div class="uk-width-1-2">
+											<h5 class="uk-nav-header uk-nav-header--mega">Мы в социальных сетях</h5>
+											<div class="uk-nav-divider uk-nav-divider--mega"></div>
+											<ul class="uk-nav uk-nav-dropdown uk-panel uk-nav--mega">
+												<li class="uk-nav__item--icon">
+													<a href="#">
+														<i class="mdi mdi-vk"></i> Vkontakte</a>
+												</li>
+												<li class="uk-nav__item--icon">
+													<a href="#">
+														<i class="mdi mdi-odnoklassniki"></i> Odnoklassniki</a>
+												</li>
+												<li class="uk-nav__item--icon">
+													<a href="#">
+														<i class="mdi mdi-facebook"></i> Facebook</a>
+												</li>
+												<li class="uk-nav__item--icon">
+													<a href="#">
+														<i class="mdi mdi-youtube-play"></i> Youtube</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="navigation">
+								<li data-uk-dropdown="{ mode: 'hover', hoverDelayIdle: 0, remaintime: 300 }" class="navigation__item navigation__item--dropdown">
+									<a href="" class="navigation__link">Каталог организаций
+										<i class="mdi mdi-chevron-down"></i>
+									</a>
+									<div class="uk-dropdown uk-dropdown-bottom uk-dropdown--main">
+										<ul class="uk-nav uk-nav-dropdown uk-nav--main">
+											<li>
+												<a href="">Категории</a>
+											</li>
+											<li>
+												<a href="">Поиск</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li data-uk-dropdown="{ mode: 'hover', hoverDelayIdle: 0, remaintime: 300 }" class="navigation__item navigation__item--dropdown">
+									<a href="" class="navigation__link">Торговая площадка
+										<i class="mdi mdi-chevron-down"></i>
+									</a>
+									<div class="uk-dropdown uk-dropdown-bottom uk-dropdown--main">
+										<ul class="uk-nav uk-nav-dropdown uk-nav--main">
+											<li>
+												<a href="">Покупка</a>
+											</li>
+											<li>
+												<a href="">Продажа</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li data-uk-dropdown="{ mode: 'hover', pos:'bottom-right', hoverDelayIdle: 0, remaintime: 300 }" class="navigation__item navigation__item--dropdown">
+									<a href="" class="navigation__link">Новости статьи
+										<i class="mdi mdi-chevron-down"></i>
+									</a>
+									<div class="uk-dropdown uk-dropdown-bottom uk-dropdown--main">
+										<ul class="uk-nav uk-nav-dropdown uk-nav--main">
+											<li>
+												<a href="">Новости</a>
+											</li>
+											<li>
+												<a href="">Статьи</a>
+											</li>
+											<li>
+												<a href="">Интервью</a>
+											</li>
+											<li>
+												<a href="">Пресс-релизы</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li data-uk-dropdown="{ mode: 'hover', pos:'bottom-right', hoverDelayIdle: 0, remaintime: 300 }" class="navigation__item navigation__item--dropdown">
+									<a href="" class="navigation__link">Еще
+										<i class="mdi mdi-chevron-down"></i>
+									</a>
+									<div class="uk-dropdown uk-dropdown-bottom uk-dropdown--main">
+										<ul class="uk-nav uk-nav-dropdown uk-nav--main">
+											<li>
+												<a href="">Помощь</a>
+											</li>
+											<li>
+												<a href="">О проекте</a>
+											</li>
+											<li>
+												<a href="">Реклама</a>
+											</li>
+											<li>
+												<a href="">Контакты</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="layout-header-mobile-main" class="layout__header is-mobile">
+						<div class="layout__header-row">
+							<button data-target="#menu" class="layout__header-button-icon layout__header-button-menu">
+								<i class="mdi mdi-menu"></i>
+							</button>
+							<div class="layout-spacer"></div>
+							<img src="assets/images/informupack-logo.png" alt="" width="161" height="37">
+							<div class="layout-spacer"></div>
+							<button data-uk-toggle="{ target: '#layout-header-mobile-main', cls: 'is-visible-search' }" class="layout__header-button-icon">
+								<i class="mdi mdi-magnify"></i>
+							</button>
+						</div>
+					</div>
+					<div class="layout__header-placeholder"></div>
+					<div id="layout-header-mobile-search" class="layout__header is-search is-mobile">
+						<div class="layout__header-row">
+							<div id="mobile-search" class="input-group input-group-search layout__header-search">
+								<span class="input-group-prefix mdi mdi-magnify"></span>
+								<input type="text" value="" class="form-control typeahead">
+								<span data-uk-toggle="{ target: '#layout-header-mobile-main', cls: 'is-visible-search' }" class="input-group-postfix mdi mdi-close input-group-postfix--close"></span>
+							</div>
+						</div>
+					</div>
+					<div id="menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul data-uk-nav="" class="uk-nav uk-nav-offcanvas uk-nav-parent-icon">
+								<li class="uk-nav-city">
+									<a href="#">
+										<i class="icon icon--pin-white-xs"></i>
+										<span class="title">Ваш город:</span>
+										<span class="name">Оренбург</span>
+										<i class="mdi mdi-menu-down"></i>
+									</a>
+								</li>
+								<li class="uk-nav-divider"></li>
+								<li class="uk-nav-button">
+									<a href="#">Войти</a>
+								</li>
+								<li class="uk-nav-button">
+									<a href="#">Регистрация</a>
+								</li>
+								<li class="uk-nav-divider"></li>
+								<li class="uk-parent">
+									<a href="#">Каталог организаций</a>
+									<ul class="uk-nav-sub">
+										<li>
+											<a href="#">Упаковка и тара</a>
+										</li>
+										<li>
+											<a href="#">Полиграфическое оборудование и материалы</a>
+										</li>
+										<li>
+											<a href="#">Упаковочное оборудование</a>
+										</li>
+									</ul>
+								</li>
+								<li class="uk-parent">
+									<a href="#">Торговая площадка</a>
+									<ul class="uk-nav-sub">
+										<li>
+											<a href="#">Пункт один</a>
+										</li>
+										<li>
+											<a href="#">Пункт два</a>
+										</li>
+									</ul>
+								</li>
+								<li class="uk-nav-divider"></li>
+								<li class="uk-nav-header">Мы в социальных сетях</li>
+								<li>
+									<a href="#">
+										<i class="mdi mdi-vk"></i> Vkontakte</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="mdi mdi-odnoklassniki"></i> Odnoklassniki</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="mdi mdi-facebook"></i> Facebook</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="mdi mdi-youtube-play"></i> Youtube</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content">
+						<div class="nano layout-nano-content layout-nano-content--alt">
+							<div class="nano-content">
+								<div class="section__header section__header--panel-space p-b-0 z-index-11">
+									<div class="section__header-row">
+										<div class="section__header-primary-content">
+											<nav class="breadcrumb section__breadcrumb">
+												<a href="" class="breadcrumb__item">Главная</a>
+												<a href="" class="breadcrumb__item">Полезная информация</a>
+												<a href="" class="breadcrumb__item">Вакансии</a>
+											</nav>
+										</div>
+										<div class="section__header-secondary-content">
+											<a href="" class="section__header-secondary-action section__header-secondary-action--prev">
+												<i class="mdi mdi-chevron-left"></i>Назад</a>
+										</div>
+									</div>
+									<div class="section__hr section__hr--m-t-1"></div>
+								</div>
+								<section class="section section--job-in">
+									<section class="card card--more-line card--avatar card--panel-section">
+										<header class="card__header">
+											<div class="card__header-primary-content">
+												<div class="card__header-avatar-wrap card__header-avatar-wrap--h-110">
+													<div style="background-image:url(http://placehold.it/50x50)" class="card__header-avatar">
+														<img src="http://placehold.it/50x50" alt="" width="50" height="50">
+													</div>
+													<div class="card__header-avatar-caption">Вакансия</div>
+													<div class="card__spacer"></div>
+													<div class="card__header-avatar-caption">Сегодня в 14:00</div>
+												</div>
+												<p class="card__header-sup-title">Мир упаковки, ЗАО
+													<small class="small">организация (больше 500 человек)</small>
+												</p>
+												<h1 class="card__header-title card__header-title--h1">Директор филиала</h1>
+												<ul class="list list--title-left list--title-left-width-1 card__header-list">
+													<li class="list__item list__item--salary-2">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">з/п:</strong>
+															<span class="list__item-text-body">142 000 руб.</span>
+														</div>
+													</li>
+												</ul>
+												<ul class="list list--title-left list--title-left-width-1 card__header-list">
+													<li id="phone-item" class="list__item list__item--phone">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">Телефон:</strong>
+															<span class="list__item-text-body">
+																<i class="icon icon--mobile-link-xs"></i>
+																<span class="phone1">+7 495 XX-XX-67</span>
+																<span class="phone2">+7 495 77-15-33</span>
+															</span>
+														</div>
+														<span class="list__item-secondary-content">
+															<a href="#" data-uk-modal="{ target: '#modal-phone', center: true }" data-uk-toggle="{ target: '#phone-item', cls: 'is-show' }"
+																class="list__item-section-action">
+																<i class="mdi mdi-menu-left"></i>
+																<span>Показать телефон</span>
+															</a>
+														</span>
+													</li>
+													<li class="list__item">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">Город:</strong>
+															<span class="list__item-text-body">
+																<a href="">Россия, Алтайский край, г. Барнаул</a>
+															</span>
+														</div>
+													</li>
+													<li class="list__item">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">Опыт работы:</strong>
+															<span class="list__item-text-body">1 год</span>
+														</div>
+													</li>
+													<li class="list__item">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">Образование:</strong>
+															<span class="list__item-text-body">Среднее специальное</span>
+														</div>
+													</li>
+													<li class="list__item">
+														<div class="list__item-primary-content">
+															<strong class="list__item-title-left">График:</strong>
+															<span class="list__item-text-body">Полный рабочий день</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="card__header-secondary-content">
+												<button class="btn btn-primary btn--alt m-t-24px">
+													<i class="icon icon--email-white-sm"></i>
+													<span class="btn__text">Отправить резюме</span>
+												</button>
+											</div>
+										</header>
+									</section>
+									<section class="panel panel--section layout-widget-contact">
+										<div class="panel__map">
+											<img src="http://placehold.it/768x235" alt="" width="768" height="235">
+										</div>
+										<div class="panel__body">
+											<h3 class="typography--headline">Профессиональные требования:</h3>
+											<ul class="list list--title-left panel__list list--square panel__list--m-1">
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Знание Adobe Photoshop</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Знание Adobe Illustrator</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Наличие профильного портфолио обязательно</span>
+													</div>
+												</li>
+											</ul>
+											<div class="panel__hr">
+												<hr>
+											</div>
+											<h3 class="typography--headline">Обязанности:</h3>
+											<ul class="list list--title-left panel__list list--square panel__list--m-1">
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Веб-дизайн</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Фирменный стиль</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Полиграфия</span>
+													</div>
+												</li>
+											</ul>
+											<div class="panel__hr">
+												<hr>
+											</div>
+											<h3 class="typography--headline">Условия работы:</h3>
+											<ul class="list list--title-left panel__list list--square panel__list--m-1">
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">8 часовой рабочий день, пятидневка</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Официальное трудоустройство</span>
+													</div>
+												</li>
+												<li class="list__item">
+													<div class="list__item-primary-content">
+														<span class="list__item-text-body">Профессиональное обучение</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="panel__footer">
+											<div class="panel__hr">
+												<hr>
+											</div>
+											<div class="panel__footer-line">
+												<button class="btn btn-primary btn--alt">
+													<i class="icon icon--email-white-sm"></i>
+													<span>Отправить резюме</span>
+												</button>
+											</div>
+											<div class="panel__footer-line">
+												<p class="typography--body-small-2 typography--color-muted">Дата последнего обновления: Сегодня.</p>
+												<p class="typography--body-small-2 typography--color-muted">Вакансия опубликована в рубриках:
+													<a href="">Логистика</a> /
+													<a href="">Полиграфия</a> /
+													<a href="">Производство</a>
+												</p>
+											</div>
+										</div>
+									</section>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-right">
+					<div class="page-right__toggle">
+						<div class="page-right__toggle-icon"></div>
+					</div>
+					<div class="cat-head">
+						<span>Каталог</span>
+						<a href="https://informupack.ru/information/help/">Добавить организацию</a>
+					</div>
+					<div class="catalog-col-box">
+						<div class="nano layout-nano-catalog-col-box">
+							<div class="nano-content">
+								<a href="https://informupack.ru/company/97/" class="group-cat">
+									<span class="catorgname">Упаковка и тара</span>
+									<span class="catorgnum">286 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num1"></div>
+								</a>
+								<a href="https://informupack.ru/company/98/" class="group-cat">
+									<span class="catorgname">Полиграфическое оборудование и материалы</span>
+									<span class="catorgnum">268 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num2"></div>
+								</a>
+								<a href="https://informupack.ru/company/99/" class="group-cat">
+									<span class="catorgname">Упаковочное оборудование</span>
+									<span class="catorgnum">273 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num3"></div>
+								</a>
+								<a href="https://informupack.ru/company/100/" class="group-cat">
+									<span class="catorgname">Пищевое оборудование</span>
+									<span class="catorgnum">269 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num4"></div>
+								</a>
+								<a href="https://informupack.ru/company/101/" class="group-cat">
+									<span class="catorgname">Упаковочные материалы и сырьё</span>
+									<span class="catorgnum">280 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num5"></div>
+								</a>
+								<a href="https://informupack.ru/company/102/" class="group-cat">
+									<span class="catorgname">Оборудование для производства упаковки</span>
+									<span class="catorgnum">177 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num6"></div>
+								</a>
+								<a href="https://informupack.ru/company/103/" class="group-cat">
+									<span class="catorgname">Полимерное оборудование и материалы</span>
+									<span class="catorgnum">203 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num7"></div>
+								</a>
+								<a href="https://informupack.ru/company/104/" class="group-cat">
+									<span class="catorgname">Непищевое оборудование</span>
+									<span class="catorgnum">124 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num8"></div>
+								</a>
+								<a href="https://informupack.ru/company/105/" class="group-cat">
+									<span class="catorgname">Торговля. Склад. Транспорт. Логистика</span>
+									<span class="catorgnum">111 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num9"></div>
+								</a>
+								<a href="https://informupack.ru/company/106/" class="group-cat">
+									<span class="catorgname">Бренды. Торговые марки</span>
+									<span class="catorgnum">120 организаций</span>
+									<div class="pattern"></div>
+									<div class="cat num10"></div>
+								</a>
+								<a href="https://informupack.ru/company/info/" class="group-cat">
+									<span class="catorgname">Полезная информация</span>
+									<span class="catorgnum"></span>
+									<div class="pattern"></div>
+									<div class="cat num11"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-right__tint"></div>
+				<div class="footer">
+					<div class="top-activnih">
+						<div class="top-activnih-text">
+							<span>Топ самых активных</span>
+							<a href="https://informupack.ru/information/access/">Как попасть в топ?</a>
+						</div>
+						<div class="top-activnih-line">
+							<div id="bx_3099439860_3001" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/183/3001/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/b04/82_82_2/b040cbc896ee62f09640b25b43716651.jpg" alt="ПрофПак.рф">
+								</a>
+								<a href="https://informupack.ru/company/183/3001/" title="ПрофПак.рф" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">ПрофПак.рф</a>
+								<span class="comp-name-rating">369</span>
+							</div>
+							<div id="bx_3099439860_3046" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/2696/3046/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/5bb/82_82_2/5bbc76476c70eaf41566ad8382907254.jpg" alt="ИП Бушнева Ольга Николаевна">
+								</a>
+								<a href="https://informupack.ru/company/2696/3046/" title="ИП Бушнева Ольга Николаевна" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">ИП Бушнева Ольга Николаевна</a>
+								<span class="comp-name-rating">362</span>
+							</div>
+							<div id="bx_3099439860_2992" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/204/2992/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/400/82_82_2/400759de6a9e9ce4ab538a9c948cbe3f.png" alt="ООО РуСнА">
+								</a>
+								<a href="https://informupack.ru/company/204/2992/" title="ООО РуСнА" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">ООО РуСнА</a>
+								<span class="comp-name-rating">269</span>
+							</div>
+							<div id="bx_3099439860_1545" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/218/1545/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/993/82_82_2/9938b62b587ae35d7fc114195c8fdaab.png" alt="Элементарные машины ">
+								</a>
+								<a href="https://informupack.ru/company/218/1545/" title="Элементарные машины " style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">Элементарные машины</a>
+								<span class="comp-name-rating">248</span>
+							</div>
+							<div id="bx_3099439860_2928" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/704/2928/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/d15/82_82_2/d15229214381b859d2e815bdf36ec1f0.bmp.jpg"
+										alt="МередианУпак">
+								</a>
+								<a href="https://informupack.ru/company/704/2928/" title="МередианУпак" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">МередианУпак</a>
+								<span class="comp-name-rating">154</span>
+							</div>
+							<div id="bx_3099439860_2836" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/457/2836/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/b4b/82_82_2/b4b05df4f2c878fe8bd9a956adc53dd0.jpg" alt="ООО ЗЭТ СТИЛЬ">
+								</a>
+								<a href="https://informupack.ru/company/457/2836/" title="ООО ЗЭТ СТИЛЬ" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">ООО ЗЭТ СТИЛЬ</a>
+								<span class="comp-name-rating">145</span>
+							</div>
+							<div id="bx_3099439860_3449" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/352/3449/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/2c3/82_82_2/2c3f2c0e0cf87ba95cf0e87a760c6c23.jpg" alt="АПОЛИНАРИЯ">
+								</a>
+								<a href="https://informupack.ru/company/352/3449/" title="АПОЛИНАРИЯ" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">АПОЛИНАРИЯ</a>
+								<span class="comp-name-rating">138</span>
+							</div>
+							<div id="bx_3099439860_2922" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/1545/2922/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/3d4/82_82_2/3d4da49476fc260cf44614b8e60411d6.png" alt="КвадроКом">
+								</a>
+								<a href="https://informupack.ru/company/1545/2922/" title="КвадроКом" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">КвадроКом</a>
+								<span class="comp-name-rating">138</span>
+							</div>
+							<div id="bx_3099439860_2923" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/1727/2923/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/ffc/82_82_2/ffc384ee48c9755b3be8a4636387700b.jpg" alt="Мк Арнита">
+								</a>
+								<a href="https://informupack.ru/company/1727/2923/" title="Мк Арнита" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">Мк Арнита</a>
+								<span class="comp-name-rating">133</span>
+							</div>
+							<div id="bx_3099439860_3366" class="top-activnih-obj">
+								<a href="https://informupack.ru/company/353/3366/">
+									<img src="https://informupack.ru/upload/resize_cache/iblock/b10/82_82_2/b1062585a968db37cc7f4d32ab3d95b8.png" alt="ЗАО БОЛОТНИНСКАЯ ГОФРОТАРА">
+								</a>
+								<a href="https://informupack.ru/company/353/3366/" title="ЗАО БОЛОТНИНСКАЯ ГОФРОТАРА" style="overflow: hidden; line-height: 22px;height:22px;"
+									class="comp-name-top">ЗАО БОЛОТНИНСКАЯ ГОФРОТАРА</a>
+								<span class="comp-name-rating">131</span>
+							</div>
+						</div>
+					</div>
+					<div class="niz-footer">
+						<div class="niz-footer-col hidden-xs-down">
+							<span class="mi-soc">Мы в соц. медиа:</span>
+							<span class="soc-icon">
+								<a href="https://vk.com/public114365284" target="_blank" class="vk"></a>
+								<a href="https://www.facebook.com/informupack.ru" target="_blank" class="fb"></a>
+								<a href="https://twitter.com/informupack" target="_blank" class="tw"></a>
+								<a href="#" class="ok"></a>
+								<a href="http://my.mail.ru/community/informupack/" target="_blank" class="ma"></a>
+							</span>
+							<span class="copyright">© 2015-2016 ООО «ИнформУпак»
+								<br>Все права защищены.</span>
+							<div id="bx-composite-banner">
+								<a target="_blank" href="http://www.1c-bitrix.ru/composite/" style="background-color: rgb(58, 66, 77);" class="bx-composite-btn bx-btn-white">Быстро с 1С-Битрикс</a>
+							</div>
+						</div>
+						<div class="niz-footer-col">
+							<ul class="footer-ul">
+								<li>Карта сайта</li>
+								<li>
+									<a href="https://informupack.ru/company/">Каталог предприятий</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/news/">Новости, статьи</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/index/">Котировки, индексы</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/board/">Доска объявлений</a>
+								</li>
+								<li>
+									<script id="bx24_form_link" data-skip-moving="true">
+										(function(w, d, u, b)
+										{
+											w['Bitrix24FormObject'] = b;
+											w[b] = w[b] || function()
+											{
+												arguments[0].ref = u;
+												(w[b].forms = w[b].forms || []).push(arguments[0])
+											};
+											if (w[b]['forms']) return;
+											s = d.createElement('script');
+											r = 1 * new Date();
+											s.async = 1;
+											s.src = u + '?' + r;
+											h = d.getElementsByTagName('script')[0];
+											h.parentNode.insertBefore(s, h);
+										})(window, document, 'https://informupak.bitrix24.ru/bitrix/js/crm/form_loader.js', 'b24form');
+										b24form(
+										{
+											"id": "4",
+											"lang": "ru",
+											"sec": "b4w8l1",
+											"type": "link",
+											"click": ""
+										});
+
+									</script>
+									<a style="cursor: pointer;">Обратная связь</a>
+								</li>
+							</ul>
+						</div>
+						<div class="niz-footer-col">
+							<ul class="footer-ul">
+								<li>Информация</li>
+								<li>
+									<a href="https://informupack.ru/information/help/">Помощь</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/information/about/">О проекте</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/information/advertising/">Реклама на портале</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/information/contact/">Контакты</a>
+								</li>
+								<li>
+									<a href="https://informupack.ru/information/agreement/">Пользовательское соглашение</a>
+								</li>
+							</ul>
+						</div>
+						<div id="subscribe-form" class="niz-footer-col hidden-sm-down">
+							<ul class="footer-ul">
+								<li>Подписаться</li>
+							</ul>
+							<form action="/personal/subscribe">
+								<input id="sf_RUB_ID_1" type="hidden" name="sf_RUB_ID[]" value="1">
+								<div class="find-field-footer">
+									<input type="text" name="sf_EMAIL" size="20" placeholder="Ваш e-mail" autocomplete="off" value="" title="" class="input-text">
+									<input type="submit" name="OK" value="" class="input-submit">
+								</div>
+							</form>
+							<span class="conf-info">Мы уважаем Вашу конфиденциальность. Мы не предоставляем и не продаем Вашу информацию третьим лицам.</span>
+						</div>
+						<div class="niz-footer-col niz-footer-col--width-1-1 hidden-md-up">
+							<span class="mi-soc">Мы в соц. медиа:</span>
+							<span class="soc-icon">
+								<a href="https://vk.com/public114365284" target="_blank" class="vk"></a>
+								<a href="https://www.facebook.com/informupack.ru" target="_blank" class="fb"></a>
+								<a href="https://twitter.com/informupack" target="_blank" class="tw"></a>
+								<a href="#" class="ok"></a>
+								<a href="http://my.mail.ru/community/informupack/" target="_blank" class="ma"></a>
+							</span>
+							<span class="copyright">© 2015-2016 ООО «ИнформУпак»
+								<br>Все права защищены.</span>
+							<div id="bx-composite-banner">
+								<a target="_blank" href="http://www.1c-bitrix.ru/composite/" style="background-color: rgb(58, 66, 77);" class="bx-composite-btn bx-btn-white">Быстро с 1С-Битрикс</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="opacity-block"></div>
+				<div class="popup-block"></div>
+				<script src="assets/scripts/_jquery.js"></script>
+				<script src="assets/scripts/_func.js"></script>
+				<script src="assets/scripts/_flickity.js"></script>
+				<script src="assets/scripts/app.min.js"></script>
+			</div>
+		</div>
+	</body>
+
+</html>

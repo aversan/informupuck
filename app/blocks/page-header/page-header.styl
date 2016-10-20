@@ -3,6 +3,13 @@
 	border-bottom 1px solid #eee
 	background-image $background-image-pattern
 	background-repeat repeat
+	box-sizing border-box
+	overflow hidden
+	height 112px
+
+	+below(767px)
+		min-height 112px
+		height auto
 
 	&__row
 		display flex
@@ -11,6 +18,11 @@
 		flex-wrap nowrap
 		align-items center
 		overflow hidden
+
+		+below(767px)
+			flex-direction column
+			align-items flex-start
+
 	&__primary-content
 		order 0
 		flex-grow 2
@@ -23,6 +35,10 @@
 		flex-flow column
 		align-items flex-end
 		margin-left 12px
+
+		+below(767px)
+			margin-left 78px
+			margin-top 7px
 
 	&__title
 		font-size 18px
@@ -51,7 +67,6 @@
 	.breadcrumb
 		margin-bottom 10px
 		position relative
-		z-index 1
 
 	&__row--three-line
 		.page-header__primary-content

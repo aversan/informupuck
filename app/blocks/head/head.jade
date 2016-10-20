@@ -1,13 +1,32 @@
 head
 	meta(charset='utf-8')
-	meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
+	meta(name='viewport' content='height=device-height, width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
 	meta(http-equiv='X-UA-Compatible' content='IE=edge')
 
-	link(sizes='16x16'   href='/favicon-16x16.png'   rel='icon' type='image/png')
+	link(rel='apple-touch-icon', href='https://informupack.ru/local/templates/projeckt/favicon_white.png')
+	link(rel='icon', type='image/png', href='https://informupack.ru/local/templates/projeckt/favicon.png')
 
 	block head
 	title= pageTitle || ''
-	meta(name='description' content=pageDescription || '')
-	meta(name='keywords' content=pageKeywords || '')
+	meta(name='robots', content='index, follow')
+	meta(name='description' content=pageDescription || 'Информационный отраслевой деловой портал InformUpack.ru — Взгляни по-новому на привычные вещи. Мы с теми, для кого упаковка больше, чем просто упаковка. Будь в центре упаковочной промышленности.')
+	meta(name='keywords' content=pageKeywords || 'Упаковка,новости,информупак')
 
+	link(rel='stylesheet', type='text/css', href='https://informupack.ru/local/js/jquery.mCustomScrollbar.css')
+	link(rel='stylesheet', type='text/css', href='https://informupack.ru/local/js/fancy/jquery.fancybox.css?v=2.1.5', media='screen')
+	link(rel='stylesheet', type='text/css', href='https://informupack.ru/local/js/ui/css/style.css')
+	link(href='https://informupack.ru/bitrix/js/main/core/css/core.css?14423619943963', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/bitrix/js/socialservices/css/ss.css?14595118655037', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/bitrix/js/main/core/css/core_popup.css?145951181438446', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/bitrix/js/altasib.errorsend/css/window.css?14621039544771', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/templates/projeckt/components/twofingers/location/head/style.css?145962863911053', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/templates/projeckt/components/bitrix/news.list/main_slider/style.css?14545235865065', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/templates/projeckt/components/bitrix/system.auth.authorize/flat1/style.css?1456316330699', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/bitrix/components/bitrix/socserv.auth.form/templates/flat/style.css?14595118732659', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/templates/projeckt/components/marvil/main.register/custom/style.css?14563414711078', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/js/suggestions/css/suggestions.css?14658555989803', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/bitrix/panel/main/popup.css?145951181423084', type='text/css', rel='stylesheet')
+	link(href='https://informupack.ru/local/templates/projeckt/components/bitrix/system.auth.authorize/.default/style.css?1454523586475', type='text/css', data-template-style='true', rel='stylesheet')
+	//- link(href='https://informupack.ru/local/templates/projeckt/styles.css?146779793657598', type='text/css', data-template-style='true', rel='stylesheet')
+	//- link(href='local/templates/projekt/template_styles.css', rel='stylesheet')
 	link(href='assets/styles/app.min.css?t=' + timestamp rel='stylesheet')

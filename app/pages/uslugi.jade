@@ -1,0 +1,34 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content
+			.nano-content
+				.section__header.section__header--space.section__header--pattern.z-index-11
+					.section__header-row
+						.section__header-primary-content
+							include ../blocks/breadcrumb/breadcrumb-uslugi
+						.section__header-secondary-content
+							a.section__header-secondary-action.section__header-secondary-action--prev(href='')
+								i.mdi.mdi-chevron-left
+								| Назад
+					.section__header-row
+						.section__header-primary-content
+							h1.section__title.section__title--page Полезная информация
+					.section__intro
+						| Здесь вы можете найти ответы на все интересующие вопросы, связанные с отраслью упаковки, ознакомиться с современными терминами, подобрать специалистов, разместить резюме, а так же найти учебное заведение.
+				.cell-two-col
+					.col-100
+						include ../blocks/teaser-news/teaser-section-rubric-uslugi
+
+		.cell-one-col.onmain
+			.nano.layout-nano-cell-one-col
+				.nano-content
+					include ../blocks/teaser-news/teaser-section-lenta
+					include ../blocks/panel/panel-side-index

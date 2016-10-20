@@ -1,115 +1,121 @@
-html {
-	box-sizing: border-box;
-}
+html
+	box-sizing border-box
+	font-size $font-size-root
+	-webkit-tap-highlight-color rgba(0,0,0,0)
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
+*
+*::before
+*::after
+	box-sizing inherit
 
-html,
-body {
-	width: 100%;
-	height: 100%;
-}
+html
+body
+	width 100%
+	height 100%
 
-@-moz-viewport {
-	width: device-width;
-}
+@-moz-viewport
+	width device-width
 
-@-ms-viewport {
-	width: device-width;
-}
+@-ms-viewport
+	width device-width
 
-@-webkit-viewport {
-	width: device-width;
-}
+@-webkit-viewport
+	width device-width
 
-@viewport {
-	width: device-width;
-}
+@viewport
+	width device-width
 
-html {
-	font-size: $font-size-root;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+body
+	background #414a5a
+	color #fff
+	min-width 320px
 
-body {
-	min-width: 320px;
-}
+[tabindex="-1"]:focus
+	outline none !important
 
-[tabindex="-1"]:focus {
-	outline: none !important;
-}
+img
+	vertical-align middle
 
-img {
-	vertical-align: middle;
-}
+[role="button"]
+	cursor pointer
 
-[role="button"] {
-	cursor: pointer;
-}
+a
+area
+button
+[role="button"]
+input
+label
+select
+summary
+textarea
+	touch-action manipulation
 
-a,
-area,
-button,
-[role="button"],
-input,
-label,
-select,
-summary,
-textarea {
-	touch-action: manipulation;
-}
+label
+	display inline-block
 
-label {
-	display: inline-block;
-}
+button
+	&:focus
+		outline 1px dotted
+		outline 5px auto -webkit-focus-ring-color
 
-button:focus {
-	outline: 1px dotted;
-	outline: 5px auto -webkit-focus-ring-color;
-}
+input
+button
+select
+textarea
+	margin 0
+	line-height inherit
+	border-radius 0
 
-input,
-button,
-select,
-textarea {
-	margin: 0;
-	line-height: inherit;
-	border-radius: 0;
-}
+textarea
+	resize vertical
 
-textarea {
-	resize: vertical;
-}
+fieldset
+	min-width 0
+	padding 0
+	margin 0
+	border 0
 
-fieldset {
-	min-width: 0;
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
+legend
+	display block
+	width 100%
+	padding 0
+	font-size 1.5rem
+	line-height inherit
+	border 0
 
-legend {
-	display: block;
-	width: 100%;
-	padding: 0;
-	font-size: 1.5rem;
-	line-height: inherit;
-	border: 0;
-}
+input[type="search"]
+	box-sizing inherit
+	-webkit-appearance none
 
-input[type="search"] {
-	box-sizing: inherit;
-	-webkit-appearance: none;
-}
+[hidden]
+	display none !important
 
-[hidden] {
-	display: none !important;
-}
+small
+	font-size $small-font-size
 
-small {
-	font-size: $small-font-size;
-}
+a
+	color $link-color
+
+	&:hover
+		color $link-hover-color
+		text-decoration none
+
+::-webkit-input-placeholder
+	color #828282
+	font-family 'GothamPro',arial, sans-serif
+	font-size 11px
+
+::-moz-placeholder
+	color #828282
+	font-family 'GothamPro',arial, sans-serif
+	font-size 11px
+
+:-moz-placeholder
+	color #828282
+	font-family 'GothamPro',arial, sans-serif
+	font-size 11px
+
+:-ms-input-placeholder
+	color #828282
+	font-family 'GothamPro',arial, sans-serif
+	font-size 11px

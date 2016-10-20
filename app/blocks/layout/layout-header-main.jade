@@ -1,0 +1,199 @@
+.layout__header.layout__header--main
+  a.layout__header-logo-wrapper(href='')
+    img.layout__header-logo(src='assets/images/informupack-logo2.png', alt='', width='81', height='71')
+  .layout__header-row.layout__header-row--sep.layout__header-row--secondary
+    .layout__header-city
+      i.icon.icon--pin-dark-blue-xs
+      span.title Ваш город:
+      a.tf_location_link(href='#tfLocationPopup', onclick="tfLocationPopupOpen('/bitrix/components/twofingers/location', ''); return false;")
+        span.name Оренбург
+        i.mdi.mdi-menu-down
+      .custom-popup-2014-overlay(style='display:none;')
+      .city-top.custom-popup-2014-content.custom-popup-2014.global(style='display:none;')
+        .close-region.custom-popup-2014-close
+        span.okno-vibora-zag Выбрать город
+        span.okno-vibora-podzag Введите название Города
+        input.field-text.input-okno-vibora.city-search(type='text', name='search', placeholder='', autocomplete='off')
+        a.clear_field(href='#')
+        .clr
+        br
+        .clr
+        span.okno-vibora-pop Популярные города (регионы)
+        .popup-city.nice-scroll.inner
+          ul.pop-goroda.mega-city.current-list
+            li
+              a(data-id='36', href='#') Москва (Московская область)
+            li
+              a(data-id='2234', href='#') Муром (Владимирская область)
+            li
+              a(data-id='2120', href='#') Мышкин (Ярославская область)
+            li
+              a(data-id='3136', href='#') Нижний Новгород (Нижегородская область)
+            li
+              a(data-id='4052', href='#') Новосибирск (Новосибирская область)
+            li
+              a(data-id='4097', href='#') Омск (Омская область)
+            li
+              a(data-id='1867', href='#') Орёл (Орловская область)
+            li
+              a(data-id='3366', href='#') Пенза (Пензенская область)
+            li
+              a(data-id='3307', href='#') Пермь (Пермский край)
+            li
+              a(data-id='2336', href='#') Петрозаводск (Республика Карелия)
+            li
+              a(data-id='2498', href='#') Псков (Псковская область)
+            li
+              a(data-id='2126', href='#') Ростов Великий (Ярославская область)
+            li
+              a(data-id='2686', href='#') Ростов-на-Дону (Ростовская область)
+            li
+              a(data-id='2130', href='#') Рыбинск (Ярославская область)
+            li
+              a(data-id='1899', href='#') Рязань (Рязанская область)
+            li
+              a(data-id='3269', href='#') Самара (Самарская область)
+    #title-search2.input__container.layout__header-search-container.bx-searchtitle
+      form(action='/search/')
+        #desktop-search.input-group.input-group-search.layout__header-search.bx-input-group
+          span.input-group-prefix.mdi.mdi-magnify
+          input#title-search-input2.form-control(type='text', value='', placeholder='Поиск по сайту', autocomplete='off')
+          button.input-group-postfix.icon.icon--enter-light-grey(type='submit')
+        #title-search2_res.find-rezult
+          .title-search-result
+    a.navigation__link.navigation__link--alt(href='') Войти
+    a.navigation__link.navigation__link--alt(href='') Регистрация
+  .layout__header-row.layout__header-row--primary
+    .layout__header-button-menu-wrapper(data-uk-dropdown="{ mode:'click' }")
+      button.layout__header-button-icon.layout__header-button-menu
+      .uk-dropdown.uk-dropdown-bottom.uk-dropdown--mega
+        .uk-grid.uk-dropdown-grid
+          .uk-width-1-1
+            h5.uk-nav-header.uk-nav-header--mega Каталог организаций
+            .uk-nav-divider.uk-nav-divider--mega
+            ul.uk-nav.uk-nav-dropdown.uk-panel.uk-nav--mega.uk-column-1-2
+              li
+                a(href='') Упаковка и тара
+              li
+                a(href='') Полиграфическое оборудование
+              li
+                a(href='') Упаковочное оборудование
+              li
+                a(href='') Пищевое оборудование
+              li
+                a(href='') Упаковочные материалы и сырье
+              li
+                a(href='') Оборудование для производства упаковки
+              li
+                a(href='') Полимерное оборудование и материалы
+              li
+                a(href='') Непищевое оборудование
+              li
+                a(href='') Торговля. Склад. Транспорт. Логистика
+              li
+                a(href='') Бренды. Торговые марки
+              li
+                a(href='') Услуги
+        .uk-grid.uk-dropdown-grid
+          .uk-width-1-2
+            h5.uk-nav-header.uk-nav-header--mega Торговая площадка
+            .uk-nav-divider.uk-nav-divider--mega
+            ul.uk-nav.uk-nav-dropdown.uk-panel.uk-nav--mega
+              li
+                a(href='') Покупка
+              li
+                a(href='') Продажа
+              li
+                a(href='') Добавить объявление
+          .uk-width-1-2
+            h5.uk-nav-header.uk-nav-header--mega Новости и статьи
+            .uk-nav-divider.uk-nav-divider--mega
+            ul.uk-nav.uk-nav-dropdown.uk-panel.uk-nav--mega
+              li
+                a(href='') Новости отрасли
+              li
+                a(href='') Статьи
+              li
+                a(href='') Интервью
+        .uk-grid.uk-dropdown-grid
+          .uk-width-1-2
+            h5.uk-nav-header.uk-nav-header--mega Информация
+            .uk-nav-divider.uk-nav-divider--mega
+            ul.uk-nav.uk-nav-dropdown.uk-panel.uk-nav--mega
+              li
+                a(href='') О проекте
+              li
+                a(href='') Реклама
+              li
+                a(href='') Помощь
+              li
+                a(href='') Контакты
+          .uk-width-1-2
+            h5.uk-nav-header.uk-nav-header--mega Мы в социальных сетях
+            .uk-nav-divider.uk-nav-divider--mega
+            ul.uk-nav.uk-nav-dropdown.uk-panel.uk-nav--mega
+              li.uk-nav__item--icon
+                a(href='#')
+                  i.mdi.mdi-vk
+                  |  Vkontakte
+              li.uk-nav__item--icon
+                a(href='#')
+                  i.mdi.mdi-odnoklassniki
+                  |  Odnoklassniki
+              li.uk-nav__item--icon
+                a(href='#')
+                  i.mdi.mdi-facebook
+                  |  Facebook
+              li.uk-nav__item--icon
+                a(href='#')
+                  i.mdi.mdi-youtube-play
+                  |  Youtube
+    ul.navigation
+      li.navigation__item.navigation__item--dropdown(data-uk-dropdown="{ mode: 'hover', hoverDelayIdle: 0, remaintime: 300 }")
+        a.navigation__link(href='')
+          | Каталог организаций
+          i.mdi.mdi-chevron-down
+        .uk-dropdown.uk-dropdown-bottom.uk-dropdown--main
+          ul.uk-nav.uk-nav-dropdown.uk-nav--main
+            li
+              a(href='') Категории
+            li
+              a(href='') Поиск
+      li.navigation__item.navigation__item--dropdown(data-uk-dropdown="{ mode: 'hover', hoverDelayIdle: 0, remaintime: 300 }")
+        a.navigation__link(href='')
+          | Торговая площадка
+          i.mdi.mdi-chevron-down
+        .uk-dropdown.uk-dropdown-bottom.uk-dropdown--main
+          ul.uk-nav.uk-nav-dropdown.uk-nav--main
+            li
+              a(href='') Покупка
+            li
+              a(href='') Продажа
+      li.navigation__item.navigation__item--dropdown(data-uk-dropdown="{ mode: 'hover', pos:'bottom-right', hoverDelayIdle: 0, remaintime: 300 }")
+        a.navigation__link(href='')
+          | Новости статьи
+          i.mdi.mdi-chevron-down
+        .uk-dropdown.uk-dropdown-bottom.uk-dropdown--main
+          ul.uk-nav.uk-nav-dropdown.uk-nav--main
+            li
+              a(href='') Новости
+            li
+              a(href='') Статьи
+            li
+              a(href='') Интервью
+            li
+              a(href='') Пресс-релизы
+      li.navigation__item.navigation__item--dropdown(data-uk-dropdown="{ mode: 'hover', pos:'bottom-right', hoverDelayIdle: 0, remaintime: 300 }")
+        a.navigation__link(href='')
+          | Еще
+          i.mdi.mdi-chevron-down
+        .uk-dropdown.uk-dropdown-bottom.uk-dropdown--main
+          ul.uk-nav.uk-nav-dropdown.uk-nav--main
+            li
+              a(href='') Помощь
+            li
+              a(href='') О проекте
+            li
+              a(href='') Реклама
+            li
+              a(href='') Контакты

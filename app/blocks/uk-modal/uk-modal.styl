@@ -13,8 +13,6 @@
 	-webkit-transition: opacity 0.15s linear;
 	transition: opacity 0.15s linear;
 	touch-action: cross-slide-y pinch-zoom double-tap-zoom;
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0);
 }
 
 .uk-modal.uk-open {
@@ -35,11 +33,8 @@
 	max-width: 100%;
 	max-width: calc(100% - 20px);
 	background: #ffffff;
-	opacity: 0;
-	-webkit-transform: translateY(-100px);
-	transform: translateY(-100px);
-	-webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s ease-out;
-	transition: opacity 0.3s linear, transform 0.3s ease-out;
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
 }
 
 @media (max-width: 767px) {
@@ -50,9 +45,10 @@
 }
 
 .uk-open .uk-modal-dialog {
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+  	-webkit-animation-duration: .7s;
+	animation-duration: .7s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
 
 .uk-modal-dialog > :not([class*='uk-modal-']):last-child {
@@ -161,6 +157,41 @@
 	font-family: FontAwesome;
 	-webkit-animation: uk-rotate 2s infinite linear;
 	animation: uk-rotate 2s infinite linear;
+}
+
+
+@keyframes bounceInDown {
+	from, 60%, 75%, 90%, to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	to {
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 .uk-modal-header

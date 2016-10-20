@@ -44,10 +44,12 @@
 	border-radius 0
 	box-sizing border-box
 	display flex
+	flex-wrap nowrap
 	align-items center
 
 	& > li > a
 	& > li > span
+		font-family 'GothamPro', arial, sans-serif
 		padding 0
 		color $brand-primary
 		background-color transparent
@@ -57,9 +59,14 @@
 		line-height 24px
 		text-align center
 		border-radius 100px
-		margin 10px
-		font-size 11px
+		margin 5px
+		font-size 12px
 		box-sizing border-box
+
+	& > li:not(.active):not(.prev):not(.next) > a
+	& > li:not(.active):not(.prev):not(.next) > span
+		+below(767px)
+			display none
 
 	& > li > a:hover
 	& > li > a:focus
@@ -89,9 +96,48 @@
 		background-color #f9fafb
 		border-color #f9fafb
 
+	& > li.prev > a
+	& > li.prev > span
+	& > li.next > a
+	& > li.next > span
+		font-family 'Roboto', arial, sans-serif
+		white-space nowrap
+		width auto
+
+		span
+			opacity .6
+
+		&:hover
+		&:focus
+			color $brand-primary
+			border-color transparent
+			background-color transparent
+
+			span
+				opacity 1
+
+	& > .prev.disabled > a
+	& > .prev.disabled > a:hover
+	& > .prev.disabled > a:focus
+	& > .prev.disabled > span
+	& > .prev.disabled > span:hover
+	& > .prev.disabled > span:focus
+	& > .next.disabled > a
+	& > .next.disabled > a:hover
+	& > .next.disabled > a:focus
+	& > .next.disabled > span
+	& > .next.disabled > span:hover
+	& > .next.disabled > span:focus
+		opacity .6
+		color #adadad
+		background-color transparent
+		border-color transparent
+
+		span
+			opacity 1
+
 	&__spacer
 		flex-grow 1
-
 
 .pagination--helper
 	margin-left -10px

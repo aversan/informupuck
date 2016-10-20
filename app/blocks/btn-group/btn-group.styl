@@ -1,0 +1,113 @@
+.btn-group
+	position relative
+	display inline-block
+	vertical-align middle
+
+	& > .btn
+	& > .btn-group-addon
+		position relative
+		float left
+
+	& > .btn:hover
+	& > .btn:focus
+	& > .btn:active
+	& > .btn.active
+		z-index 2
+
+	& .btn + .btn
+	& .btn + &
+	& & + .btn
+	& & + &
+	& .btn + .btn-group-addon
+	& .btn-group-addon + .btn
+	& .btn-group-addon + .btn-group-addon
+		margin-left -1px
+
+	& > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle)
+	& > .btn-group-addon:not(:first-child):not(:last-child):not(.dropdown-toggle)
+		border-radius 0
+
+	& > .btn:first-child
+	& > .btn-group-addon:first-child
+		margin-left 0
+
+	& > .btn:first-child:not(:last-child):not(.dropdown-toggle)
+	& > .btn-group-addon:first-child:not(:last-child):not(.dropdown-toggle)
+		border-top-right-radius 0
+		border-bottom-right-radius 0
+
+	& > .btn:last-child:not(:first-child)
+	& > .dropdown-toggle:not(:first-child)
+	& > .btn-group-addon:last-child:not(:first-child)
+		border-top-left-radius 0
+		border-bottom-left-radius 0
+
+	& > &
+		float left
+
+	& > &:not(:first-child):not(:last-child) > .btn
+		border-radius 0
+
+	& > &:first-child:not(:last-child) > .btn:last-child
+	& > &:first-child:not(:last-child) > .dropdown-toggle
+		border-top-right-radius 0
+		border-bottom-right-radius 0
+
+	& > &:last-child:not(:first-child) > .btn:first-child
+		border-top-left-radius 0
+		border-bottom-left-radius 0
+
+	& .dropdown-toggle:active
+	&.open .dropdown-toggle
+		outline 0
+
+	& > .btn + .dropdown-toggle
+		padding-right 8px
+		padding-left 8px
+
+
+	& > .btn-lg + .dropdown-toggle
+	.btn-group-lg& > .btn + .dropdown-toggle
+		padding-right 12px
+		padding-left 12px
+
+[data-toggle="buttons"] > .btn input[type="radio"]
+[data-toggle="buttons"] > .btn input[type="checkbox"]
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"]
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"]
+	position absolute
+	clip rect(0, 0, 0, 0)
+	pointer-events none
+
+.btn-group-addon
+	display inline-block
+	border 1px solid #ccc
+	color #333
+	background #fff
+
+// theme
+.btn-group-addon
+	border-color $input-border-color
+	color $input-group-addon-bg
+
+&.input-sm
+&.input-md
+&.input-lg
+	padding 0
+
+btnGroupSize('sm', $input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm)
+btnGroupSize('md', $input-padding-y-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-border-radius-md)
+btnGroupSize('lg', $input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg)
+btnGroupSize('xl', $input-padding-y-xl, $input-padding-x-xl, $font-size-xl, $line-height-xl, $input-border-radius-xl)
+
+.btn-group-justified
+	display table
+	width 100%
+	table-layout fixed
+	border-collapse separate
+
+	& > .btn
+	& > .btn-group
+		display table-cell
+		float none
+		width 1%

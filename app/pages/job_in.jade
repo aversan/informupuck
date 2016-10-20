@@ -1,0 +1,24 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Вакансия';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content.layout-nano-content--alt
+			.nano-content
+				.section__header.section__header--panel-space.p-b-0.z-index-11
+					.section__header-row
+						.section__header-primary-content
+							include ../blocks/breadcrumb/breadcrumb-vacancy
+						.section__header-secondary-content
+							a.section__header-secondary-action.section__header-secondary-action--prev(href='')
+								i.mdi.mdi-chevron-left
+								| Назад
+					.section__hr.section__hr--m-t-1
+				section.section.section--job-in
+					include ../blocks/card/card-vacancy-inner
+					include ../blocks/panel/panel-section-vacancy-inner

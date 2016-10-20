@@ -1,0 +1,34 @@
+.form__container
+  .container-fluid.form__container-inner
+    form.form
+      fieldset
+        header.form__header
+          h2.form__header-title Регистрация
+        p.form__hint-block.text-xs-center
+          | Для регистрации заполните форму ниже. Все поля
+          br
+          | обязательны для заполнения
+        .form__form-group.has-error
+          label.control-label(for='ctrl_company') Название компании:
+          .form-control__container
+            input#ctrl_company.form-control.input-xl(type='text')
+            label.form-control__error(for='ctrl_company') Укажите ИНН или название компании
+        .form__form-group
+          label.control-label(for='ctrl_email_2') Электронная почта:
+          input#ctrl_email_2.form-control.input-xl(type='text')
+        .form__form-group
+          label.control-label(for='ctrl_login') Ваш логин:
+          input#ctrl_company.form-control.input-xl(type='text')
+        .form__form-group
+          label.control-label(for='ctrl_password_2') Пароль:
+          input#ctrl_password_2.form-control.input-xl(type='text', value='', placeholder='Введите пароль')
+        .form__form-group
+          label.control-label(for='ctrl_password_3') Повторите пароль:
+          input#ctrl_password_3.form-control.input-xl(type='text', value='', placeholder='Повторите пароль')
+        p.form__hint-block
+          i.icon.icon--attention-o-blue-sm
+          | Убедитесь, что включена функция CapsLock. Парольдолжен быть не менее 6 символов в длину. Хороший пароль – не менее 6 цифр и букв.
+        .form__form-group.form__form-group--footer
+          button.btn.btn-xl.btn-block.btn-primary.form__btn-width-2(type='submit') Зарегистрироваться
+          .form__sep.form__sep--small
+          a.form__footer-link(href='login.html') Вход на сайт

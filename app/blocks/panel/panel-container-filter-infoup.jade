@@ -1,0 +1,68 @@
+#accordion.panel__container(role='tablist', aria-multiselectable='true')
+  .panel.panel--filter
+    #heading_01.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_01', aria-expanded='false', aria-controls='collapse_01')
+          | Категории
+    #collapse_01.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_01')
+      .panel__body
+        .nano.panel__nano(style='height: 575px')
+          .nano-content
+            .treeview.treeview--view2
+              ul
+                li
+                  div
+                    p
+                      a.sc(href='#', onclick='return UnHide(this)')
+                        i.mdi.mdi-minus-box
+                      input#tall(type='checkbox', name='tall')
+                      label.custom-unchecked(for='tall') Ампуты
+                  ul
+                    li
+                      div
+                        p
+                          input#tall-1(type='checkbox', name='tall-1')
+                          label.custom-unchecked(for='tall-1') Подкатегория 1
+                    li
+                      div
+                        p
+                          a.sc(href='#', onclick='return UnHide(this)')
+                            i.mdi.mdi-minus-box
+                          input#tall-2(type='checkbox', name='tall-2')
+                          label.custom-unchecked(for='tall-2') Подкатегория 2
+                      ul
+                        li
+                          div
+                            p
+                              input#tall-2-1(type='checkbox', name='tall-2-1')
+                              label.custom-unchecked(for='tall-2-1') Медицинские
+                        li.last
+                          div
+                            p
+                              input#tall-2-2(type='checkbox', name='tall-2-2')
+                              label.custom-unchecked(for='tall-2-2') Пищевые
+                    li.last
+                      div
+                        p
+                          input#tall-3(type='checkbox', name='tall-3')
+                          label.custom-unchecked(for='tall-3') Подкатегория 3
+                li
+                  div
+                    p
+                      input#short(type='checkbox', name='short')
+                      label.custom-unchecked(for='short') Асептическая упаковка
+                li
+                  div
+                    p
+                      input#short1(type='checkbox', name='short1')
+                      label.custom-unchecked(for='short1') Асептическая упаковка
+                li
+                  div
+                    p
+                      input#short2(type='checkbox', name='short2')
+                      label.custom-unchecked(for='short2') Асептическая упаковка
+                li.last
+                  div
+                    p
+                      input#short3(type='checkbox', name='short3')
+                      label.custom-unchecked(for='short3') Аэразольная упаковка

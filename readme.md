@@ -4,7 +4,7 @@
 
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:aversan/informupuck.git new-project && cd new-project
+git clone git@github.com:Informupack/dev.git new-project && cd new-project
 ```
 
 ### Установи модули

@@ -1,0 +1,347 @@
+.layout-spacer
+	flex-grow 1
+
+.layout__header
+	background-color $brand-primary
+	background-image $background-image-pattern
+	background-repeat repeat
+
+	&--main
+		background-color #fff
+		background-image none
+		color #333
+
+	&-row
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		flex-shrink 0
+		align-items center
+		height 60px
+
+		.layout__header--main &
+			height 50px
+			box-sizing border-box
+
+	&-button-icon
+		width 60px
+		height 60px
+		border 0
+		background transparent
+		text-align center
+		font-size 24px
+		line-height 60px
+		color #fff
+		cursor pointer
+
+.layout__header.is-mobile
+	display none
+
++below(767px)
+	.layout__header.is-mobile
+		display block
+		position fixed
+		left 0
+		top 28px
+		right 0
+		z-index 99
+
+		& + .layout__header-placeholder
+			display block
+			height 60px
+
+	.layout__header.is-visible-search
+		display none
+
+	.layout__header.is-search
+		display none
+
+		.layout__header.is-visible-search ~ &
+			position fixed
+			left 0
+			top 28px
+			right 0
+			z-index 1111
+			width auto
+			display block
+
+.layout__header-search
+	margin-left 10px
+	width calc(100% - 20px)
+
+.layout__header--main
+	position relative
+	z-index 1000
+	width 768px
+	box-shadow 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+
+	+below(767px)
+		display none
+
+.layout__header--main .layout__header-row
+	position relative
+	box-sizing border-box
+	height 50px
+
+.layout__header--main .layout__header-row + .layout__header-row:before
+	content ''
+	display block
+	position absolute
+	left 0
+	right 0
+	top 0
+	border-top 1px solid #e8e8e8
+	z-index -1
+
+.layout__header--main .layout__header-row--sep
+	& > *
+		position relative
+
+	& > :before
+		content ''
+		display inline-block
+		width 0
+		height 100%
+		border-left 1px solid #e8e8e8
+		position absolute
+		left 0
+		top 0
+		z-index -1
+
+	& > :first-child:before
+		display none
+
+.layout__header--main .layout__header-row--primary
+	display flex
+	order 0
+	flex-grow 2
+	padding-left 60px
+
+.layout__header--main .layout__header-logo
+	position absolute
+	left 50%
+	top 50%
+	transform translate(-50%, -50%)
+
+	&-wrapper
+		background-color $brand-primary
+		background-image $background-image-pattern
+		background-repeat repeat
+		width 100px
+		height 100px
+		position relative
+		display block
+		float left
+
+.layout__header--main .layout__header-button-icon
+	height 50px
+	line-height 50px
+
+.layout__header--main .layout__header-button-menu
+	font-family "Material Design Icons"
+	text-rendering auto
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	background-color #f2f2f2
+	color $brand-primary
+
+	&:before
+		content '\F35C'
+
+	&:focus
+	&:hover
+		background-color $brand-primary
+		color #fff
+
+.layout__header--main .uk-open > .layout__header-button-menu
+	background-color $brand-primary
+	color #fff
+
+	&:before
+		content '\F156'
+
+.layout__header--main .uk-open > .layout__header-button-menu:hover
+.layout__header--main .uk-open > .layout__header-button-menu:focus
+	background-color $brand-primary
+	color #fff
+
+.layout__header--main .layout__header-row--primary .layout__header-button-menu
+	float left
+	width 60px
+	margin-left -60px
+
+.layout__header--main .layout__header-city
+	display inline-block
+	padding-left 24px
+	padding-right 24px
+	box-sizing border-box
+
+	.icon
+		vertical-align middle
+		color $brand-primary
+		margin-right 3px
+
+	.title
+		font-family $font-family-sans-serif
+		font-weight normal
+		font-size 11px
+		color #333
+		opacity .6
+		margin-right 2px
+
+	a
+		color #333
+		text-decoration none
+
+	.name
+		display inline-block
+		font-family $font-family-sans-serif
+		font-weight normal
+		font-size 12px
+		color #333
+		max-width 70px
+		vertical-align middle
+		text-truncate()
+
+	.mdi-menu-down
+		position absolute
+		margin-top 3px
+		margin-left 7px
+
+	a .name
+		border-bottom 1px solid alpha(#333, .3)
+
+.layout__header--main .layout__header-search
+	margin-left 0
+
+	.form-control
+		background-color #f8f8f8
+		border-color #f8f8f8
+		color #333
+		font-size 11px
+
+		&:focus
+			border-color alpha($input-border-color, .6)
+			box-shadow none
+
+	.input-group-postfix
+		position absolute
+		width 1px
+		height 1px
+		padding 0
+		margin -1px
+		overflow hidden
+		clip rect(0, 0, 0, 0)
+		border 0
+		background-color transparent
+		display none
+
+	&.input-group-search > .form-control
+	&.input-group-search > .twitter-typeahead > .form-control
+	&.input-group-search > .input-group-addon
+	&.input-group-search > .input-group-btn > .btn
+		height 50px
+
+	&.input-group-search > .form-control
+		padding-left 50px
+
+	&.input-group-search .input-group-prefix
+	&.input-group-search .input-group-postfix
+		width 50px
+		height 50px
+		line-height 50px
+
+	&.input-group-search .input-group-prefix:before
+		margin-left 10px
+
+.layout__header--main .navigation
+	display table
+	width 100%
+
+.layout__header--main .navigation__item
+	display table-cell
+	vertical-align top
+	text-align center
+
+	&--dropdown
+		position relative
+
+.layout__header--main .navigation__link
+	display flex
+	align-items center
+	flex-shrink 0
+	user-select inherit
+	height 50px
+	font-family $headings-font-family-medium
+	font-weight normal
+	font-size 11px
+	line-height 50px
+	padding 0 24px
+	text-transform uppercase
+	letter-spacing normal
+	white-space nowrap
+	color #333
+	box-sizing border-box
+	justify-content center
+	background-color transparent
+
+	&--alt
+		font-size 10px
+
+	.mdi-chevron-down
+		font-size 1.2em
+		float right
+		color $brand-primary
+		margin-left 0
+		width 20px
+		margin-right -15px
+		text-align center
+
+	&:focus
+	&:hover
+		background-color $brand-primary
+		color #fff
+
+		.mdi-chevron-down
+			color #fff
+
+	.uk-active > &
+	.uk-active > &:focus
+	.uk-active > &:hover
+		background-color $brand-primary
+		color #fff
+
+		.mdi-chevron-down
+			color #fff
+
+.layout__header--main .layout__header-row--primary .navigation__link
+	padding-left 20px
+	padding-right 20px
+
+.layout__header--main .uk-dropdown--main
+	width 300px
+	box-shadow 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12)
+
+.layout__header--main .uk-dropdown--main.uk-dropdown-bottom
+	margin-top 0
+	z-index 1001
+
+.layout__header--main .layout__header-search
+	width 100%
+	width calc(100% - 1px)
+	margin-left auto
+
+.layout__header--main .layout__header-row--secondary .layout__header-city
+	width 206px
+
+.layout__header--main .layout__header-row--secondary .input__container
+	transition all 0.2s ease-in-out 0s
+	width 206px
+
+.layout__header--main .layout__header-row--secondary .input__container.is-focused
+	width 412px
+	margin-left -207px
+
+.layout__header--main .layout__header-row--secondary .navigation__link
+	width 128px
+	text-align center

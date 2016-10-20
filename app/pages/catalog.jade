@@ -1,0 +1,54 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Каталог организаций';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content.bg-pattern
+		.nano.layout-nano-content.layout-nano-content--alt.bg-pattern
+			.nano-content
+				.pad-colx2
+					.section__header.z-index-11
+						.section__header-row
+							.section__header-primary-content
+								include ../blocks/breadcrumb/breadcrumb-catalog
+							.section__header-secondary-content
+								a.section__header-secondary-action.section__header-secondary-action--prev(href='')
+									i.mdi.mdi-chevron-left
+									| Назад
+					.row
+						aside.col-side.page-side
+							.page-side__inner
+								include ../blocks/panel/panel-container-filter-company
+							.page-side__toggle
+								.page-side__toggle-icon
+						.page-side__tint
+						.col-section-wrap
+							.col-section
+								section.section.section--catalog
+									header.section__header
+										.section__header-row
+											.section__header-primary-content
+												h1.section__title.section__title--page Каталог организаций
+											.section__header-secondary-content
+												a.section__header-secondary-action(href='')
+													i.mdi.mdi-plus-circle-outline.mdi-sm
+													| Добавить организацию
+									.section__form
+										form(action='')
+											include ../blocks/input-group/input-group-search-by-name-alt
+									.hr.section__hr
+										hr
+									include ../blocks/list/list-chip-company
+									.hr.section__hr
+										hr
+									include ../blocks/toolbar/toolbar-section-catalog
+									.card-list.section__list
+										.nano.layout-nano-card-list
+											.nano-content
+												include ../blocks/card/card-company
+												include ../blocks/card/card-company
+								include ../blocks/pagination/pagination-container

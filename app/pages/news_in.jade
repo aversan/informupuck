@@ -1,0 +1,28 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'КОМУС-упаковка приняла участие в выставке RosUpack.';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content
+			.nano-content
+				.section__header.section__header--space.z-index-11
+					.section__header-row
+						.section__header-primary-content
+							include ../blocks/breadcrumb/breadcrumb-news
+						.section__header-secondary-content
+							a.section__header-secondary-action.section__header-secondary-action--prev(href='')
+								i.mdi.mdi-chevron-left
+								| Назад
+				.section__hr.section__hr--header.section__hr--header--m-t-1
+				include ../blocks/section/section-article
+
+		.cell-one-col.onmain
+			.nano.layout-nano-cell-one-col
+				.nano-content
+					include ../blocks/teaser-news/teaser-section-lenta-reader-choise
+					include ../blocks/teaser-news/teaser-section-press

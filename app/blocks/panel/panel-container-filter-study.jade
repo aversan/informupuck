@@ -1,0 +1,100 @@
+#accordion.panel__container(role='tablist', aria-multiselectable='true')
+  .panel.panel--filter
+    #heading_01.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_01', aria-expanded='true', aria-controls='collapse_01')
+          | Город
+    #collapse_01.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_01')
+      .panel__body
+        a.panel__chip(href='')
+          i.mdi.mdi-chevron-down
+          |                   г. Москва
+  .panel.panel--filter
+    #heading_02.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_02', aria-expanded='false', aria-controls='collapse_02')
+          | Специальность
+    #collapse_02.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_02')
+      .panel__body
+        .nano.panel__nano(style='height: 250px')
+          .nano-content
+            .checkbox
+              input#spec1.checkbox__input(type='checkbox', name='spec1')
+              label(for='spec1') Математика
+            .checkbox
+              input#spec2.checkbox__input(type='checkbox', name='spec2')
+              label(for='spec2') Физика
+            .checkbox
+              input#spec3.checkbox__input(type='checkbox', name='spec3')
+              label(for='spec3') Упаковка
+  .panel.panel--filter
+    #heading_03.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_03', aria-expanded='false', aria-controls='collapse_03')
+          | Форма обучения
+    #collapse_03.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_03')
+      .panel__body
+        .checkbox
+          input#study_form_01.checkbox__input(type='checkbox', name='study_form_01')
+          label(for='study_form_01') Любая
+        .checkbox
+          input#study_form_02.checkbox__input(type='checkbox', name='study_form_02')
+          label(for='study_form_02') Очная
+        .checkbox
+          input#study_form_03.checkbox__input(type='checkbox', name='study_form_03')
+          label(for='study_form_03') Очно-заочная
+        .checkbox
+          input#study_form_04.checkbox__input(type='checkbox', name='study_form_04')
+          label(for='study_form_04') Заочная
+        .checkbox
+          input#study_form_05.checkbox__input(type='checkbox', name='study_form_05')
+          label(for='study_form_05') Экстернат
+    .panel.panel--filter
+      #heading_04.panel__heading(role='tab')
+        h4.panel__title
+          a(data-toggle='collapse', data-parent='#accordion', href='#collapse_04', aria-expanded='false', aria-controls='collapse_04')
+            | Вид
+      #collapse_04.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_04')
+        .panel__body
+          .checkbox
+            input#study_view_01.checkbox__input(type='checkbox', name='study_view_01')
+            label(for='study_view_01') Университет
+          .checkbox
+            input#study_view_02.checkbox__input(type='checkbox', name='study_view_02')
+            label(for='study_view_02') Академия
+          .checkbox
+            input#study_view_03.checkbox__input(type='checkbox', name='study_view_03')
+            label(for='study_view_03') Институт
+      .panel.panel--filter
+        #heading_05.panel__heading(role='tab')
+          h4.panel__title
+            a(data-toggle='collapse', data-parent='#accordion', href='#collapse_05', aria-expanded='false', aria-controls='collapse_05')
+              | Правовая форма
+        #collapse_05.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_05')
+          .panel__body
+            .checkbox
+              input#study_legal_01.checkbox__input(type='checkbox', name='study_legal_01')
+              label(for='study_legal_01') Государственный
+            .checkbox
+              input#study_legal_02.checkbox__input(type='checkbox', name='study_legal_02')
+              label(for='study_legal_02') Негосударственный
+            .checkbox
+              input#study_legal_03.checkbox__input(type='checkbox', name='study_legal_03')
+              label(for='study_legal_03') Муниципальный
+        .panel.panel--filter
+          #heading_06.panel__heading(role='tab')
+            h4.panel__title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapse_06', aria-expanded='false', aria-controls='collapse_06')
+                | Основной
+          #collapse_06.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_06')
+            .panel__body
+              .checkbox
+                input#study_primary_01.checkbox__input(type='checkbox', name='study_primary_01')
+                label(for='study_primary_01') Основной
+              .checkbox
+                input#study_primary_02.checkbox__input(type='checkbox', name='study_primary_02')
+                label(for='study_primary_02') Филиал
+          .panel.panel--filter
+            .panel__body
+              button.btn.btn-primary.btn-block.btn--alt Подобрать
+              button.btn.btn-secondary.btn-block.btn--alt Сбросить фильтр

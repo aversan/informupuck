@@ -1,0 +1,97 @@
+section.panel.panel--section.layout-widget-contact
+  .panel__body
+    h3.typography--headline Контактная информация
+    .panel__hr
+      hr
+    ul.list.list--title-left.list--title-left-width-2.panel__list
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Страна:
+          span.list__item-text-body
+            a.underline(href='') Россия
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Город:
+          span.list__item-text-body
+            a.underline(href='') Архангельская обл., г. Архангельск
+    .collapse.collapseInfo_01.panel__collapse
+      ul.list.list--title-left.list--title-left-width-2.panel__list
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Адрес:
+            span.list__item-text-body
+              | ул. Академика Королева, д. 12, офис 34
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left ИНН:
+            span.list__item-text-body
+              | 7709801111
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left ОГРН:
+            span.list__item-text-body
+              | 508774614911
+    ul.list.list--title-left.list--title-left-width-2.panel__list
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Категория:
+          span.list__item-text-body
+            | Упаковка и тара
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Товары/продукция:
+          span.list__item-text-body.list__item-text-body--line-3
+            | Бумага, картон, перфарированая бумага, умага, картон, перфарированая бумага, умага, картон, перфарированаяумага, картон, перфарированая
+  .collapse.collapseInfo_01.panel__collapse
+    .panel__map
+      img(src='http://placehold.it/510x210', alt='', width='510', height='210')
+  .panel__body
+    .panel__hr
+      hr
+    ul.list.list--title-left.list--title-left-width-2.panel__list
+      li#phone-item.list__item.list__item--phone
+        .list__item-primary-content
+          strong.list__item-title-left Телефон:
+          span.list__item-text-body
+            i.icon.icon--mobile-link-xs
+            span.phone1 +7  495 XX-XX-67
+            span.phone2 +7 495 77-15-33
+            small.typography--subhead.typography--color-muted
+              | c 09:00 до 21:00
+        span.list__item-secondary-content
+          a.list__item-section-action(href='#', data-uk-modal="{ target: '#modal-phone', center: true }", data-uk-toggle="{ target: '#phone-item', cls: 'is-show' }")
+            i.mdi.mdi-menu-left
+            span Показать телефон
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Skype:
+          span.list__item-text-body
+            | HualianRussia
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left E-mail:
+          span.list__item-text-body
+            a(href='mailto:info@hulianrussia.ru') info@hulianrussia.ru
+      li.list__item
+        .list__item-primary-content
+          strong.list__item-title-left Сайт:
+          span.list__item-text-body
+            a(href='', target='_blank') www.hulianrussia.ru
+  .collapse.collapseInfo_01.panel__collapse
+    .panel__body
+      .panel__hr
+        hr
+      ul.list.list--title-left.list--title-left-width-2.panel__list
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Работа с НДС:
+            span.list__item-text-body
+              | Да
+        li.list__item
+          .list__item-primary-content
+            strong.list__item-title-left Возможность доставки:
+            span.list__item-text-body
+              | Нет
+  button.btn.btn-block.btn--more.collapse-toggle(data-target='.collapseInfo_01')
+    span.btn__text Показать подробнее
+    span.btn__text Скрыть подробную информацию

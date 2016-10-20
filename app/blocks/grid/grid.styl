@@ -1,6 +1,6 @@
 .container-fluid
-    padding-right 6px
-    padding-left 6px
+    padding-right 15px
+    padding-left 15px
     margin-right auto
     margin-left auto
 
@@ -10,8 +10,8 @@
         content ""
 
 .row
-    margin-right -6px
-    margin-left -6px
+    margin-right -7px
+    margin-left -8px
 
     &::after
         display table
@@ -82,8 +82,8 @@
 .col-xl-12
     position relative
     min-height 1px
-    padding-right 6px
-    padding-left 6px
+    padding-right 7px
+    padding-left 8px
     box-sizing border-box
 
 .col-side
@@ -928,13 +928,16 @@
         margin-left 100%
 
 .col-side
-    width 215px
+    width 210px
 
 .col-section
     width 100%
 
 .col-section-wrap
-    margin-left 215px
+    margin-left 210px
+
+    +below(767px)
+        margin-left 0
 
 .pad-colx2
-    padding 12px
+    padding 15px

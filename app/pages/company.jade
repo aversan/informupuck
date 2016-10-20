@@ -1,0 +1,28 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Архангельский целюлозный комбинат (АЦБК)';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content.has-page-header
+		include ../blocks/page-header/page-header-company
+		.nano.layout-nano-content
+			.nano-content
+				.cell-two-col
+					.col-100
+						include ../blocks/panel/panel-section-contact
+						include ../blocks/panel/panel-section-company
+						include ../blocks/panel/panel-section-company-empty
+						include ../blocks/panel/panel-section-lenta
+						include ../blocks/panel/panel-section-lenta-empty
+
+		.cell-one-col.onmain
+			.nano.layout-nano-cell-one-col
+				.nano-content
+					include ../blocks/panel/panel-side-employees
+					include ../blocks/panel/panel-side-products
+					include ../blocks/panel/panel-side-index
+

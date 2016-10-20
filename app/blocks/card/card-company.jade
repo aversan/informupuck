@@ -1,0 +1,35 @@
+section.card.card--hoverable
+  header.card__header
+    .card__header-primary-content
+      .card__header-avatar-wrap
+        .card__header-avatar(style='background-image:url(http://placehold.it/50x50)')
+          img(src='http://placehold.it/50x50', alt='', width='50', height='50')
+        .card__header-rating
+          span.card__header-rating-title Рейтинг:
+          i.icon.icon--star-yellow-xs
+          | 1674
+      h3.card__header-title Архангельский целюлозный комбинат (АЦБК)
+      p.card__header-site-link
+        a(href='', target='_blank') www.sitena.ru
+      p.card__header-address
+        i.icon.icon--pin-dark-blue-xs
+        | Россия, Архангельская обл., г. Архангельск
+      p.card__header-text-body
+        | Текст
+    .card__header-secondary-content
+      .icon.icon--label-top-10-vertical
+      label.card__header-secondary-action.mdl-icon-toggle.mdl-js-icon-toggle(for='icon-toggle-2')
+        input#icon-toggle-2.mdl-icon-toggle__input(type='checkbox')
+        i.mdl-icon-toggle__label.mdi.mdi-star-outline
+    a.card__header-cover-link(href='')
+  footer.card__actions
+    button.btn.btn-colored.card__actions-btn.btn--alt.btn-lg
+      i.icon.icon--email-dark-blue-sm
+      span.btn__text Отправить сообщение
+    button.btn.btn-colored.card__actions-btn.btn--alt.btn-lg
+      i.icon.icon--pin-dark-blue-sm
+      span.btn__text Показать на карте
+    .card__spacer
+    span.text-colored
+      i.icon.icon--smotr-blue-xs
+      span 13

@@ -54,6 +54,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@ryancavanaugh/wolfy87-eventemitter": "0.0.12-alpha",
     "autoprefixer": "^6.3.7",
     "babel": "^6.5.0",
     "babel-cli": "^6.5.0",
@@ -69,6 +70,7 @@
     "debuga": "^1.0.2",
     "eslint": "^2.12.0",
     "eslint-loader": "^1.1.1",
+    "event-emitter": "^0.3.4",
     "expose-loader": "^0.7.1",
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",

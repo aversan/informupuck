@@ -1,0 +1,100 @@
+#accordion.panel__container(role='tablist', aria-multiselectable='true')
+  .panel.panel--filter
+    #heading_01.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_01', aria-expanded='true', aria-controls='collapse_01')
+          | Город
+    #collapse_01.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_01')
+      .panel__body
+        a.panel__chip(href='')
+          i.mdi.mdi-chevron-down
+          |                   г. Москва
+  .panel.panel--filter
+    #heading_02.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_02', aria-expanded='false', aria-controls='collapse_02')
+          | Специализация
+    #collapse_02.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_02')
+      .panel__body
+        .nano.panel__nano(style='height: 250px')
+          .nano-content
+            .checkbox
+              input#spec1.checkbox__input(type='checkbox', name='spec1')
+              label(for='spec1') Топ-менеджмент
+            .checkbox
+              input#spec2.checkbox__input(type='checkbox', name='spec2')
+              label(for='spec2') Торговля
+  .panel.panel--filter
+    #heading_03.panel__heading(role='tab')
+      h4.panel__title
+        a(data-toggle='collapse', data-parent='#accordion', href='#collapse_03', aria-expanded='false', aria-controls='collapse_03')
+          | Зарплата (руб)
+    #collapse_03.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_03')
+      .panel__body
+        .panel__price-container
+          .panel__price-input-wrapper
+            input.form-control.input-sm(type='text', value='1000')
+            span —
+            input.form-control.input-sm(type='text', value='60000')
+          #salaryRange.panel__price-slider
+    .panel.panel--filter
+      #heading_04.panel__heading(role='tab')
+        h4.panel__title
+          a(data-toggle='collapse', data-parent='#accordion', href='#collapse_04', aria-expanded='false', aria-controls='collapse_04')
+            | График работы
+      #collapse_04.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_04')
+        .panel__body
+          .checkbox
+            input#schedule_01.checkbox__input(type='checkbox', name='schedule_01')
+            label(for='schedule_01') Полный день
+          .checkbox
+            input#schedule_02.checkbox__input(type='checkbox', name='schedule_02')
+            label(for='schedule_02') Свободный график
+          .checkbox
+            input#schedule_03.checkbox__input(type='checkbox', name='schedule_03')
+            label(for='schedule_03') Сменный график
+          .checkbox
+            input#schedule_04.checkbox__input(type='checkbox', name='schedule_04')
+            label(for='schedule_04') Удаленная работа
+          .checkbox
+            input#schedule_05.checkbox__input(type='checkbox', name='schedule_05')
+            label(for='schedule_05') Вахта
+      .panel.panel--filter
+        #heading_05.panel__heading(role='tab')
+          h4.panel__title
+            a(data-toggle='collapse', data-parent='#accordion', href='#collapse_05', aria-expanded='false', aria-controls='collapse_05')
+              | Ваш опыт
+        #collapse_05.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_05')
+          .panel__body
+            .checkbox
+              input#experience_01.checkbox__input(type='checkbox', name='experience_01')
+              label(for='experience_01') Без опыта
+            .checkbox
+              input#experience_02.checkbox__input(type='checkbox', name='experience_02')
+              label(for='experience_02') 1-3 года
+            .checkbox
+              input#experience_03.checkbox__input(type='checkbox', name='experience_03')
+              label(for='experience_03') 3-5 лет
+            .checkbox
+              input#experience_04.checkbox__input(type='checkbox', name='experience_04')
+              label(for='experience_04') Более 5 лет
+        .panel.panel--filter
+          #heading_06.panel__heading(role='tab')
+            h4.panel__title
+              a(data-toggle='collapse', data-parent='#accordion', href='#collapse_06', aria-expanded='false', aria-controls='collapse_06')
+                | Показать
+          #collapse_06.panel__collapse.collapse.in(role='tabpanel', aria-labelledby='heading_06')
+            .panel__body
+              .checkbox
+                input#show_01.checkbox__input(type='checkbox', name='show_01')
+                label(for='show_01') За сутки
+              .checkbox
+                input#show_02.checkbox__input(type='checkbox', name='show_02')
+                label(for='show_02') За неделю
+              .checkbox
+                input#show_03.checkbox__input(type='checkbox', name='show_03')
+                label(for='show_03') За месяц
+          .panel.panel--filter
+            .panel__body
+              button.btn.btn-primary.btn-block.btn--alt Подобрать
+              button.btn.btn-secondary.btn-block.btn--alt Сбросить фильтр

@@ -12,6 +12,9 @@ $toolbar-transition = all 0.2s ease-in-out 0s
 	font-size 11px
 	line-height 1.16
 
+	+mobile()
+		flex-wrap wrap
+
 	& > *
 		-ms-flex-negative 0
 		flex-shrink 0
@@ -41,6 +44,9 @@ $toolbar-transition = all 0.2s ease-in-out 0s
 			font-weight bold
 			color #333
 
+		&--date
+			margin-right 15px
+
 	.icon
 		margin-left 3px
 		margin-right 3px
@@ -50,3 +56,4 @@ $toolbar-transition = all 0.2s ease-in-out 0s
 
 		&:last-child
 			margin-right 0
+
