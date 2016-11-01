@@ -125,8 +125,6 @@
 
 	&-wrapper
 		background-color $brand-primary
-		background-image $background-image-pattern
-		background-repeat repeat
 		width 100px
 		height 100px
 		position relative
@@ -284,6 +282,7 @@
 	box-sizing border-box
 	justify-content center
 	background-color transparent
+	opacity 1
 
 	&--alt
 		font-size 10px
@@ -305,14 +304,14 @@
 		.mdi-chevron-down
 			color #fff
 
-	.uk-active > &
-	.uk-active > &:focus
-	.uk-active > &:hover
-		background-color $brand-primary
-		color #fff
+.layout__header--main .uk-open > .navigation__link
+.layout__header--main .uk-open > .navigation__link:focus
+.layout__header--main .uk-open > .navigation__link:hover
+	background-color $brand-primary
+	color #fff
 
-		.mdi-chevron-down
-			color #fff
+	.mdi-chevron-down
+		color #fff
 
 .layout__header--main .layout__header-row--primary .navigation__link
 	padding-left 20px
