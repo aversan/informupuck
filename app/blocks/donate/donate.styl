@@ -1,0 +1,138 @@
+.donate__container
+	display block
+	height 745px
+	background-position 50% 50%
+	background-size cover
+	background-repeat no-repeat
+	margin-bottom 32px
+
+.donate__info
+	position absolute
+	top 70px
+	left 50%
+	width 300px
+	height 255px
+	font-size 0
+
+	+below(767px)
+		left 24px
+		width auto
+		max-width 300px
+
+	&:before
+		content ''
+		display inline-block
+		height 100%
+		vertical-align middle
+
+	&-inner
+		display inline-block
+		max-width 100%
+		font-size 1rem
+		vertical-align middle
+
+.donate__title-1
+.donate__title-2
+	font-family $headings-font-family-black
+	font-size 46px
+	font-weight normal
+	line-height 1.08
+	text-transform uppercase
+	letter-spacing .1ex
+	color #fff
+
+.donate__title-2
+	font-size 16px
+
+.donate__hint-block
+	font-family $font-family-base
+	font-size 11px
+	line-height 1.27
+	opacity .8
+	display block
+	color #fff
+
+.donate__title-1
+.donate__title-2
+.donate__hint-block
+	margin-top 15px
+
+	&:first-child
+		margin-top 0
+
+.donate__tabs
+	position absolute
+	top 325px
+	left 0
+	right 0
+	width 470px
+	margin-left auto
+	margin-right auto
+
+	+below(767px)
+		left 24px
+		right 24px
+		width auto
+
+.donate__tab-wrapper
+	margin-bottom 20px
+	text-align right
+	margin-left 50%
+	display flex
+	flex-direction row
+
+	+below(767px)
+		margin-left 0
+
+.donate__tab
+	font-family $font-family-base
+	font-size 13px
+	line-height 32px
+	height 32px
+	width 123px
+	white-space nowrap
+	linearGradient(#fefefe, #cdcdcd)
+	color #333
+	border-bottom 1px solid #e6e6e6
+	text-align center
+	text-decoration none
+	display inline-block
+	flex-basis 100px
+	flex-grow 1
+	flex-shrink 1
+
+	& + &
+		margin-left 5px
+
+	&:hover
+	&:focus
+		color #333
+
+	&.uk-active
+	&.uk-active:hover
+	&.uk-active:focus
+		background #fad72a
+		border-bottom-color #ecc725
+
+	&.uk-active
+		position relative
+
+		&:before
+			top 100%
+			left 50%
+			border solid transparent
+			content ""
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+			border-color transparent
+			border-top-color #fad72a
+			border-width 6px
+			margin-left -6px
+
+.donate__tab-content
+	padding 0
+
+.bg-donate
+	background-color #e6e6e6 !important

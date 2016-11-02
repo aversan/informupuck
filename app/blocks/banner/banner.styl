@@ -3,35 +3,118 @@
 	vertical-align top
 	position relative
 	overflow hidden
+	background-position 50% 50%
+	background-size cover
+	background-repeat no-repeat
+	box-sizing border-box
 
-	&__image
+.banner__image
+	max-width 100%
+	height auto
+
+.banner__footer
+	display inline-block
+	position absolute
+	right 0
+	bottom 0
+	background-color #fff
+	white-space nowrap
+	line-height 20px
+	margin-left 10px
+	padding-left 3px
+	padding-right 10px
+
+	&:before
+		content ''
 		display block
-		max-width 100%
-		height auto
-
-	&__footer
-		display inline-block
+		width 0
+		height 0
+		border-style solid
+		border-width 0 0 20px 10px
+		border-color transparent transparent #fff transparent
 		position absolute
-		right 0
-		bottom 0
-		background-color #fff
-		white-space nowrap
-		line-height 20px
-		margin-left 10px
-		padding-left 3px
-		padding-right 10px
+		right 100%
 
-		&:before
-			content ''
-			display block
-			width 0
-			height 0
-			border-style solid
-			border-width 0 0 20px 10px
-			border-color transparent transparent #fff transparent
-			position absolute
-			right 100%
+.banner__footer-link
+	font-size 10px
+	color #4d739f
 
-	&__footer-link
-		font-size 10px
-		color #4d739f
+.banner__overlay-panel
+	position absolute
+	left 0
+	top 0
+	right 0
+	bottom 0
+	padding 15px
+	z-index 1
+	box-sizing border-box
+
+.banner--donate
+	width 510px
+	height 200px
+	color #fff
+
+	+below(767px)
+		width 100%
+		max-width 510px
+
+	.banner__title-1
+	.banner__title-2
+		font-family $headings-font-family-black
+		font-size 28px
+		font-weight normal
+		line-height 1.12
+		text-transform uppercase
+		letter-spacing .1ex
+
+	.banner__title-2
+		font-size 16px
+
+	.banner__button
+		font-family $font-family-base
+		font-size 13px
+		line-height 31px
+		width 140px
+		height 31px
+		overflow hidden
+		display block
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAfCAYAAAA1MiXTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAldJREFUeNrsm09r02Acx7/516S2tpZpEZmwiXicewW+AG9e9CToSVTEk+BJ8SDiQRF9DUUvHrwMhxcPwo4yRWQnZeIWCUXN4pM0bfL4xKrbEFsHEx/b7wdKygNNwjcffs/vSRMjy7KpIAimkiSBTrRaLTx4OHcYRAu88o7PExO7H9lCiFOGYVytVCpQW31O0PNguTt5pTShmwMyS0/b7XYbzWYTpmlqdYKu6/IqaUbw4f35b5boJgvRkzRNQVPIlvgrwhh5BOQx06UwfyCL7MD2b8BMXjNdCjNkZ8kSSm+Ow/RvqQoTMd0RxN6uHVnhE9grVwDxnKlSmEH9Sgw7uKuqyk0gE0yUwvwOCaPrw1m9DuPjfcpCYYZMQfELWKvXYHyaY4oUZsiPwnlYyxeAdPnnWJYBj58B0RfgxFEGS2E2Vpd3Z5Qs/qaxhUXg4j0DM9OFMBLi1SV0ZR21ijqIpyawXcfQ23OWiY/llNTxfxna1wQun5Q4Mvu94oSL6KXqS08tt7tqlV2eYdpcJa1zYLL/IaMN/0si/16YLC2enWC4nJKGIVV7I4AwUtLkDJfCDKBocCMlStJZHyuX1IrKYsgUZmNRUZWkE/fvvxQVxlWSlBzAUVvbKR7OYsgU5ocsqk9ZW1PVRS2by54SpdQXha00hdlM3r+zmyZArbrtnRAZNWHk3nOwogWU61tYCjn7mfa4CpNO3mZyYwq7DUJhCIUhFIb8l8I4joPiRXwpJdMgA6nV60t2o9F4G4bh0ziOtXoZXwiBXrTCOzyaUK1WXx6cPnTnqwADAD6Mr7DjWzf2AAAAAElFTkSuQmCC') 0 0 no-repeat
+		text-decoration none
+		color #fff
+		padding-left 40px
+		text-align center
+		position relative
+		transition all .2s ease-in-out 0s
+		opacity .9
+
+		&:hover
+			opacity 1
+
+	.banner__hint-block
+		font-family $font-family-base
+		font-size 11px
+		line-height 1.27
+		opacity .6
+		display block
+
+	.banner__overlay-panel
+		top 15px
+		right 40px
+		bottom 15px
+		left auto
+		width 230px
+		padding 0
+
+	.banner__title-1
+	.banner__title-2
+		margin-bottom 5px
+
+		&:last-child
+			margin-bottom 0
+
+	.banner__button
+	.banner__hint-block
+		margin-bottom 10px
+
+		&:last-child
+			margin-bottom 0

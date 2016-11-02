@@ -1,0 +1,16 @@
+.donate__container(style="background-image:url('assets/images/uploads/donate_image.jpg')")
+	.donate__info
+		.donate__info-inner
+			p.donate__title-2 Нравиться?
+			p.donate__title-1 Поддержи проект!
+			p.donate__hint-block
+				| Ваша поддержка очень приятна и важна для нас, все средства направляются на развитие проекта.
+	.donate__tabs
+		.donate__tab-wrapper(data-uk-switcher="{connect:'#donate_content'}")
+			a.donate__tab(href='') Физ. лицо
+			a.donate__tab(href='') Юр. лицо
+		#donate_content.uk-switcher
+			.donate__tab-content
+				img.uk-responsive-width(src="assets/images/uploads/donate_yandex.jpg", alt="")
+			.donate__tab-content
+				img.uk-responsive-width(src="assets/images/uploads/donate_yandex.jpg", alt="")

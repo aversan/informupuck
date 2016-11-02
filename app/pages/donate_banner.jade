@@ -1,0 +1,19 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.content
+		.nano.layout-nano-content
+			.nano-content
+				include ../blocks/banner/banner-donate
+
+		.cell-one-col.onmain
+			.nano.layout-nano-cell-one-col
+				.nano-content
+					include ../blocks/teaser-news/teaser-section-lenta
+					include ../blocks/panel/panel-side-index
